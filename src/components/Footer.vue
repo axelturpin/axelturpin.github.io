@@ -9,7 +9,7 @@ export default{
     <footer>
         <div><a target="_blank" href="https://icons8.com/icon/62923/train" class="lien">App</a> icon by <a target="_blank" href="https://icons8.com" class="lien">Icons8</a></div>
         <div>Inspiré de <a href="https://imgflip.com/memegenerator" class="lien">Imgflip Meme Generator</a>
-            et <a href="https://neal.fun/absurd-trolley-problems/" class="lien">Neal.fun</a>
+            et <a href="https://neal.fun/absurd-trolley-problems/" class="lien">Neal.fun (absurd-trolley-problems)</a>
         </div>
         <a href="https://www.flaticon.com/fr/icones-gratuites/etoile" title="étoile icônes" class="lien">Étoile icônes créées par Pixel perfect - Flaticon</a>
     </footer>
