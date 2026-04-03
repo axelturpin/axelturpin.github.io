@@ -1,0 +1,77 @@
+<script>
+export default{
+    name: "Haeder"
+}
+</script>
+
+<template>
+    <header>
+        <div>
+            <router-link to="/" class="router-link">
+                <img src="/img/train-60.png" alt="Accueil">
+                <p>Accueil</p>
+            </router-link>
+        </div>
+        <div class="titre">
+            <h1>Dilemmes purs</h1>
+            <p>(sans intérêts personnels)</p>
+        </div>
+        <div>
+            <router-link to="/parametres" class="router-link">
+                <img src="/img/paramètres-60.png" alt="Paramètres">
+                <p>paramètres</p>
+            </router-link>
+        </div>
+    </header>
+</template>
+
+<style scoped>
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEEAFF;
+    height: 15vh;
+    padding: 10px;
+    text-decoration: none;
+    color: black
+}
+
+.titre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titre h1 {
+    font-size: 48px;
+}
+
+.titre p {
+    font-size: 1.2rem;
+}
+
+.router-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black
+}
+
+@media (max-width: 768px) {
+.titre h1 {
+    font-size: 32px;
+}
+
+.titre p {
+    font-size: 1rem;
+}
+}
+</style>

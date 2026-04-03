@@ -1,0 +1,96 @@
+{
+    "dilemme1": 
+    {
+        "description": "**La probabilité à priori de mourir écrasé par le train est de 50%**\nSoit une voie avec 5 personnes et une voie adjacente avec 1 personne.\n+Un train arrive sur la voie des 5 personnes, si on ne fait rien 5 personnes mourront. \n+On peut dévier le train sur l'autre voie, pour sauver 5 personnes mais 1 personne mourra.",
+        "bouton1": "Dévier",
+        "bouton2": "Inaction",
+        "Bon": "Dévier",
+        "Détails": "Dévier le train est mieux (risque déjà important pour p = 0.5 = 50%) \nM(inaction) = 0, M(Dévier) = 1.5",
+        "M": 1.5,
+        "M1": 1.5,
+        "M2": 0,
+        "src_plan": "./img/rails.png",
+        "href": "https://imgflip.com/i/al62xe",
+        "href_person": "https://imgflip.com/i/amxn79",
+        "voie1": 5,
+        "voie2": 1,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+    "dilemme2":
+    {
+        "description": "5 personnes risquent d’être écrasées par un train mais:\n**+**On peut pousser une personne obèse d’un pont pour faire dérailler le train et sauver les 5 autres. \n**+**Ou ne rien faire",
+        "bouton1": "Pousser",
+        "bouton2": "Inaction",
+        "Bon": "Inaction",
+        "Détails": "Ne rien faire (respect null) \nM(inaction) = 0, M(pousser) = -1",
+        "M": 0,
+        "M1": -1,
+        "M2": 0,
+        "src_plan": "./img/Homme obèse.png",
+        "href": "https://imgflip.com/i/amxkzy",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_arbre": false,
+        "voie2_arbre": false 
+    },
+    "dilemme3": 
+    {
+        "description": "Soit un nombre de participant **(1000) qui ont choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et consentent pleinement aux conséquences de cette couleur. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut donc pas y avoir autant de rouges que de bleus",
+        "bouton1": "Bleu",
+        "bouton2": "Rouge",
+        "Bon": "Bleu",
+        "Détails": "'Bon choix: Bleue' (le respect est plus grand, car on peut sauver les autres bleus, très subjectif) \nM(inaction) = 0, M(bleu) > M(rouge) > 0 les valeurs exactes dépendent du nombre de participants",
+        "M": 1,
+        "M1": 1,
+        "M2": 0.6,
+        "src_plan": "./img/pilules.png",
+        "href": "https://imgflip.com/i/alenyu",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+    "dilemme4": 
+    {
+        "description": "Soit un nombre de participant **(1000) qui ont choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et consentent pleinement aux conséquences de cette couleur. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous ceux qui sont bleue meurt si ils sont minoritaire \n**<u>Rouge:</u>** Tous ceux qui sont rouges sont sauvés\n**<u>Rien</u>**: tu meurs\n+Il ne peut donc pas y avoir autant de rouges que de bleus",
+        "bouton1": "Bleu",
+        "bouton2": "Rouge",
+        "Bon": "Rouge",
+        "Détails": "Meme dilemme donc normalement: 'Bon choix: Bleue', mais la description fait qu'il y aura plus de rouge que de bleus en moyenne, rendant le choix bleu trop risqué.",
+        "M": 1,
+        "M1": 0.6,
+        "M2": 1,
+        "src_plan": "./img/pilules.png",
+        "href": "https://imgflip.com/i/alenyu",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+    "dilemme5": 
+    {
+        "description": "A-t-on vraiment un libre arbitre, ou tout est déjà déterminé ?",
+        "bouton1": "Libre",
+        "bouton2": "Déterminé",
+        "Bon": "Libre",
+        "Détails": "On ne sait pas donc tous les points dans les 2 cas",
+        "M": 1,
+        "M1": 1,
+        "M2": 1,
+        "src_plan": "./img/question.png",
+        "href": "https://imgflip.com/i/anq8z7",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    }
+}

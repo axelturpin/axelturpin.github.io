@@ -1,0 +1,101 @@
+{
+    "dilemme1": 
+    {
+        "description": "**La probabilité à priori de mourir écrasé par le train est de 50%**\nSoit une voie avec 4 personnes et une voie adjacente avec 5 personnes mais un arbre devant pouvant faire **dérailler le train avec une probabilité de 50%**.\n+Un train arrive sur la voie des 5 personnes, si on ne fait rien 5 personnes mourront. \n+On peut dévier le train sur l'autre voie, pour sauver 4 personnes mais 5 personnes risquent de mourir.",
+        "bouton1": "Dévier",
+        "bouton2": "Inaction",
+        "Bon": "Dévier",
+        "Détails": "'Bon choix': Dévier le train (risque déjà présent pour p = 0.5, et respect plus grand car moins de risques à dévier le train, risque de déraillement de pd = 0.5) \nM(inaction) = 0, M(dévier) = 0.5 ",
+        "M": 0.5,
+        "M1": 0.5,
+        "M2": 0,
+        "src_plan": "./img/rails.png",
+        "href": "https://imgflip.com/i/al62xe",
+        "href_person": "https://imgflip.com/i/amxn79",
+        "voie1": 4,
+        "voie2": 5,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": true
+    },
+    "dilemme2": 
+    {
+        "description": "Soit **50%** la probabilité de mourir par le train si on est sur une voie pendant 1 heure\nDilemme du tramway variante accident: quelqu’un est tombé accidentellement sur une voie et va être inconscient environ 1 heure sans train pour le moment, et **2 personnes se sont mises volontairement sur la voie adjacente**, et veulent y rester pendant 1 heure sans savoir si un train allait passer ou non. Ceux qui sont allé volontairement  sur la voie n'ont pas vu la personne tombé par accident. \n+Un train arrive sur la voie de la personne tombée par accident, si on ne fait rien cette personne mourra. \n+On peut dévier le train sur l'autre voie, pour sauver cette personne mais 5 personnes qui ont pris le risque de mourir volontairement mourront.",
+        "bouton1": "Dévier",
+        "bouton2": "Inaction",
+        "Bon": "Inaction",
+        "Détails": "'Bon choix': Ne rien faire (pour p = 0.5, le risque pris intentionnellement n’est pas trop élevé, mais le devient, donc dévier est mieux pour p = 0.6 et plus) \nM(inaction) = 0, M(dévier) = -0.25",
+        "M": 0,
+        "M1": -0.25,
+        "M2": 0,
+        "src_plan": "./img/rails.png",
+        "href": "https://imgflip.com/i/al62xe",
+        "href_person": "https://imgflip.com/i/amxn79",
+        "voie1": 1,
+        "voie2": 2,
+        "voie1_type": "person",
+        "voie2_type": "voluntary person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+
+    "dilemme3":
+    {
+        "description": "Soit 1 personne ligotée sur la voie \nUn tramway arrive sur cette personne, mais des Aliens acceptent de la sauver contre brancher une autre personne (qui ne risque rien et n'est pas consentant) à la machine à expérience:\nDescription: La machine à expérience est une machine qui nous garde dans une simulation de pnj mais sans qu’on le sache, de plus la simulation est optimisée pour maximiser notre bonheur. On suppose que la liberté offerte par la machine à expérience est négligeable car virtuelle, mais que le bonheur est triplé\n+Accepter de céder une personne à la machine à expérience\n+Ne rien faire",
+        "bouton1": "Accepter",
+        "bouton2": "Inaction",
+        "Bon": "Accepter",
+        "Détails": "'Bon choix': Accepter \nM(inaction) = 0, M(accepter) = 0.25",
+        "M": 0.25,
+        "M1": 0.25,
+        "M2": 0,
+        "src_plan": "./img/rails-unique.png",
+        "href": "https://imgflip.com/i/al62xe",
+        "href_soucoupe": "https://imgflip.com/i/ancqwb",
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "soucoupe": true,
+        "voie1": 1,
+        "voie2": 1,
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+
+    "dilemme4": 
+    {
+        "description": "Soit un nombre impair de participant **(11) qui ont choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et consentent pleinement aux conséquences de cette couleur. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut donc pas y avoir autant de rouges que de bleus",
+        "bouton1": "Bleu",
+        "bouton2": "Rouge",
+        "Bon": "Bleu",
+        "Détails": "'Bon choix: Bleue' (le respect est plus grand, car on peut sauver les autres bleus, très subjectif) \nM(inaction) = 0, M(bleu) > M(rouge) > 0 les valeurs exactes dépendent du nombre de participants",
+        "M": 1,
+        "M1": 1,
+        "M2": 0.6,
+        "src_plan": "./img/pilules.png",
+        "href": "https://imgflip.com/i/alenyu",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+    "dilemme5":
+    {
+        "description": "Vous êtes médecin dans un hôpital où cinq patients sont gravement malades et mourront sans un traitement expérimental. Vous avez accès à un médicament qui pourrait sauver ces cinq patients, mais il doit être testé sur une personne saine.  \n+Administrer ce médicament à une personne saine comporte un **risque de 1 %** de la tuer. +Sans ce test, les cinq patients mourront certainement. Que faites-vous ?",
+        "bouton1": "Administrer",
+        "bouton2": "Inaction",
+        "Bon": "Inaction",
+        "Détails": "'Bon choix': Ne rien faire (homme obèse en plus légé donc mal moins important, mais le respect reste null, c’est juste moins mal) \nM(inaction) = 0, M(administrer) = -p = -0.01 ",
+        "M": 0,
+        "M1": 0,
+        "M2": -0.01,
+        "src_plan": "./img/medicament.png",
+        "href": "https://imgflip.com/i/alptp6",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_arbre": false,
+        "voie2_arbre": false 
+    }
+}
