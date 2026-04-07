@@ -16,6 +16,7 @@ export default {
       clicked: false,
       Détails: "",
       score: 0,
+      score_temp: 0,
       ratio: 3, //pour calculer le score selon la difficulté
       étoiles_niveau: 0,
       afficher_étoiles: false,
@@ -50,9 +51,11 @@ export default {
             }, 1900);
             
             if(this.dilemme.bouton1 === this.dilemme.Bon){
-                this.score += 100
+                this.score_temp = 100;
+                this.score += 100;
             }else{
-                this.score += (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/this.ratio))
+                this.score_temp = (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/this.ratio));
+                this.score += this.score_temp
             }
         }
     },
@@ -77,9 +80,11 @@ export default {
             }, 1900);
             
             if(this.dilemme.bouton2 === this.dilemme.Bon){
+                this.score_temp = 100
                 this.score += 100
             }else{
-                this.score += (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/this.ratio))
+                this.score_temp = (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/this.ratio))
+                this.score += this.score_temp
             }
         }
     },
@@ -92,9 +97,11 @@ export default {
             this.Détails = this.dilemme.Détails;
             
             if(this.dilemme.bouton3 === this.dilemme.Bon){
+                this.score_temp = 100
                 this.score += 100
             }else{
-                this.score += (100*(1-Math.abs(this.dilemme.M3 - this.dilemme.M)/4))
+                this.score_temp = (100*(1-Math.abs(this.dilemme.M3 - this.dilemme.M)/this.ratio));
+                this.score += this.score_temp;
             }
         }
     },
@@ -367,6 +374,7 @@ export default {
     </div>
 
     <div class="center colonne">
+        <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(score_temp) }}</p>
     <p class="score">Score total: {{ Math.floor(score) }}</p>
     <p class="détails" v-if="clicked" v-html="Détails"></p>
         <!-- étoiles -->

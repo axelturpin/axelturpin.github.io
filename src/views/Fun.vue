@@ -44,9 +44,11 @@ export default {
             }, 1950);
             
             if(this.dilemme.bouton1 === this.dilemme.Bon){
-                this.score += 100
+                this.score_temp = 100;
+                this.score += 100;
             }else{
-                this.score += (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/4))
+                this.score_temp = (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/this.ratio));
+                this.score += this.score_temp
             }
             if(this.dilemme.voie2_arbre){
                 this.slipId = setTimeout(function(){
@@ -82,9 +84,11 @@ export default {
             }, 1950);
             
             if(this.dilemme.bouton2 === this.dilemme.Bon){
+                this.score_temp = 100
                 this.score += 100
             }else{
-                this.score += (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/4))
+                this.score_temp = (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/this.ratio))
+                this.score += this.score_temp
             }
             if(this.dilemme.voie1_arbre){
                 this.slipId = setTimeout(function(){
@@ -109,9 +113,11 @@ export default {
             this.Détails = this.dilemme.Détails;
             
             if(this.dilemme.bouton3 === this.dilemme.Bon){
+                this.score_temp = 100
                 this.score += 100
             }else{
-                this.score += (100*(1-Math.abs(this.dilemme.M3 - this.dilemme.M)/4))
+                this.score_temp = (100*(1-Math.abs(this.dilemme.M3 - this.dilemme.M)/this.ratio));
+                this.score += this.score_temp;
             }
         }
     },
@@ -357,6 +363,7 @@ export default {
     </div>
 
     <div class="center colonne">
+        <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(score_temp) }}</p>
     <p class="score">Score total: {{ Math.floor(score) }}</p>
     <p class="détails" v-if="clicked">{{ Détails }}</p>
         <!-- étoiles -->

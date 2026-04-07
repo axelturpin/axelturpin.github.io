@@ -1,10 +1,15 @@
 <script>
 export default {
     name: "Base_custom",
-    props: [
+    // props: [
+    //     "niveau",
+    //     "dilemmes_custom",
+    //     "nombre_dilemmes"
+    // ],
+    inject:  [
         "niveau",
-        "dilemmes_custom",
-        "nombre_dilemmes"
+        "nombre_dilemmes", 
+        "dilemmes_custom"
     ],
   data() {
     return {

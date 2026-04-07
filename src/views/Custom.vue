@@ -20,7 +20,14 @@ export default {
         Détails: "Détails non modifié",
         PasEncoreValider: false
     }
-  },
+    },
+    provide() {
+    return {
+        niveau: "Custom" ,
+        nombre_dilemmes: this.nb, 
+        dilemmes_custom: this.dilemmes
+    }
+    },
   methods:{
     click(){
         this.ajout = true;
@@ -41,6 +48,8 @@ export default {
                 description: this.description,
                 Détails: this.Détails,
                 src_plan: "./img/rails.png",
+                bouton1: this.bouton1,
+                bouton2: this.bouton2
         }
 
         // const dilemmes_custom = JSON.parse(localStorage.getItem("dilemmes_custom")) || {}
@@ -67,7 +76,7 @@ export default {
         }
     },
     tousSupprimer(){
-        localStorage.setItem("dilemmes_custom", 0);
+        localStorage.setItem("dilemmes_custom", "{}");
         localStorage.setItem("nb_custom", 0);
     }
     },
@@ -97,19 +106,27 @@ export default {
             <input type="number" id="nb-person-voie2" @change="setVoie2" v-model="input_vies_voie2">
             <label for="type-person-voie2">type de vies sur la première voie</label>
             <input type="text" id="type-person-voie2" @change="setVoie2" v-model="input_type_voie2">
+
+            <label for="btn-1">nom bouton1</label>
+            <input type="text" id="btn-1" v-model="bouton1">
+            <label for="btn-2">nom bouton2</label>
+            <input type="text" id="btn-2" v-model="bouton2">
         </form>
         <div class="center colonne">
             <button class="btn" @click="valider">valider un dilemme</button>
         </div>
         <form action="" class="center colonne">
-            supprimer le dilemme n°
-            <input type="number" @change="supprimer(e.target.value)">
-            Supprimer tous les dilemmes:
-            <button type="number" @click="tousSupprimer()">Tout supprimer</button>
+            <label for="supprimer 1">supprimer le dilemme n°</label>
+            <input type="number" @change="supprimer(e.target.value)" id="supprimer 1">
+            <label for="supprimer tout">Supprimer tous les dilemmes:</label>
+            <button type="number" @click="tousSupprimer()" id="supprimer tout">Tout supprimer</button>
         </form>
     </div>
+    <router-link to="/custom/play" class="none center">
+        <button class="mode">Jouer au custom</button>
+    </router-link>
 
-  <Base_custom niveau="Custom" :nombre_dilemmes="nb" :dilemmes_custom="dilemmes"></Base_custom>
+  <!-- <Base_custom niveau="Custom" :nombre_dilemmes="nb" :dilemmes_custom="dilemmes"></Base_custom> -->
 </template>
 
 <style scoped>

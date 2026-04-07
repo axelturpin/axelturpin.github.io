@@ -11,6 +11,7 @@ import Normal from "../views/Normal.vue";
 import Classique from "../views/Classique.vue";
 import Fun from "@/views/Fun.vue";
 import Bonus from "@/views/Bonus.vue";
+import Base_custom from "@/views/Base_custom.vue";
 
 //définir les routes
 
@@ -54,6 +55,11 @@ const roads = [
         path: "/custom",
         name: "Custom",
         component: Custom
+    },
+    {
+        path: "/custom/play",
+        name: "Play Custom",
+        component: Base_custom
     },
     {
         path: "/fun",
