@@ -68,15 +68,15 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_aléatoire)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/custom" class="none">
-                <button class="mode">Custom</button>
-            </router-link>
             <router-link to="/fun" class="none">
                 <button class="mode">
                     Fun
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_fun" class="étoile" loading="lazy" :key="n">
                     <img src="/img/etoile vide.png" v-for="n in (n_fun - étoiles_fun)" class="étoile" loading="lazy" :key="n">
                 </button>
+            </router-link>
+            <router-link to="/custom" class="none">
+                <button class="mode">Custom</button>
             </router-link>
         </div>
     </div>
