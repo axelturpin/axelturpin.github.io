@@ -10,6 +10,7 @@ export default{
             étoiles_classique: Number(localStorage.getItem("étoiles_Classique")) || 0,
             étoiles_bonus: Number(localStorage.getItem("étoiles_Bonus")) || 0,
             étoiles_fun: Number(localStorage.getItem("étoiles_Fun")) || 0,
+            étoiles_aléatoire: Number(localStorage.getItem("étoiles_Aléatoire")) || 0,
             n_fun: 2,
         }
     }
@@ -61,7 +62,11 @@ export default{
                 </button>
             </router-link>
             <router-link to="/aleatoire" class="none">
-                <button class="mode">Aléatoire</button>
+                <button class="mode">
+                    Aléatoire
+                    <img src="/img/etoile pleine.png" v-for="n in étoiles_aléatoire" class="étoile" loading="lazy" :key="n">
+                    <img src="/img/etoile vide.png" v-for="n in (5-étoiles_aléatoire)" class="étoile" loading="lazy" :key="n">
+                </button>
             </router-link>
             <router-link to="/custom" class="none">
                 <button class="mode">Custom</button>

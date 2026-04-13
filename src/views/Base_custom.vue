@@ -6,11 +6,11 @@ export default {
     //     "dilemmes_custom",
     //     "nombre_dilemmes"
     // ],
-    inject:  [
-        "niveau",
-        "nombre_dilemmes", 
-        "dilemmes_custom"
-    ],
+    // inject:  [
+    //     'niveau',
+    //     'nombre_dilemmes', 
+    //     'dilemmes_custom'
+    // ],
   data() {
     return {
       data: {},
@@ -106,7 +106,6 @@ export default {
     chargement(){
         // attendre que le DOM rende les éléments (v-if et v-for)
         this.$nextTick(() => {
-            if(!Object.getOwnPropertyNames(this.data).length === 0){
             this.description = this.dilemme.description
             // .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
             // .replace(/\n/g, '<br>');
@@ -123,11 +122,11 @@ export default {
             voie1.forEach((vie, index) => {
                 vie.style.display = "block";
                 vie.style.position = "absolute";
-                vie.style.top = `calc(80% - ${index*7}px)`;
+                vie.style.top = `calc(70% - ${index*7}px)`;
                 vie.style.left = `calc(95% - ${index*25}px)`;
                 vie.style.transform = "translate(-50%, -50%)";
                 if (screenWidth <= 768){
-                vie.style.top = `calc(75% - ${index*4}px)`;
+                vie.style.top = `calc(70% - ${index*4}px)`;
                 vie.style.left = `calc(95% - ${index*12}px)`;
                 }
             });
@@ -135,13 +134,13 @@ export default {
             voie2.forEach((vie, index) => {
                 vie.style.display = "block";
                 vie.style.position = "absolute";
-                vie.style.top = `calc(33% - ${index*7}px)`;
+                vie.style.top = `calc(35% + ${index*2}px)`;
                 vie.style.left = `calc(95% - ${index*25}px)`;
+                vie.style.transform = "translate(-50%, -50%)";
                 if (screenWidth <= 768){
-                    vie.style.top = `calc(33% - ${index*4}px)`;
+                    vie.style.top = `calc(35% + ${index*1}px)`;
                     vie.style.left = `calc(95% - ${index*12}px)`;
                 }
-                vie.style.transform = "translate(-50%, -50%)";
             });
             
             
@@ -197,7 +196,6 @@ export default {
         const train = document.querySelector(".train");
         train.style.display = "block"
     }
-}
             })
     },
     suivant(){
@@ -208,7 +206,7 @@ export default {
         }
         // console.log(this.numéro, this.nombre_dilemmes)
         if(this.numéro == this.nombre_dilemmes){
-            this.Détails = "Terminé";
+            this.Détails = "Terminé, pas de score en mode custom";
 
 
             let étoiles = localStorage.getItem(`étoiles_${this.niveau}_courrante`) || 0;
@@ -296,9 +294,13 @@ export default {
       this.data = JSON.parse(localStorage.getItem("dilemmes_custom")) || {}
       console.log(this.data);
     //verifier que data est non-vide
-    if(!Object.getOwnPropertyNames(this.data).length === 0){
+    if(!(Object.getOwnPropertyNames(this.data).length === 0)){
         this.dilemme = this.data.dilemme1;
     }
+
+    this.nombre_dilemmes =  localStorage.getItem("nombre_dilemmes_custom");
+    this.niveau = "Custom";
+    console.log(this.nombre_dilemmes);
 
     //pour avoir le CSS au chargement, je reprends la fonction suivante:
     this.chargement();
@@ -359,10 +361,11 @@ export default {
             </a>
         </div>
 
-        <div><a  class="lien">from Imgflip Meme Generator</a></div>
-        <div v-if="dilemme.href_dog"><a :href="dilemme.href_dog" class="lien">dog modified image from Imgflip Meme Generator</a></div>
-        <div v-if="dilemme.href_person"><a :href="dilemme.href_person" class="lien">person modified image from Imgflip Meme Generator</a></div>
-        <div v-if="dilemme.href_soucoupe"><a :href="dilemme.href_soucoupe" class="lien">soucoup modified image from Imgflip Meme Generator</a></div>
+        <!-- <div><a href="https://imgflip.com/memegenerator" class="lien">from Imgflip Meme Generator</a></div> -->
+        <!-- <div v-if="dilemme.href_dog"><a :href="dilemme.href_dog" class="lien">dog modified image from Imgflip Meme Generator</a></div> -->
+        <div v-if="dilemme.href"><a :href="dilemme.href" class="lien">Décorts inspirés de Imgflip Meme Generator</a></div>
+        <div v-if="dilemme.href_person"><a :href="dilemme.href_person" class="lien">personnage inspiré de Imgflip Meme Generator</a></div>
+        <div v-if="dilemme.href_soucoupe"><a :href="dilemme.href_soucoupe" class="lien">soucoup inspiré de Imgflip Meme Generator</a></div>
     </div>
 
     <div class="center">
@@ -449,14 +452,16 @@ export default {
 .train{
     position: absolute;
     z-index: 2;
-    top: -20%;
-    left: -30%;
+    top: 12%;
+    left: -5%;
 }
 
-.Vperson{
-    margin: 10px;
-    width: 110px;
+.chien{
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
 }
+
 
 .soucoupe{
     position: absolute;
@@ -474,10 +479,10 @@ export default {
     translate: 0px 0px;
   }
   50%{
-    translate: 250px 65px;
+    translate: 380px 65px;
   }
   100%{
-    translate: 500px -40px;
+    translate: 760px -40px;
   }
 }
 .animation2{
@@ -488,20 +493,15 @@ export default {
     translate: 0px 0px;
   }
   50%{
-    translate: 250px 65px;
+    translate: 380px 75px;
   }
   100%{
-    translate: 500px 130px;
+    translate: 760px 150px;
   }
 }
 
 .hidden{
     display: none;
-}
-
-.chien{
-    width: 200px;
-    margin-left: -40px;
 }
 
 
@@ -517,22 +517,22 @@ export default {
 }   
 
 .train{
-    width: 500px;
+    width: 100px;
     position: absolute;
-    top: -40%;
-    left: -50%;
+    top: 15%;
+    left: -5%;
 }
 
 .voie1{
-    width: 90px;
+    width: 50px;
 }
 
 .voie2{
-    width: 90px;
+    width: 50px;
 }
 
-.Vperson{
-    width: 60px;
+.chien{
+    margin-left: 0%;
 }
 
 .soucoupe{
@@ -555,13 +555,25 @@ export default {
     translate: 0px 0px;
   }
   50%{
-    translate: 100px 30px;
+    translate: 150px 30px;
   }
   100%{
-    translate: 200px -20px;
+    translate: 300px -20px;
   }
 }
 
+@keyframes animerTrain2 {
+  0%{
+    translate: 0px 0px;
+  }
+  50%{
+    translate: 160px 47px;
+  }
+  100%{
+    translate: 380px 94px;
+  }
+
+}
 }
 
 

@@ -138,11 +138,11 @@ export default {
                 vie.style.position = "absolute";
                 vie.style.top = `calc(35% + ${index*2}px)`;
                 vie.style.left = `calc(95% - ${index*25}px)`;
+                vie.style.transform = "translate(-50%, -50%)";
                 if (screenWidth <= 768){
                     vie.style.top = `calc(35% + ${index*1}px)`;
                     vie.style.left = `calc(95% - ${index*12}px)`;
                 }
-                vie.style.transform = "translate(-50%, -50%)";
             });
             
             
@@ -219,7 +219,7 @@ export default {
             this.étoiles_niveau = Number(étoiles);
 
             const screenWidth = window.innerWidth;
-            this.$nextTick(() => {
+            this.$nextTick(() => { //afficher étoiles:
             if(!this.afficher_étoiles){
                 for(let i = 0; i < this.nombre_dilemmes; i++){
                     const e = document.createElement("img");

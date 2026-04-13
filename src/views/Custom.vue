@@ -21,13 +21,13 @@ export default {
         PasEncoreValider: false
     }
     },
-    provide() {
-    return {
-        niveau: "Custom" ,
-        nombre_dilemmes: this.nb, 
-        dilemmes_custom: this.dilemmes
-    }
-    },
+    // provide() {
+    // return {
+    //     niveau: "Custom" ,
+    //     nombre_dilemmes: this.nb, 
+    //     dilemmes_custom: this.dilemmes
+    // }
+    // },
   methods:{
     click(){
         this.ajout = true;
@@ -45,20 +45,29 @@ export default {
         //localstorage
         this.nb++
         this.dilemme[`dilemme${this.nb}`] = {
+                niveau: "Custom",
                 description: this.description,
                 Détails: this.Détails,
                 src_plan: "./img/rails.png",
+                href: "https://imgflip.com/i/al62xe",
                 bouton1: this.bouton1,
-                bouton2: this.bouton2
+                bouton2: this.bouton2,
+                voie1: this.input_vies_voie1,
+                voie2: this.input_vies_voie2,
+                voie1_type: this.input_type_voie1,
+                voie2_type: this.input_type_voie2,
+                voie1_arbre: this.voie1_arbre,
+                voie2_arbre: this.voie2_arbre
         }
 
         // const dilemmes_custom = JSON.parse(localStorage.getItem("dilemmes_custom")) || {}
         this.dilemmes[`dilemme${this.nb}`] = this.dilemme[`dilemme${this.nb}`]
-        localStorage.setItem("nb_custom", this.nb+1);
+        localStorage.setItem("nb_custom", this.nb);
         this.PasEncoreValider = false;
         console.log(this.dilemmes);
         //Enregistrer la liste des dilemmes
         localStorage.setItem("dilemmes_custom", JSON.stringify(this.dilemmes));
+        localStorage.setItem("nombre_dilemmes_custom", this.nb);
     },
     supprimer(index){
         // décaler tous les numéros de dilemme:
@@ -97,15 +106,31 @@ export default {
             Solution:
             <textarea name="détails" id="détails" placeholder="Description de la solution" v-model="Détails"></textarea>
 
+            <div class="check">
+                <label for="arbre">Arbre voie 1 ?</label>
+                <input type="checkbox" name="" id="arbre" v-model="voie1_arbre">
+            </div>
             <label for="nb-person-voie1">Nombre de vies sur la première voie</label>
-            <input type="number" id="nb-person-voie1" @change="setVoie1" v-model="input_vies_voie1">
+            <input type="number" id="nb-person-voie1" v-model="input_vies_voie1">
             <label for="type-person-voie1">type de vies sur la première voie</label>
-            <input type="text" id="type-person-voie1" @change="setVoie1" v-model="input_type_voie1">
+            <select type="text" id="type-person-voie1" v-model="input_type_voie1">
+                <option value="chien">chien</option>
+                <option value="person">personne</option>
+                <option value="voluntary person">personne volontaire</option>
+            </select>
 
+            <div class="check">
+                <label for="arbre2">Arbre voie 2 ?</label>
+                <input type="checkbox" name="" id="arbre2" v-model="voie2_arbre">
+            </div>
             <label for="nb-person-voie2">Nombre de vies sur la deuxième voie</label>
             <input type="number" id="nb-person-voie2" @change="setVoie2" v-model="input_vies_voie2">
-            <label for="type-person-voie2">type de vies sur la première voie</label>
-            <input type="text" id="type-person-voie2" @change="setVoie2" v-model="input_type_voie2">
+            <label for="type-person-voie2">type de vies sur la deuxième voie</label>
+            <select type="text" id="type-person-voie2" @change="setVoie2" v-model="input_type_voie2">
+                <option value="chien">chien</option>
+                <option value="person">person</option>
+                <option value="voluntary person">personne volontaire</option>
+            </select>
 
             <label for="btn-1">nom bouton1</label>
             <input type="text" id="btn-1" v-model="bouton1">
@@ -119,7 +144,7 @@ export default {
             <label for="supprimer 1">supprimer le dilemme n°</label>
             <input type="number" @change="supprimer(e.target.value)" id="supprimer 1">
             <label for="supprimer tout">Supprimer tous les dilemmes:</label>
-            <button type="number" @click="tousSupprimer()" id="supprimer tout">Tout supprimer</button>
+            <button class="btn" @click="tousSupprimer()" id="supprimer tout">Tout supprimer</button>
         </form>
     </div>
     <router-link to="/custom/play" class="none center">
@@ -148,8 +173,44 @@ textarea{
     margin: 20px;
 }
 .colonne *{
-    width: 20vw;
+    width: calc(20vw, 20vw, 20vw);
     margin: 5px;
+}
+
+.mode{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #FEEAFF;
+    width: 520px;
+    height: 100px;
+    font-size: 24px;
+    margin: 25px;
+    border-radius: 20px;
+}
+
+.btn{
+    background-color: #FFECB9;
+    padding: 10px 30px;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.check{
+    display: flex;
+    align-items: center;
+}
+
+.check *{
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+#arbre, #arbre2{
+    width: 25px;
+    height: 25px;
 }
 
 </style>
