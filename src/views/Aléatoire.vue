@@ -401,7 +401,7 @@ export default {
     <p class="détails" v-if="clicked" v-html="Détails"></p>
         <!-- étoiles -->
     <button class="mode" :class="{hidden: !fin}">
-        {{ niveau }} 
+        Aléatoire
         <!-- img d'étoiles en js cette fois ci -->
     </button>
     </div>

@@ -11,8 +11,12 @@ export default{
             étoiles_bonus: Number(localStorage.getItem("étoiles_Bonus")) || 0,
             étoiles_fun: Number(localStorage.getItem("étoiles_Fun")) || 0,
             étoiles_aléatoire: Number(localStorage.getItem("étoiles_Aléatoire")) || 0,
+            étoiles_total: 0,
             n_fun: 2,
         }
+    },
+    created(){
+        this.étoiles_total = this.étoiles_facile + this.étoiles_normal + this.étoiles_difficile + this.étoiles_classique + this.étoiles_bonus + this.étoiles_fun + this.étoiles_aléatoire;
     }
 }
 </script>
@@ -21,6 +25,7 @@ export default{
 <template>
 <div class="vh">
     <h2>Modes de jeu</h2>
+    <h3 class="total">étoiles: {{ étoiles_total }}/32</h3>
     <div class="modes">
         <div class="niveaux">
             <router-link to="/facile" class="none">
@@ -84,6 +89,10 @@ export default{
 </template>
 
 <style scoped>
+
+.total{
+    text-align: center;
+}
 
 .modes{
     display: flex;
