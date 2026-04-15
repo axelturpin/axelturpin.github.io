@@ -83,7 +83,7 @@
     },
     "dilemme5":
     {
-        "description": "Vous êtes médecin dans un hôpital où cinq patients sont gravement malades et mourront sans un traitement expérimental. Vous avez accès à un médicament qui pourrait sauver ces cinq patients, mais il doit être testé sur une personne saine.  \n+Administrer ce médicament à une personne saine comporte un **risque de 1 %** de la tuer. +Sans ce test, les cinq patients mourront certainement. Que faites-vous ?",
+        "description": "Vous êtes médecin dans un hôpital où cinq patients sont gravement malades et mourront sans un médicament innovant. Vous disposez d’un médicament expérimental qui pourrait les sauver, mais il doit être testé rapidement sur une personne saine, qui refuse, **elle ne consent pas à ce test**. \n**+**Administrer ce médicament à une personne saine comporte un risque de 1 % de la tuer. \n**+**Sans ce test, les cinq patients mourront certainement. Que faites-vous ?",
         "bouton1": "Administrer",
         "bouton2": "Inaction",
         "Bon": "Inaction",
