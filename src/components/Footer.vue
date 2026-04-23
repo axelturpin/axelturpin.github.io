@@ -8,6 +8,7 @@ export default{
 <template>
     <footer>
         <div><a target="_blank" href="https://icons8.com/icon/62923/train" class="lien">App</a> icon by <a target="_blank" href="https://icons8.com" class="lien">Icons8</a></div>
+        <div><a target="_blank" href="https://icons8.com/icon/59996/settings">App</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
         <div>Inspiré de <a href="https://imgflip.com/memegenerator" class="lien">Imgflip Meme Generator</a>
             et <a href="https://neal.fun/absurd-trolley-problems/" class="lien">Neal.fun ("absurd-trolley-problems" de Neal Agarwal)</a>
         </div>

@@ -98,6 +98,7 @@ export default {
 </script>
 
 <template>
+    <div class="vh">
     <button class="btn" @click="click">Ajouter ou supprimer un dilemme</button>
     <div v-if="ajout && PasEncoreValider">
         <form action="" class="form">
@@ -150,6 +151,7 @@ export default {
     <router-link to="/custom/play" class="none center">
         <button class="mode">Jouer au custom</button>
     </router-link>
+    </div>
 
   <!-- <Base_custom niveau="Custom" :nombre_dilemmes="nb" :dilemmes_custom="dilemmes"></Base_custom> -->
 </template>
@@ -211,6 +213,11 @@ textarea{
 #arbre, #arbre2{
     width: 25px;
     height: 25px;
+}
+
+.vh{ 
+    /* pour que le footer se mette en bas de l'écran */
+    min-height: calc(100vh - 15vh - 12vh - 30px);
 }
 
 </style>
