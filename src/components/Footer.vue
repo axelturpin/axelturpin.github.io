@@ -29,7 +29,7 @@ footer{
     align-items: center;
     justify-content: space-evenly;
     background-color: #FEEAFF;
-    height: 12vh;
+    height: auto;
     padding: 10px;
 }
 </style>

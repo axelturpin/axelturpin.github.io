@@ -37,7 +37,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: #FEEAFF;
-    height: 15vh;
+    height: auto;
     padding: 10px;
     text-decoration: none;
     color: black
