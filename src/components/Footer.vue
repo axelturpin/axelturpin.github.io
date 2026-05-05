@@ -32,7 +32,7 @@ export default{
         Dilemmes inspirés et scénarios adaptés/reformulés :<br>
         1. <strong>Trolley problem</strong> de Philippa Foot (1967)<br>
         2. Variante du pont avec l’homme obèse de <strong>Judith Jarvis Thomson</strong> (1976)<br>
-        3. Étude de <strong>Spranca, Minsk & Baron</strong> (1991)<br>
+        3. Dilemme adapté de l’étude : <strong>Spranca, Minsk & Baron (1991)</strong>, *"Omission and commission in judgment and choice"*, *Journal of Experimental Social Psychology*, 27(1), 76–105. <br>
         4. Dilemmes des pilules, descriptions de <strong>Mr Phi</strong> sur YouTube (2025)<br>
         5. Machine à expérience de <strong>Nozick</strong> (1974)
     </div>
