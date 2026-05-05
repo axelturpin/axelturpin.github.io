@@ -38,7 +38,7 @@
     },
     "dilemme3": 
     {
-        "description": "Soit un nombre de participant **(1000) qui ont choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et consentent pleinement aux conséquences de cette couleur. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut donc pas y avoir autant de rouges que de bleus",
+        "description": "Soit un nombre de participant **(1001) qui ont choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et consentent pleinement aux conséquences de cette couleur. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus",
         "bouton1": "Bleu",
         "bouton2": "Rouge",
         "Bon": "Bleu",
@@ -57,7 +57,7 @@
     },
     "dilemme4": 
     {
-        "description": "Soit un nombre de participant **(1000) qui ont choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et consentent pleinement aux conséquences de cette couleur. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous ceux qui sont bleue meurt si ils sont minoritaire \n**<u>Rouge:</u>** Tous ceux qui sont rouges sont sauvés\n**<u>Rien</u>**: tu meurs\n+Il ne peut donc pas y avoir autant de rouges que de bleus",
+        "description": "Soit un nombre de participant **(1001) qui ont choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et consentent pleinement aux conséquences de cette couleur. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous ceux qui sont bleue meurt si ils sont minoritaire \n**<u>Rouge:</u>** Tous ceux qui sont rouges sont sauvés\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé (seul) qu'avec cette description du dilemme, il y a plus de rouges que de bleus en moyenne",
         "bouton1": "Bleu",
         "bouton2": "Rouge",
         "Bon": "Rouge",
