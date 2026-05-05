@@ -12,7 +12,10 @@ export default{
         <div>Inspiré de <a href="https://imgflip.com/memegenerator" class="lien">Imgflip Meme Generator</a>
             et <a href="https://neal.fun/absurd-trolley-problems/" class="lien">Neal.fun ("absurd-trolley-problems" de Neal Agarwal)</a>
         </div>
-        <div>Inspiré du trolley problem de Philippa Foot (1967), scénarios adaptés et reformulés.</div>
+        <div>Dilemmes Inspirés avec scénarios adaptés et reformulés.: 1 trolley problem de Philippa Foot (1967)
+            2 Étude de Spranca, Minsk & Baron (1991)
+            3 Dilemme des pilules
+        </div>
         <a href="https://www.flaticon.com/fr/icones-gratuites/etoile" title="étoile icônes" class="lien">Étoile icônes créées par Pixel perfect - Flaticon</a>
     </footer>
 </template>
