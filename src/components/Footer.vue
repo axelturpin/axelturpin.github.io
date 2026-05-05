@@ -15,6 +15,7 @@ export default{
         <div>Dilemmes Inspirés avec scénarios adaptés et reformulés: 1 trolley problem de Philippa Foot (1967)
             2 Étude de Spranca, Minsk & Baron (1991)
             3 Dilemmes des pilules, Descriptions de Mr phi sur youtube
+            4 machine à expérience de nozick 1974
         </div>
         <a href="https://www.flaticon.com/fr/icones-gratuites/etoile" title="étoile icônes" class="lien">Étoile icônes créées par Pixel perfect - Flaticon</a>
     </footer>
