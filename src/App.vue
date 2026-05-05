@@ -32,7 +32,7 @@ export default{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: v-bind(police), sans-serif;
+    font-family: v-bind(police);
 }
 
 body{
