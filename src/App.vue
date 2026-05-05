@@ -8,7 +8,7 @@ export default{
   },
   data(){
     return{
-      police: localStorage.getItem("font") || "Arial"
+      police: localStorage.getItem("font") || "Arial",
     }
   },
   mounted() {
@@ -19,7 +19,7 @@ export default{
 
 </script>
 
-<template>
+<template :style="{ '--police': police }">
   <Header></Header>
   <router-view/>
   <p>Musique : "Infos Tapis", "Alice", "Luiz" – Copyright © Hicham Chahidi, utilisé avec permission via MusicScreen (musique libre de droits).</p>
@@ -40,8 +40,8 @@ body{
 }
 
 @font-face {
-    font-family : "Luciole";
-    src: url("fonts/Luciole/Luciole/Luciole-Regular.ttf");
+font-family: "Luciole";
+    src: url("/fonts/Luciole/Luciole-Regular.ttf") format("truetype");
 }
 
 h2{

@@ -7,7 +7,7 @@
         },
         methods:{
             setPolice(){
-                const police = this.malvoyant ? "Luciole" : "Arial";
+                const police = this.malvoyant ? "Arial" : "Luciole";
                 localStorage.setItem("font", police);
                 localStorage.setItem("malvoyant", JSON.stringify(this.malvoyant));
                 //prévenir l'application que la police a changé (optionnel)

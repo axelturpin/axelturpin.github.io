@@ -217,7 +217,7 @@ textarea{
 
 .vh{ 
     /* pour que le footer se mette en bas de l'écran */
-    min-height: calc(100vh - 15vh - 12vh - 20px - 70px);
+    min-height: calc(100vh - 15vh - 12vh - 20px - 52px);
 }
 
 </style>
