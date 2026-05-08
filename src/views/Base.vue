@@ -326,7 +326,7 @@ export default {
 </script>
 
 <template>
-  <h2>{{ niveau }} {{ numéro }}</h2>
+  <h2>{{ niveau }}: {{ numéro }}</h2>
     <div class="center">
         <!-- v-html pour appliquer des effets au texte (mettre en gras) -->
         <p class="p-description" v-html="description"></p>

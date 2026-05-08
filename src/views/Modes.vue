@@ -9,6 +9,7 @@ export default{
             étoiles_difficile: Number(localStorage.getItem("étoiles_Difficile")) || 0,
             étoiles_classique: Number(localStorage.getItem("étoiles_Classique")) || 0,
             étoiles_bonus: Number(localStorage.getItem("étoiles_Bonus")) || 0,
+            étoiles_bonus2: Number(localStorage.getItem("étoiles_Bonus2")) || 0,
             étoiles_fun: Number(localStorage.getItem("étoiles_Fun")) || 0,
             étoiles_aléatoire: Number(localStorage.getItem("étoiles_Aléatoire")) || 0,
             étoiles_total: 0,
@@ -16,7 +17,7 @@ export default{
         }
     },
     created(){
-        this.étoiles_total = this.étoiles_facile + this.étoiles_normal + this.étoiles_difficile + this.étoiles_classique + this.étoiles_bonus + this.étoiles_fun + this.étoiles_aléatoire;
+        this.étoiles_total = this.étoiles_facile + this.étoiles_normal + this.étoiles_difficile + this.étoiles_classique + this.étoiles_bonus + this.étoiles_bonus2 + this.étoiles_fun + this.étoiles_aléatoire;
     }
 }
 </script>
@@ -25,7 +26,7 @@ export default{
 <template>
 <div class="vh">
     <h2>Modes de jeu</h2>
-    <h3 class="total">étoiles: {{ étoiles_total }}/32</h3>
+    <h3 class="total">étoiles: {{ étoiles_total }}/35</h3>
     <div class="modes">
         <div class="niveaux">
             <router-link to="/facile" class="none">
@@ -54,6 +55,13 @@ export default{
                     Bonus
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_bonus" class="étoile" loading="lazy" :key="n">
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_bonus)" class="étoile" loading="lazy" :key="n">
+                </button>
+            </router-link>
+            <router-link to="/bonus2" class="none">
+                <button class="mode">
+                    Bonus2
+                    <img src="/img/etoile pleine.png" v-for="n in étoiles_bonus2" class="étoile" loading="lazy" :key="n">
+                    <img src="/img/etoile vide.png" v-for="n in (3-étoiles_bonus2)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
 

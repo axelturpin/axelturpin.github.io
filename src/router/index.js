@@ -12,6 +12,7 @@ import Classique from "../views/Classique.vue";
 import Fun from "@/views/Fun.vue";
 import Bonus from "@/views/Bonus.vue";
 import Base_custom from "@/views/Base_custom.vue";
+import Bonus2 from "@/views/Bonus2.vue";
 
 //définir les routes
 
@@ -70,6 +71,11 @@ const roads = [
         path: "/bonus",
         name: "Bonus",
         component: Bonus
+    },
+    {
+        path: "/bonus2",
+        name: "Bonus2",
+        component: Bonus2
     },
     {
         path: "/parametres",
