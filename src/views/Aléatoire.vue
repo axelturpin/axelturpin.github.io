@@ -108,9 +108,6 @@ export default {
         }
     },
     async chargement(){
-            this.$nextTick(() => {
-            window.scrollTo(0, 0) 
-            });
         // attendre que le DOM rende les éléments (v-if et v-for)
             const niveauAléatoire = Math.ceil(Math.random() * 4)
             switch(niveauAléatoire){
@@ -139,6 +136,7 @@ export default {
             this.dilemme = data[`dilemme${dilemmeAléatoire}`];
 
             this.$nextTick(async () => {
+            window.scrollTo(0, 0) 
             this.description = this.dilemme.description
             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
             .replace(/\n/g, '<br>');
