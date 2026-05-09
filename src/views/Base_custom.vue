@@ -383,7 +383,7 @@ export default {
         <!-- img d'étoiles en js cette fois ci -->
     </button>
     </div>
-    <div class="center">
+    <div class="center wrap">
         <button class="btn suivant" v-if="clicked && !fin" @click="suivant">Suivant</button>
         <router-link to="/" class="router-link" v-if="fin">
                 <button class="btn accueil" v-if="fin">Accueil</button>
