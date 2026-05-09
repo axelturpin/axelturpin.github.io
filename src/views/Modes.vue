@@ -57,9 +57,9 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_bonus)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/bonus2" class="none">
+            <router-link to="/cache" class="none" v-if="this.étoiles_total >= 10">
                 <button class="mode">
-                    Bonus2
+                    Caché
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_bonus2" class="étoile" loading="lazy" :key="n">
                     <img src="/img/etoile vide.png" v-for="n in (3-étoiles_bonus2)" class="étoile" loading="lazy" :key="n">
                 </button>

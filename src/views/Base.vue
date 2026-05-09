@@ -367,7 +367,7 @@ export default {
         <div v-if="dilemme.href_soucoupe"><a :href="dilemme.href_soucoupe" class="lien">soucoup inspiré de Imgflip Meme Generator</a></div>
     </div>
 
-    <div class="center">
+    <div class="center wrap">
         <button class="btn btn-1" @click="click1">{{ dilemme.bouton1 }}</button>
         <button class="btn btn-2" @click="click2">{{ dilemme.bouton2 }}</button>
         <button class="btn btn-3" @click="click3" v-if="dilemme.bouton3">{{ dilemme.bouton3 }}</button>

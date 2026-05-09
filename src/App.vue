@@ -59,6 +59,11 @@ h2{
     justify-content: center;
 }
 
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .none{
     text-decoration: none;
 }
