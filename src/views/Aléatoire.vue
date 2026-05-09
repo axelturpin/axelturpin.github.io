@@ -108,6 +108,9 @@ export default {
         }
     },
     async chargement(){
+            this.$nextTick(() => {
+            window.scrollTo(0, 0), 
+            0});
         // attendre que le DOM rende les éléments (v-if et v-for)
             const niveauAléatoire = Math.ceil(Math.random() * 4)
             switch(niveauAléatoire){
