@@ -11,6 +11,8 @@ export default {
       clicked: false,
       Détails: "",
       score: 0,
+      score_temp: 0,
+      ratio: 3, //pour calculer le score selon la difficulté
       étoiles_fun: 0,
       afficher_étoiles: false,
       fin: false,
@@ -81,7 +83,7 @@ export default {
             if(train){
                 train.style.display = "none";
             }
-            }, 1950);
+            }, 1900);
             
             if(this.dilemme.bouton2 === this.dilemme.Bon){
                 this.score_temp = 100
@@ -314,6 +316,20 @@ export default {
     //pour avoir le CSS au chargement, je reprends la fonction suivante:
     this.chargement();
 
+    switch(this.niveau){
+        case "Facile":
+            this.ratio = 4;
+            break;
+        case "Normal":
+            this.ratio = 1.6;
+            break;
+        case "Difficile":
+            this.ratio = 0.6;
+            break;
+        default:
+            this.ratio = 3;
+    }
+
   } catch (error) {
     this.error = error.message;
     console.error(error);
@@ -363,8 +379,8 @@ export default {
     </div>
 
     <div class="center colonne">
-        <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(score_temp) }}</p>
-    <p class="score">Score total: {{ Math.floor(score) }}</p>
+        <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(this.score_temp) }}</p>
+    <p class="score">Score total: {{ Math.floor(this.score) }}</p>
     <p class="détails" v-if="clicked">{{ Détails }}</p>
         <!-- étoiles -->
     <button class="mode" :class="{hidden: !fin}" >

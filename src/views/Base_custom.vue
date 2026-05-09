@@ -21,7 +21,8 @@ export default {
       clicked: false,
       Détails: "",
       score: 0,
-    //   ratio: 3, //pour calculer le score selon la difficulté
+      score_temp: 0,
+      ratio: 3, //pour calculer le score selon la difficulté
       étoiles_niveau: 0,
       afficher_étoiles: false,
       fin: false,
