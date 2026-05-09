@@ -107,6 +107,7 @@ export default {
     },
     chargement(){
         // attendre que le DOM rende les éléments (v-if et v-for)
+        window.scrollTo(0, 0);
         this.$nextTick(() => {
             this.description = this.dilemme.description
             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')

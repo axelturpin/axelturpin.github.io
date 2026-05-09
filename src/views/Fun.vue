@@ -124,6 +124,7 @@ export default {
         }
     },
     chargement(){
+        window.scrollTo(0, 0);
         // attendre que le DOM rende les éléments (v-if et v-for)
         this.$nextTick(() => {
             this.description = this.dilemme.description
