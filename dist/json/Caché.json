@@ -58,6 +58,46 @@
         "voie2": 0,
         "voie1_arbre": false,
         "voie2_arbre": false
+    },
+    "dilemme4":{
+        "description": "Un **criminel à tué 2 personnes**, et on ne peut pas le mettre en prison, \nil risque de tuer encore 2 personnes avec 50% de chances, \ndoit-on le tuer \n**+**Tuer \n**+**Inaction \n**+**Peu importe",
+        "bouton1": "Tuer",
+        "bouton2": "Inaction",
+        "bouton3": "Peu importe",
+        "Bon": "Peu importe",
+        "Détails": "<u>Bon choix</u>: Peu importe, M = 0 dans tous les cas, j'ai utilisé la notion d'empêchement \n(dans la partie Respect + formule du document Finalitarisme)",
+        "M": 3,
+        "M1": 2,
+        "M2": 2,
+        "M3": 3,
+        "src_plan": "./img/vol.png",
+        "href": "",
+        "voie1_type": "",
+        "voie2_type": "",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+    "dilemme5":{
+        "description": "Quel est le but de la vie ?",
+        "bouton1": "Morale",
+        "bouton2": "Science",
+        "bouton3": "Autre",
+        "Bon": "Morale",
+        "Détails": "<u>Bon choix</u>: Morale \nArgument: \nLa définition de la morale est de faire ce qu'il y a de mieux. \nLa définition du but de la vie est de faire ce qu'il y a de mieux \nDonc le but de la vie est la morale",
+        "M": 3,
+        "M1": 3,
+        "M2": 1,
+        "M3": 1.1,
+        "src_plan": "./img/question.png",
+        "href": "",
+        "voie1_type": "",
+        "voie2_type": "",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_arbre": false,
+        "voie2_arbre": false
     }
 
 

@@ -15,7 +15,7 @@ export default {
 <template>
     <!-- 3 dilemme pour l'instant -->
      <!-- 3 dans Modes aussi -->
-  <Base niveau="Caché" nombre_dilemmes="3"></Base>
+  <Base niveau="Caché" nombre_dilemmes="5"></Base>
 </template>
 
 <style scoped>

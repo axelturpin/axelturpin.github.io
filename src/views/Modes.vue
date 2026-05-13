@@ -9,7 +9,7 @@ export default{
             étoiles_difficile: Number(localStorage.getItem("étoiles_Difficile")) || 0,
             étoiles_classique: Number(localStorage.getItem("étoiles_Classique")) || 0,
             étoiles_bonus: Number(localStorage.getItem("étoiles_Bonus")) || 0,
-            étoiles_bonus2: Number(localStorage.getItem("étoiles_Bonus2")) || 0,
+            étoiles_cache: Number(localStorage.getItem("étoiles_Caché")) || 0,
             étoiles_fun: Number(localStorage.getItem("étoiles_Fun")) || 0,
             étoiles_aléatoire: Number(localStorage.getItem("étoiles_Aléatoire")) || 0,
             étoiles_total: 0,
@@ -17,7 +17,7 @@ export default{
         }
     },
     created(){
-        this.étoiles_total = this.étoiles_facile + this.étoiles_normal + this.étoiles_difficile + this.étoiles_classique + this.étoiles_bonus + this.étoiles_bonus2 + this.étoiles_fun + this.étoiles_aléatoire;
+        this.étoiles_total = this.étoiles_facile + this.étoiles_normal + this.étoiles_difficile + this.étoiles_classique + this.étoiles_bonus + this.étoiles_cache + this.étoiles_fun + this.étoiles_aléatoire;
     }
 }
 </script>
@@ -60,8 +60,8 @@ export default{
             <router-link to="/cache" class="none" v-if="this.étoiles_total >= 10">
                 <button class="mode">
                     Caché
-                    <img src="/img/etoile pleine.png" v-for="n in étoiles_bonus2" class="étoile" loading="lazy" :key="n">
-                    <img src="/img/etoile vide.png" v-for="n in (3-étoiles_bonus2)" class="étoile" loading="lazy" :key="n">
+                    <img src="/img/etoile pleine.png" v-for="n in étoiles_cache" class="étoile" loading="lazy" :key="n">
+                    <img src="/img/etoile vide.png" v-for="n in (5-étoiles_cache)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
 
