@@ -1,7 +1,7 @@
 {
     "dilemme1": 
     {
-        "description": "**La probabilité à priori de mourir écrasé par le train est de 50%**\nSoit une voie avec 5 personnes et une voie adjacente avec 5 personnes mais un arbre devant pouvant faire dérailler le train avec une probabilité de 50%.\n+Un train automatique (sans personnes) arrive sur la voie des 5 personnes, si on ne fait rien 5 personnes mourront. \n+On peut dévier le train sur l'autre voie, pour sauver 5 personnes mais 5 personnes risquent de mourir.",
+        "description": "**La probabilité à priori de mourir écrasé par le train est de 50%**\nSoit une voie avec 5 personnes et une voie adjacente avec 5 personnes mais un arbre devant pouvant faire **dérailler le train avec une probabilité de 50%**.\n+Un train automatique (sans personnes) arrive sur la voie des 5 personnes, si on ne fait rien 5 personnes mourront. \n+On peut dévier le train sur l'autre voie, pour sauver 5 personnes mais 5 personnes risquent de mourir.",
         "bouton1": "Dévier",
         "bouton2": "Inaction",
         "Bon": "Dévier",
