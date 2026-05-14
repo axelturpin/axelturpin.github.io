@@ -5,7 +5,7 @@
         "bouton2": "Inaction",
         "bouton3": "Manque d'information",
         "Bon": "Guerre",
-        "Détails": "<u>Bon choix</u>: Guerre, car si on ne fait rien M = -1000 car 1000 personnes non consentantes meurent, alors que si on fait la guerre, c'est mal mais moins mal, 200 soldats (donc volontaires => 200*0.5 = 100) + 110 civils, donc M = -210. (pour le calcul les points je rentre des valeurs différentes)",
+        "Détails": "<u>Bon choix</u>: Guerre, car si on ne fait rien M = -1000 (ou moins puisque que je n'ai pas compté la souffrance et ma formule est limite pour savoir si c'est bien quand les conséquences sont futures) car 1000 personnes non consentantes meurent, alors que si on fait la guerre, c'est mal mais moins mal, 200 soldats (donc volontaires => 200*0.5 = 100) + 110 civils, donc M = -210. \n(pour le calcul les points je rentre des valeurs différentes)",
         "M": 2.5,
         "M1": 2.5,
         "M2": 1,
