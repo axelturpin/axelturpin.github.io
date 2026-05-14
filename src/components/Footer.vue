@@ -24,7 +24,7 @@ export default{
     <div>
          Dilemmes + dessins Inspiré de :
         <a href="https://imgflip.com/memegenerator" class="lien">Imgflip Meme Generator</a> et
-        <a href="https://neal.fun/absurd-trolley-problems/" class="lien">"Absurd Trolley Problems" par Neal Agarwal</a>.
+        <a href="https://neal.fun/absurd-trolley-problems/" class="lien">"Absurd Trolley Problems" par Neal Agarwal (Neal.fun)</a>.
     </div>
 
     <!-- Dilemmes et sources philosophiques/scientifiques -->

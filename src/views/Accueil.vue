@@ -7,7 +7,11 @@ export default{
             Avec des mesures très subjectives de la mortalité (on peut ne pas être d'accord) si désaccord entre la formule et l’intuition commune, alors je me base sur l’intuition commune, par exemple pour les dilemmes des pilules, je donne des scores sans calculs de moralité)\n
             Cette théorie (le Finalitarisme) est causale, càd que si inaction alors la moralité M = 0\nPlus d’information en dessous`,
         }
-      } 
+      }, mounted(){
+        this.$nextTick(() => {
+            window.scrollTo(0, 0);
+        });
+      }
 }
 </script>
 
