@@ -26,7 +26,7 @@ export default{
 <template>
 <div class="vh">
     <h2>Modes de jeu</h2>
-    <h3 class="total">étoiles: {{ étoiles_total }}/35</h3>
+    <h3 class="total">étoiles: {{ étoiles_total }}/37</h3>
     <div class="modes">
         <div class="niveaux">
             <router-link to="/facile" class="none">
