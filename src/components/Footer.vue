@@ -22,7 +22,7 @@ export default{
 
     <!-- Inspirations de contenu -->
     <div>
-        Inspiré de :
+         Dilemmes + dessins Inspiré de :
         <a href="https://imgflip.com/memegenerator" class="lien">Imgflip Meme Generator</a> et
         <a href="https://neal.fun/absurd-trolley-problems/" class="lien">"Absurd Trolley Problems" par Neal Agarwal</a>.
     </div>
