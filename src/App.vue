@@ -41,7 +41,7 @@ body{
 
 @font-face {
 font-family: "Luciole";
-    src: url("/fonts/Luciole/Luciole-Regular.ttf") format("truetype");
+    src: url("./fonts/Luciole/Luciole-Regular.ttf") format("truetype");
 }
 
 h2{
