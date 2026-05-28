@@ -80,7 +80,7 @@
         "voie2_arbre": false
     },
     "dilemme5":{
-        "description": "Quel est le but de la vie ? \n**+**Le but de la vie est de recevoir, d’apprendre, d’appliquer, et de transmettre la morale. \n**+**Le but de la vie est de recevoir, d’apprendre, d’appliquer, et de transmettre la science. \n**+**Autre",
+        "description": "Quel est le but de la vie ? \n**+**Le but de la vie est de recevoir, d’apprendre, d’appliquer, et de transmettre la morale. \n**+**Le but de la vie est d’apprendre, d’utiliser, et de transmettre la science. \n**+**Autre",
         "bouton1": "Morale",
         "bouton2": "Science",
         "bouton3": "Autre",
