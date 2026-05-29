@@ -67,7 +67,7 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_cache)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/enfoui" class="none" v-if="this.étoiles_total >= 30">
+            <router-link to="/enfoui" class="none" v-if="this.étoiles_total >= 24">
                 <button class="mode">
                     Enfoui
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_enfoui" class="étoile" loading="lazy" :key="n">
@@ -99,7 +99,7 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (n_fun - étoiles_fun)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/pilules" class="none" v-if="this.étoiles_total >= 20">
+            <router-link to="/pilules" class="none" v-if="this.étoiles_total >= 18">
                 <button class="mode">
                     Pilules
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_pilules" class="étoile" loading="lazy" :key="n">
