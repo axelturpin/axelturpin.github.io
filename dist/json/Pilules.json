@@ -5,7 +5,7 @@
         "bouton1": "Bleu",
         "bouton2": "Rouge",
         "Bon": "Bleu",
-        "Détails": "'Bon choix: Bleue' (le respect est plus grand, car on peut sauver les autres bleus, très subjectif) \nM(inaction) = 0, M(bleu) = 0.52 M(rouge) = 0.20 les valeurs exactes dépendent du nombre de participants, rouge gagne que pour 3 participants",
+        "Détails": "'Bon choix: Bleue' (le respect est plus grand, car on peut sauver les autres bleus, très subjectif) \nM(inaction) = 0, M(bleu) = 0.52 M(rouge) = 0.20 les valeurs exactes dépendent du nombre de participants, rouge gagne que pour 3 participants, car peu de chance de tuer 1 et 1 seul bleu",
         "M": 0.52,
         "M1": 0.52,
         "M2": 0.20,
