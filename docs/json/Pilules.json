@@ -1,0 +1,98 @@
+{
+    "dilemme1": 
+    {
+        "description": "Dilemme des pilules pour soi-même \nSoit un nombre de participant **(101)**, \nTu fais partie des participants \nTu choisis ta couleur, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous le monde est sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne \n+Dans ce dilemme uniquement, il y a de l'intérêt personnel, je demande donc à faire comme si il n'y en avait pas",
+        "bouton1": "Bleu",
+        "bouton2": "Rouge",
+        "Bon": "Bleu",
+        "Détails": "'Bon choix: Bleue' (le respect est plus grand, car on peut sauver les autres bleus, très subjectif) \nM(inaction) = 0, M(bleu) = 0.52 M(rouge) = 0.20 les valeurs exactes dépendent du nombre de participants, rouge gagne que pour 3 participants",
+        "M": 0.52,
+        "M1": 0.52,
+        "M2": 0.20,
+        "src_plan": "./img/pilules.png",
+        "href": "https://imgflip.com/i/alenyu",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+    "dilemme2": 
+    {
+        "description": "Dilemme des pilules pour autrui C(bleu) = 1 C(rouge) = 1 \nSoit un nombre de participant **(101) qui ont choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **consentent pleinement aux conséquences de cette couleur**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
+        "bouton1": "Bleu",
+        "bouton2": "Rouge",
+        "Bon": "Bleu",
+        "Détails": "'Bon choix: Bleue' (le respect est plus grand, car on peut sauver les autres bleus, très subjectif) \nM(inaction) = 0, M(bleu) = 0.96 M(rouge) = 0.91 les valeurs exactes dépendent du nombre de participants ici 101",
+        "M": 0.96,
+        "M1": 0.96,
+        "M2": 0.91,
+        "src_plan": "./img/pilules.png",
+        "href": "https://imgflip.com/i/alenyu",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+    "dilemme3": 
+    {
+        "description": "Dilemme des pilules pour autrui C(bleu) = 0 C(rouge) = 0 \nSoit un nombre de participant **(101) qui n'ont pas choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **ne consentent pas du tout aux conséquences de cette couleur**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
+        "bouton1": "Bleu",
+        "bouton2": "Rouge",
+        "Bon": "Bleu",
+        "Détails": "'Bon choix: Bleue' (le respect est plus grand, car on peut sauver les autres bleus, très subjectif) \nM(inaction) = 0, M(bleu) = 0.96 M(rouge) = 0.91 les valeurs exactes dépendent du nombre de participants ici 101",
+        "M": 0.48,
+        "M1": 0.48,
+        "M2": 0.18,
+        "src_plan": "./img/pilules.png",
+        "href": "https://imgflip.com/i/alenyu",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+    "dilemme4": 
+    {
+        "description": "Dilemme des pilules pour autrui C(bleu) = 1 C(rouge) = 0 \nSoit un nombre de participant **(101) qui n'ont pas choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **disent tous vouloir êtres bleus mais surtout pas rouge**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
+        "bouton1": "Bleu",
+        "bouton2": "Rouge",
+        "Bon": "Bleu",
+        "Détails": "'Bon choix: Bleue' (le respect est plus grand, car on peut sauver les autres bleus, très subjectif) \nM(inaction) = 0, M(bleu) = 0.96 M(rouge) = 0.91 les valeurs exactes dépendent du nombre de participants ici 101",
+        "M": 0.96,
+        "M1": 0.96,
+        "M2": 0.41,
+        "src_plan": "./img/pilules.png",
+        "href": "https://imgflip.com/i/alenyu",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+    "dilemme5": 
+    {
+        "description": "Dilemme des pilules pour autrui C(bleu) = 0 C(rouge) = 1 \nSoit un nombre de participant **(101) qui n'ont pas choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **disent tous vouloir êtres rouges mais surtout pas bleu**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
+        "bouton1": "Bleu",
+        "bouton2": "Rouge",
+        "Bon": "Bleu",
+        "Détails": "'Bon choix: Rouge' (le respect est plus grand, car les rouges sont consentant mais pas les bleus) \nM(inaction) = 0, M(bleu) = 0.96 M(rouge) = 0.68 les valeurs exactes dépendent du nombre de participants, ici 101",
+        "M": 0.68,
+        "M1": 0.48,
+        "M2": 0.68,
+        "src_plan": "./img/pilules.png",
+        "href": "https://imgflip.com/i/alenyu",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    }
+
+}

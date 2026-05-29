@@ -312,6 +312,9 @@ export default {
         case "Difficile":
             this.ratio = 0.6;
             break;
+        case "Pilules":
+            this.ratio = 1;
+            break;
         default:
             this.ratio = 3;
     }

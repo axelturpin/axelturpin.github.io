@@ -34,8 +34,8 @@ export default{
         2. Variante du pont avec l’homme obèse de <strong>Judith Jarvis Thomson</strong> (1976), *"Killing, Letting Die, and the Trolley Problem"* (*The Monist*, 59(2), 204–217).<br>
         3. Dilemme adapté de l’étude : <strong>Spranca, Minsk & Baron (1991)</strong>, *"Omission and commission in judgment and choice"*, *Journal of Experimental Social Psychology*, 27(1), 76–105.<br>
         4. Dilemmes des pilules, inspirés de la vidéo *"Le dilemme des pilules"* de <strong>Mr Phi</strong> (<a href="https://www.youtube.com/watch?v=lo7iJnq_U9M" class="lien">YouTube</a>, (2025)).<br>
-        5. Machine à expérience de <strong>Robert Nozick</strong> (1974), *"Anarchy, State, and Utopia"* (Chapitre 3).
-        6. Dilemme des pilules de Malleus Magorum (pseudo sur le discord: "Chez MrPhi")
+        5. Machine à expérience de <strong>Robert Nozick</strong> (1974), *"Anarchy, State, and Utopia"* (Chapitre 3). <br>
+        6. Dilemmes des pilules de Malleus Magorum (pseudo sur le discord: "Chez MrPhi")
     </div>
 </footer>
 </template>

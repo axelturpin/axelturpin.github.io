@@ -1,0 +1,22 @@
+{
+    "dilemme1": 
+    {
+        "description": "**La probabilité à priori de mourir écrasé par le train est de 50%**\n**Les 9 personnes au total qui sont sur les voix ont été choisi aléatoirement parmis la population mondiale, donc personne n'est visé personnellement**\nSoit une voie avec 5 personnes et une voie adjacente avec 4 personnes.\n+Un train arrive sur la voie des 5 personnes, si on ne fait rien 5 personnes mourront. \n+On peut dévier le train sur l'autre voie, pour sauver 5 personnes mais 4 personnes mourront.",
+        "bouton1": "Dévier",
+        "bouton2": "Inaction",
+        "Bon": "Dévier",
+        "Détails": "Dévier le train est mieux car le fait que personne en particulier ne soit visé (personnes choisi aléatoirement parmis tout le monde) augmente le respect à presque 100%\nM(inaction) = 0, M(Dévier) = 1 (subjectif, mais ça justifie le fait d'avoir le droit de respirer autrement, argument = processus de selection des victimes, car respirer pollu et peut donc tuer d'autres humains, c'est juste que personne n'est visé)",
+        "M": 1,
+        "M1": 1,
+        "M2": 0,
+        "src_plan": "./img/rails.png",
+        "href": "https://imgflip.com/i/al62xe",
+        "href_person": "https://imgflip.com/i/amxn79",
+        "voie1": 5,
+        "voie2": 4,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    }
+}

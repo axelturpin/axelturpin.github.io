@@ -3,7 +3,7 @@
 import Base from "./Base.vue";
 
 export default {
-    name: 'Caché',
+    name: 'Pilules',
     components: {
     Base
   },
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <Base niveau="Caché" nombre_dilemmes="5"></Base>
+  <Base niveau="Pilules" nombre_dilemmes="5"></Base>
 </template>
 
 <style scoped>

@@ -3,7 +3,7 @@
 import Base from "./Base.vue";
 
 export default {
-    name: 'Caché',
+    name: 'Enfoui',
     components: {
     Base
   },
@@ -13,7 +13,9 @@ export default {
 </script>
 
 <template>
-  <Base niveau="Caché" nombre_dilemmes="5"></Base>
+    <!-- 1 dilemme pour l'instant -->
+     <!-- 1 dans Modes aussi -->
+  <Base niveau="Enfoui" nombre_dilemmes="1"></Base>
 </template>
 
 <style scoped>

@@ -12,12 +12,14 @@ export default{
             étoiles_cache: Number(localStorage.getItem("étoiles_Caché")) || 0,
             étoiles_fun: Number(localStorage.getItem("étoiles_Fun")) || 0,
             étoiles_aléatoire: Number(localStorage.getItem("étoiles_Aléatoire")) || 0,
+            étoiles_pilules: Number(localStorage.getItem("étoiles_Pilules")) || 0,
+            étoiles_enfoui: Number(localStorage.getItem("étoiles_Enfoui")) || 0,
             étoiles_total: 0,
             n_fun: 2,
         }
     },
     created(){
-        this.étoiles_total = this.étoiles_facile + this.étoiles_normal + this.étoiles_difficile + this.étoiles_classique + this.étoiles_bonus + this.étoiles_cache + this.étoiles_fun + this.étoiles_aléatoire;
+        this.étoiles_total = this.étoiles_facile + this.étoiles_normal + this.étoiles_difficile + this.étoiles_classique + this.étoiles_bonus + this.étoiles_cache + this.étoiles_fun + this.étoiles_aléatoire + this.étoiles_pilules + this.étoiles_enfoui;
     }
 }
 </script>
@@ -26,9 +28,10 @@ export default{
 <template>
 <div class="vh">
     <h2>Modes de jeu</h2>
-    <h3 class="total">étoiles: {{ étoiles_total }}/37</h3>
+    <h3 class="total">étoiles: {{ étoiles_total }}/42</h3>
     <div class="modes">
         <div class="niveaux">
+            <span class="center taille">Niveaux</span>
             <router-link to="/facile" class="none">
                 <button class="mode">
                     Facile 
@@ -64,9 +67,17 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_cache)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
+            <router-link to="/enfoui" class="none" v-if="this.étoiles_total >= 30">
+                <button class="mode">
+                    Enfoui
+                    <img src="/img/etoile pleine.png" v-for="n in étoiles_enfoui" class="étoile" loading="lazy" :key="n">
+                    <img src="/img/etoile vide.png" v-for="n in (1-étoiles_enfoui)" class="étoile" loading="lazy" :key="n">
+                </button>
+            </router-link>
 
         </div>
         <div class="autre">
+            <span class="center taille">Autre</span>
             <router-link to="/classique" class="none">
                 <button class="mode">
                     Classique
@@ -86,6 +97,13 @@ export default{
                     Fun
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_fun" class="étoile" loading="lazy" :key="n">
                     <img src="/img/etoile vide.png" v-for="n in (n_fun - étoiles_fun)" class="étoile" loading="lazy" :key="n">
+                </button>
+            </router-link>
+            <router-link to="/pilules" class="none" v-if="this.étoiles_total >= 20">
+                <button class="mode">
+                    Pilules
+                    <img src="/img/etoile pleine.png" v-for="n in étoiles_pilules" class="étoile" loading="lazy" :key="n">
+                    <img src="/img/etoile vide.png" v-for="n in (5 - étoiles_pilules)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
             <router-link to="/custom" class="none">
@@ -125,6 +143,12 @@ export default{
 .niveaux, .autre{
     display: flex;
     flex-direction: column;
+    border: 1.5px solid black;
+    border-radius: 20px;
+}
+
+.taille{
+    font-size: 1.8rem;
 }
 
 .vh{ 

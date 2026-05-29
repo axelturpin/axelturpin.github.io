@@ -14,6 +14,8 @@ import Bonus from "@/views/Bonus.vue";
 import Base_custom from "@/views/Base_custom.vue";
 // import Bonus2 from "@/views/Bonus2.vue";
 import Caché from "@/views/Caché.vue";
+import Pilules from "@/views/Pilules.vue";
+import Enfoui from "@/views/Enfoui.vue";
 
 //définir les routes
 
@@ -77,6 +79,21 @@ const roads = [
         path: "/cache",
         name: "Caché",
         component: Caché
+    },
+    {
+        path: "/pilules",
+        name: "Pilules",
+        component: Pilules
+    },
+    {
+        path: "/enfoui",
+        name: "Enfoui",
+        component: Enfoui
+    },
+    {
+        path: "/pilules",
+        name: "Pilules",
+        component: Pilules
     },
     {
         path: "/parametres",
