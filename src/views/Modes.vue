@@ -67,7 +67,7 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_cache)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/enfoui" class="none" v-if="this.étoiles_total >= 24">
+            <router-link to="/enfoui" class="none" v-if="this.étoiles_total >= 21">
                 <button class="mode">
                     Enfoui
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_enfoui" class="étoile" loading="lazy" :key="n">
