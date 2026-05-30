@@ -18,5 +18,45 @@
         "voie2_type": "person",
         "voie1_arbre": false,
         "voie2_arbre": false
+    },
+    "dilemme2":
+    {
+        "description": "10 personnes sont infectées mais une personne est saine, et on peut faire un **remède en l’analysant avec une probabilité de 90%** mais elle se trouve sur une voie du dilemme du tramway, 5 autres personnes sont sur la voie adjacente, la **probabilité à priori que le train passe est de 50%** \n+<u>Inaction:</u> Si on la laisse mourir, les 5 personnes de la voie adjacente seront sauvés mais les 10 infectées mourront \n+<u>Action</u>: Si on la sauve, 5 personne meurent pour en sauver 10",
+        "bouton1": "Action",
+        "bouton2": "Inaction",
+        "Bon": "Inaction",
+        "Détails": "'<u>Bon choix</u>': Les 2 sont aussi bien environ, mais laisser mourir est peut-être légèrement mieux, car le respect est de 0.5 ou légèrement moins selon l’opinion (la formule choisie)",
+        "M": 0,
+        "M1": -0.5,
+        "M2": 0,
+        "src_plan": "./img/medicament.png",
+        "href": "https://imgflip.com/i/alptp6",
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_arbre": false,
+        "voie2_arbre": false
+    },
+    "dilemme3":
+    {
+        "description": "Soit un train automatique (personne dedans) qui arrive sur une voie avec 5 personnes dessus, nommés D1,..,D5, une **2e voie à côté qui contient 1 seule personne A**, et une **3e voie qui contient 5 personnes B1,..., B5 mais avec une partie d’un arbre dessus**, les 11 personnes sur les voies 1 à 3 sont tombées par accident mais **4 personnes sont allés volontairement sur une 4e voie** qui peut elle aussi être relié à la voie du train: Soit X1 a X4 ces 4 personnes. \net une personne O peut actionner un levier pour faire aller le train ou il le souhaite. \nAvant que le train arrive, la probabilité que le train arrive sur la 1ere voie était de pt = 0.5 tout comme pour les 2 autres voies. La liberté investie par toutes ces personnes est la même: li = 10. On fixe la moralité en conséquence d’un mort à My = 1. On suppose que le consentement de ceux qui meurent est de 0, et de ceux qui survivent est de 1. La probabilité que le train déraille si il va sur la 3e voie est de pd = 0.5. \nJ'enlève l'inaction car c'est la moins bonne action des 4, et j'ai mis que 3 boutons. L'image n'est pas entière (voie 1 et 2 seulement) car trop de voies à représenter",
+        "bouton1": "Voie 2",
+        "bouton2": "Voie 3",
+        "bouton3": "Voie 4",
+        "Bon": "Voie 2",
+        "Détails": "'<u>Bon choix</u>': Les 2 sont aussi bien environ, mais laisser mourir est peut-être légèrement mieux, car le respect est de 0.5 ou légèrement moins selon l’opinion (la formule choisie) \nVoie 2 avec M = 1.5 Vie/15 \nVoie 3 avec, M = 1.25 Vie/15 \nVoie 4 avec, M = 1,1875 Vie/15 \nVoie 1 avec M = 0 Vie/15",
+        "M": 1.5,
+        "M1": 1.5,
+        "M2": 1.25,
+        "M3": 1.1875,
+        "src_plan": "./img/rails.png",
+        "href": "https://imgflip.com/i/alptp6",
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1": 5,
+        "voie2": 1,
+        "voie1_arbre": false,
+        "voie2_arbre": false
     }
 }

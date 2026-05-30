@@ -28,7 +28,7 @@ export default{
 <template>
 <div class="vh">
     <h2>Modes de jeu</h2>
-    <h3 class="total">étoiles: {{ étoiles_total }}/42</h3>
+    <h3 class="total">étoiles: {{ étoiles_total }}/45</h3>
     <div class="modes">
         <div class="niveaux">
             <span class="center taille">Niveaux</span>
@@ -60,6 +60,7 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_bonus)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
+            <button class="mode" v-if="this.étoiles_total < 10">{{ this.étoiles_total }}/10 étoiles</button>
             <router-link to="/cache" class="none" v-if="this.étoiles_total >= 10">
                 <button class="mode">
                     Caché
@@ -67,11 +68,12 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_cache)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/enfoui" class="none" v-if="this.étoiles_total >= 21">
+            <button class="mode" v-if="this.étoiles_total < 20">{{ this.étoiles_total }}/20 étoiles</button>
+            <router-link to="/enfoui" class="none" v-if="this.étoiles_total >= 20">
                 <button class="mode">
                     Enfoui
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_enfoui" class="étoile" loading="lazy" :key="n">
-                    <img src="/img/etoile vide.png" v-for="n in (1-étoiles_enfoui)" class="étoile" loading="lazy" :key="n">
+                    <img src="/img/etoile vide.png" v-for="n in (3-étoiles_enfoui)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
 
@@ -99,7 +101,8 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (n_fun - étoiles_fun)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/pilules" class="none" v-if="this.étoiles_total >= 18">
+            <button class="mode" v-if="this.étoiles_total < 20">{{ this.étoiles_total }}/20 étoiles</button>
+            <router-link to="/pilules" class="none" v-if="this.étoiles_total >= 20">
                 <button class="mode">
                     Pilules
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_pilules" class="étoile" loading="lazy" :key="n">

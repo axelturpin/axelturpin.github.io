@@ -25,6 +25,10 @@
                     localStorage.setItem("étoiles_Classique", 0);
                     localStorage.setItem("étoiles_Bonus", 0);
                     localStorage.setItem("étoiles_Fun", 0);
+                    localStorage.setItem("étoiles_Aléatoire", 0);
+                    localStorage.setItem("étoiles_Caché", 0);
+                    localStorage.setItem("étoiles_Enfoui", 0);
+                    localStorage.setItem("étoiles_Pilules", 0);
                 } else {
                     alert("Action annulée.");
                 }

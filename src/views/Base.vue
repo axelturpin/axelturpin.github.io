@@ -30,6 +30,30 @@ export default {
     }
   },
   methods: {
+    resetNiveau(){
+      if (this.timeoutId) {
+        clearTimeout(this.timeoutId);
+        this.timeoutId = null;
+      }
+      const mode = document.querySelector(".mode");
+      if (mode) {
+        mode.querySelectorAll(".étoile").forEach(star => star.remove());
+      }
+      this.dilemme = {};
+      this.error = null;
+      this.clicked = false;
+      this.score = 0;
+      this.score_temp = 0;
+      this.étoiles_niveau = 0;
+      this.afficher_étoiles = false;
+      this.fin = false;
+      this.numéro = 0;
+      this.clickBtn1 = false;
+      this.clickBtn2 = false;
+      this.clickBtn3 = false;
+      this.socoupAnimation = false;
+      this.suivant();
+    },
     click1(){
         if (!this.clicked){
             this.clicked = true;
@@ -222,6 +246,10 @@ export default {
             const screenWidth = window.innerWidth;
             this.$nextTick(() => { //afficher étoiles:
             if(!this.afficher_étoiles){
+                const mode = document.querySelector(".mode");
+                if (mode) {
+                  mode.querySelectorAll(".étoile").forEach(star => star.remove());
+                }
                 for(let i = 0; i < this.nombre_dilemmes; i++){
                     const e = document.createElement("img");
                     e.className = "étoile";
@@ -234,8 +262,9 @@ export default {
                     if (screenWidth <= 768){
                         e.style.width = "25px";
                     }
-                    const mode = document.querySelector(".mode");
-                    mode.appendChild(e);
+                    if (mode) {
+                      mode.appendChild(e);
+                    }
                 }
                 this.afficher_étoiles = true;
                 this.fin = true;
@@ -382,10 +411,12 @@ export default {
     <p class="score">Score total: {{ Math.floor(score) }}</p>
     <p class="détails" v-if="clicked" v-html="Détails"></p>
         <!-- étoiles -->
-    <button class="mode" :class="{hidden: !fin}">
+    <router-link :to="'/'+ niveau.toLocaleLowerCase()" class="none">
+    <button @click="resetNiveau()" class="mode" :class="{hidden: !fin}">
         {{ niveau }} 
         <!-- img d'étoiles en js cette fois ci -->
     </button>
+    </router-link>
     </div>
     <div class="center">
         <button class="btn suivant" v-if="clicked && !fin" @click="suivant">Suivant</button>
