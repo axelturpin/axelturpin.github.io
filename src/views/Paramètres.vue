@@ -29,6 +29,17 @@
                     localStorage.setItem("étoiles_Caché", 0);
                     localStorage.setItem("étoiles_Enfoui", 0);
                     localStorage.setItem("étoiles_Pilules", 0);
+
+                    localStorage.setItem("étoiles_Facile_courrante", 0)
+                    localStorage.setItem("étoiles_Normal_courrante", 0);
+                    localStorage.setItem("étoiles_Difficile_courrante", 0);
+                    localStorage.setItem("étoiles_Classique_courrante", 0);
+                    localStorage.setItem("étoiles_Bonus_courrante", 0);
+                    localStorage.setItem("étoiles_Fun_courrante", 0);
+                    localStorage.setItem("étoiles_Aléatoire_courrante", 0);
+                    localStorage.setItem("étoiles_Caché_courrante", 0);
+                    localStorage.setItem("étoiles_Enfoui_courrante", 0);
+                    localStorage.setItem("étoiles_Pilules_courrante", 0);
                 } else {
                     alert("Action annulée.");
                 }

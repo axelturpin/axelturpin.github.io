@@ -13,9 +13,7 @@ export default {
 </script>
 
 <template>
-    <!-- 3 dilemme pour l'instant -->
-     <!-- 3 dans Modes aussi -->
-  <Base niveau="Enfoui" nombre_dilemmes="3"></Base>
+  <Base niveau="Enfoui" nombre_dilemmes="5"></Base>
 </template>
 
 <style scoped>

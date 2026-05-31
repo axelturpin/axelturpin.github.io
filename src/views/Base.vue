@@ -44,7 +44,6 @@ export default {
       this.clicked = false;
       this.score = 0;
       this.score_temp = 0;
-      this.étoiles_niveau = 0;
       this.afficher_étoiles = false;
       this.fin = false;
       this.numéro = 0;
@@ -53,6 +52,7 @@ export default {
       this.clickBtn3 = false;
       this.socoupAnimation = false;
       this.suivant();
+      this.étoiles_niveau = 0;
     },
     click1(){
         if (!this.clicked){
@@ -236,10 +236,9 @@ export default {
             this.Détails = "Terminé";
 
 
-            let étoiles = localStorage.getItem(`étoiles_${this.niveau}_courrante`) || 0;
             localStorage.setItem(`étoiles_${this.niveau}_courrante`, Math.floor(this.score/100).toString());
+            let étoiles = localStorage.getItem(`étoiles_${this.niveau}_courrante`) || 0;
             localStorage.setItem(`étoiles_${this.niveau}`, Math.max(Math.floor(this.score/100), étoiles));
-            étoiles = localStorage.getItem(`étoiles_${this.niveau}_courrante`) || 0;
             
             this.étoiles_niveau = Number(étoiles);
 
@@ -343,6 +342,9 @@ export default {
             break;
         case "Pilules":
             this.ratio = 1;
+            break;
+        case "Enfoui":
+            this.ratio = 1.6;
             break;
         default:
             this.ratio = 3;

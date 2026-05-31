@@ -39,5 +39,25 @@
         "voie2_type": "person",
         "voie1_arbre": false,
         "voie2_arbre": false
+    },
+        "dilemme3": 
+    {
+        "description": "Dieu existe-t-il ?",
+        "bouton1": "oui",
+        "bouton2": "C'est quoi ?",
+        "bouton3": "à moitié",
+        "Bon": "à moitié",
+        "Détails": "A moitié, comme le chat de schrodinger",
+        "M": 1.5,
+        "M1": 0.5,
+        "M2": 0.4,
+        "M3": 1.5,
+        "src_plan": "./img/question.png",
+        "voie1": 0,
+        "voie2": 0,
+        "voie1_type": "person",
+        "voie2_type": "person",
+        "voie1_arbre": false,
+        "voie2_arbre": false
     }
 }

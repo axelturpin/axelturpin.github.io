@@ -15,7 +15,7 @@ export default{
             étoiles_pilules: Number(localStorage.getItem("étoiles_Pilules")) || 0,
             étoiles_enfoui: Number(localStorage.getItem("étoiles_Enfoui")) || 0,
             étoiles_total: 0,
-            n_fun: 2,
+            n_fun: 3,
         }
     },
     created(){
@@ -28,7 +28,7 @@ export default{
 <template>
 <div class="vh">
     <h2>Modes de jeu</h2>
-    <h3 class="total">étoiles: {{ étoiles_total }}/45</h3>
+    <h3 class="total">étoiles: {{ étoiles_total }}/48</h3>
     <div class="modes">
         <div class="niveaux">
             <span class="center taille">Niveaux</span>
@@ -73,7 +73,7 @@ export default{
                 <button class="mode">
                     Enfoui
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_enfoui" class="étoile" loading="lazy" :key="n">
-                    <img src="/img/etoile vide.png" v-for="n in (3-étoiles_enfoui)" class="étoile" loading="lazy" :key="n">
+                    <img src="/img/etoile vide.png" v-for="n in (5-étoiles_enfoui)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
 

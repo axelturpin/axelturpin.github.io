@@ -3,7 +3,7 @@ export default {
   data() {
     return {
       data: {},
-      nombre_dilemmes: 2,
+      nombre_dilemmes: 3,
       niveau: "Fun",
       dilemme: {},
       description: null,
