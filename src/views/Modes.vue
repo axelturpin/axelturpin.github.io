@@ -127,6 +127,7 @@ export default{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    cursor: auto;
 }
 
 .mode{
@@ -141,6 +142,7 @@ export default{
     font-size: 24px;
     margin: 25px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .niveaux, .autre{
