@@ -60,7 +60,7 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_bonus)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <button class="mode" v-if="this.étoiles_total < 10">{{ this.étoiles_total }}/10 étoiles</button>
+            <button class="mode rout" v-if="this.étoiles_total < 10">{{ this.étoiles_total }}/10 étoiles</button>
             <router-link to="/cache" class="none rout" v-if="this.étoiles_total >= 10">
                 <button class="mode">
                     Caché
@@ -68,7 +68,7 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_cache)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <button class="mode" v-if="this.étoiles_total < 15">{{ this.étoiles_total }}/15 étoiles</button>
+            <button class="mode rout" v-if="this.étoiles_total < 15">{{ this.étoiles_total }}/15 étoiles</button>
             <router-link to="/enfoui" class="none rout" v-if="this.étoiles_total >= 15">
                 <button class="mode">
                     Enfoui
@@ -101,7 +101,7 @@ export default{
                     <img src="/img/etoile vide.png" v-for="n in (n_fun - étoiles_fun)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <button class="mode" v-if="this.étoiles_total < 20">{{ this.étoiles_total }}/20 étoiles</button>
+            <button class="mode rout" v-if="this.étoiles_total < 20">{{ this.étoiles_total }}/20 étoiles</button>
             <router-link to="/pilules" class="none rout" v-if="this.étoiles_total >= 20">
                 <button class="mode">
                     Pilules
@@ -135,8 +135,6 @@ export default{
     width: 567px;
     height: 108px;
     margin: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,12 +146,11 @@ export default{
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+    font-size: 24px;
     color: white;
     background-color: #4B0082;
-    width: 520px;
-    height: 100px;
-    font-size: 24px;
-    margin: 25px;
+    width: 567px;
+    height: 108px;
     border-radius: 20px;
     cursor: pointer;
 }
