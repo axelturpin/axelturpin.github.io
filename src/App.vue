@@ -51,7 +51,7 @@ h2{
 }
 
 .lien{
-  color: #0300C4
+  color: #0300A3
 }
 
 .center {
@@ -85,7 +85,8 @@ footer{
 }
 
 .btn:hover{
-  background-color:#EBAB00;
+  background-color:#993F00 !important;
+  color: white;
 }
 
 .jouer:hover{

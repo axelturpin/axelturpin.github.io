@@ -52,7 +52,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #F98FFF;
+    background-color: #F538FF;
     height: auto;
     padding: 10px;
 }

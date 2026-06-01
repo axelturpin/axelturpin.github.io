@@ -137,7 +137,8 @@ export default{
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: #F98FFF;
+    color: white;
+    background-color: #4B0082;
     width: 520px;
     height: 100px;
     font-size: 24px;

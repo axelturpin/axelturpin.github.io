@@ -277,12 +277,12 @@ export default {
             this.clickBtn2 = false;
             this.clickBtn3 = false;
             const btn1 = document.querySelector(".btn-1");
-            btn1.style.background = "#EBAB00";
+            btn1.style.background = "#FA6700";
             const btn2 = document.querySelector(".btn-2");
-            btn2.style.background = "#EBAB00";
+            btn2.style.background = "#FA6700";
             if(document.querySelector(".btn-3")){
                 const btn3 = document.querySelector(".btn-3");
-                btn3.style.background = "#EBAB00";
+                btn3.style.background = "#FA6700";
             }
 
             this.chargement();
@@ -443,7 +443,8 @@ export default {
 }
 
 .btn:hover{
-  background-color:#FA6700 !important;
+  background-color:#993F00 !important;
+  color: white;
 }
 
 .p-description {
@@ -454,7 +455,7 @@ export default {
 }
 
 .btn{
-    background-color: #EBAB00;
+    background-color: #FA6700;
     padding: 10px 30px;
     margin: 30px;
     border-radius: 20px;
@@ -479,7 +480,8 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: #F98FFF;
+    color: white;
+    background-color: #4B0082;
     width: 520px;
     height: 100px;
     font-size: 20px;

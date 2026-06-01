@@ -76,7 +76,8 @@
 }
 
 .btn:hover{
-  background-color:#FA6700 !important;
+  background-color:#993F00 !important;
+  color: white;
 }
 
 .colonne{
@@ -110,7 +111,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: #F98FFF;
+    color: white;
+    background-color: #4B0082;
     width: 520px;
     height: 100px;
     font-size: 24px;
@@ -119,7 +121,7 @@
 }
 
 .btn{
-    background-color: #EBAB00;
+    background-color: #FA6700;
     padding: 10px 30px;
     margin: 30px;
     border-radius: 20px;
