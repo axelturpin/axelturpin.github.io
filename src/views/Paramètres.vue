@@ -71,6 +71,14 @@
 
 <style scoped>
 
+.mode:hover{
+  background-color: #F538FF !important;
+}
+
+.btn:hover{
+  background-color:#FA6700 !important;
+}
+
 .colonne{
   display: flex;
   flex-direction: column;
@@ -102,7 +110,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: #FEEAFF;
+    background-color: #F98FFF;
     width: 520px;
     height: 100px;
     font-size: 24px;
@@ -111,7 +119,7 @@
 }
 
 .btn{
-    background-color: #FEEAFF;
+    background-color: #EBAB00;
     padding: 10px 30px;
     margin: 30px;
     border-radius: 20px;

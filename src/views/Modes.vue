@@ -117,6 +117,7 @@ export default{
 </div>
 </template>
 
+
 <style scoped>
 
 .total{
@@ -136,13 +137,17 @@ export default{
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: #FEEAFF;
+    background-color: #F98FFF;
     width: 520px;
     height: 100px;
     font-size: 24px;
     margin: 25px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.mode:hover{
+  background-color: #F538FF !important;
 }
 
 .niveaux, .autre{

@@ -84,10 +84,14 @@ Même en cas de “mauvaise” réponse dans le mode “Niveaux” on gagne des 
 
 .jouer{
     font-size: 32px;
-    background-color: #FEEAFF;
+    background-color: #F98FFF;
     padding: 10px 60px;
     margin: 10px;
     border-radius: 20px;
+}
+
+.jouer:hover{
+  background-color: #F538FF;
 }
 
 .div-jouer{

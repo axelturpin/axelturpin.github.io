@@ -35,9 +35,9 @@ export default{
     font-family: v-bind(police);
 }
 
-body{
+/* body{
   background-color: #FEFFE9;
-}
+} */
 
 @font-face {
 font-family: "Luciole";
@@ -70,5 +70,25 @@ h2{
 
 .étoile{
     width: 50px;
+}
+
+header{
+  background-color: #F98FFF;
+}
+
+footer{
+  background-color: #F98FFF;
+}
+
+.mode:hover{
+  background-color: #F538FF;
+}
+
+.btn:hover{
+  background-color:#EBAB00;
+}
+
+.jouer:hover{
+  background-color: #F538FF;
 }
 </style>
