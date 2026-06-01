@@ -59,7 +59,7 @@ export default {
             this.clicked = true;
             this.clickBtn1 = true;
             const btn = document.querySelector(".btn-1");
-            btn.style.background = "#FA6700";
+            btn.style.background = "#993F00";
             this.Détails = this.dilemme.Détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
             this.timeoutId = setTimeout(function()
@@ -88,7 +88,7 @@ export default {
             this.clicked = true;
             this.clickBtn2 = true;
             const btn = document.querySelector(".btn-2");
-            btn.style.background = "#FA6700";
+            btn.style.background = "#993F00";
             this.Détails = this.dilemme.Détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
             this.timeoutId = setTimeout(function()
@@ -117,7 +117,7 @@ export default {
             this.clicked = true;
             this.clickBtn3 = true;
             const btn = document.querySelector(".btn-3");
-            btn.style.background = "#FA6700";
+            btn.style.background = "#993F00";
             this.Détails = this.dilemme.Détails;
             
             if(this.dilemme.bouton3 === this.dilemme.Bon){
@@ -439,7 +439,7 @@ export default {
 <style scoped>
 
 .mode:hover{
-  background-color: #F538FF !important;
+  background-color: #C400CF !important;
 }
 
 .btn:hover{

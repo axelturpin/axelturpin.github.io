@@ -157,7 +157,7 @@ export default {
 
 <style scoped>
 .mode:hover{
-  background-color: #F538FF !important;
+  background-color: #C400CF !important;
 }
 
 .btn:hover{

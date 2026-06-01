@@ -81,7 +81,7 @@ footer{
 }
 
 .mode:hover{
-  background-color: #F538FF;
+  background-color: #9800A1;
 }
 
 .btn:hover{
