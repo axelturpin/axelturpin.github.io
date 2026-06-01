@@ -32,28 +32,28 @@ export default{
     <div class="modes">
         <div class="niveaux">
             <span class="center taille">Niveaux</span>
-            <router-link to="/facile" class="none">
+            <router-link to="/facile" class="none rout">
                 <button class="mode">
                     Facile 
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_facile" class="étoile" loading="lazy" :key="n">
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_facile)"  class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/normal" class="none">
+            <router-link to="/normal" class="none rout">
                 <button class="mode">
                     Normal
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_normal" class="étoile" loading="lazy" :key="n">
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_normal)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/difficile" class="none">
+            <router-link to="/difficile" class="none rout">
                 <button class="mode">
                     Difficile
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_difficile" class="étoile" loading="lazy" :key="n">
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_difficile)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/bonus" class="none">
+            <router-link to="/bonus" class="none rout">
                 <button class="mode">
                     Bonus
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_bonus" class="étoile" loading="lazy" :key="n">
@@ -61,7 +61,7 @@ export default{
                 </button>
             </router-link>
             <button class="mode" v-if="this.étoiles_total < 10">{{ this.étoiles_total }}/10 étoiles</button>
-            <router-link to="/cache" class="none" v-if="this.étoiles_total >= 10">
+            <router-link to="/cache" class="none rout" v-if="this.étoiles_total >= 10">
                 <button class="mode">
                     Caché
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_cache" class="étoile" loading="lazy" :key="n">
@@ -69,7 +69,7 @@ export default{
                 </button>
             </router-link>
             <button class="mode" v-if="this.étoiles_total < 15">{{ this.étoiles_total }}/15 étoiles</button>
-            <router-link to="/enfoui" class="none" v-if="this.étoiles_total >= 15">
+            <router-link to="/enfoui" class="none rout" v-if="this.étoiles_total >= 15">
                 <button class="mode">
                     Enfoui
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_enfoui" class="étoile" loading="lazy" :key="n">
@@ -80,21 +80,21 @@ export default{
         </div>
         <div class="autre">
             <span class="center taille">Autre</span>
-            <router-link to="/classique" class="none">
+            <router-link to="/classique" class="none rout">
                 <button class="mode">
                     Classique
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_classique" class="étoile" loading="lazy" :key="n">
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_classique)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/aleatoire" class="none">
+            <router-link to="/aleatoire" class="none rout">
                 <button class="mode">
                     Aléatoire
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_aléatoire" class="étoile" loading="lazy" :key="n">
                     <img src="/img/etoile vide.png" v-for="n in (5-étoiles_aléatoire)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/fun" class="none">
+            <router-link to="/fun" class="none rout">
                 <button class="mode">
                     Fun
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_fun" class="étoile" loading="lazy" :key="n">
@@ -102,14 +102,14 @@ export default{
                 </button>
             </router-link>
             <button class="mode" v-if="this.étoiles_total < 20">{{ this.étoiles_total }}/20 étoiles</button>
-            <router-link to="/pilules" class="none" v-if="this.étoiles_total >= 20">
+            <router-link to="/pilules" class="none rout" v-if="this.étoiles_total >= 20">
                 <button class="mode">
                     Pilules
                     <img src="/img/etoile pleine.png" v-for="n in étoiles_pilules" class="étoile" loading="lazy" :key="n">
                     <img src="/img/etoile vide.png" v-for="n in (5 - étoiles_pilules)" class="étoile" loading="lazy" :key="n">
                 </button>
             </router-link>
-            <router-link to="/custom" class="none">
+            <router-link to="/custom" class="none rout">
                 <button class="mode">Custom</button>
             </router-link>
         </div>
@@ -129,6 +129,17 @@ export default{
     justify-content: center;
     flex-wrap: wrap;
     cursor: auto;
+}
+
+.rout{
+    width: 567px;
+    height: 108px;
+    margin: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mode{
@@ -169,8 +180,8 @@ export default{
 
 @media (max-width: 768px) {
     .mode{
-        width: 320px;
-        height: 60px;
+        width: 330px;
+        height: 62px;
         font-size: 16px;
     }
     .étoile{
@@ -178,6 +189,11 @@ export default{
     }
     h2{
         font-size: 2rem;
+    }
+    .rout{
+        width: 330px;
+        height: 62px;
+        margin: 16px;
     }
 }
 </style>

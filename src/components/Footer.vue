@@ -17,7 +17,7 @@ export default{
         <a target="_blank" href="https://icons8.com" class="lien">Icons8</a>
     </div>
     <div>
-        <a href="https://www.flaticon.com/fr/icones-gratuites/etoile" class="lien" title="Étoile icônes">Étoile icon</a> by Pixel Perfect - Flaticon
+        <a href="https://www.flaticon.com/fr/icones-gratuites/ui" title="ui icônes">Ui icônes créées par iconmas - Flaticon</a>
     </div>
 
     <!-- Inspirations de contenu -->
