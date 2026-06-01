@@ -132,8 +132,8 @@ export default{
 }
 
 .rout{
-    width: 567px;
-    height: 108px;
+    width: 500px;
+    height: 100px;
     margin: 20px;
     display: flex;
     justify-content: center;
@@ -149,8 +149,8 @@ export default{
     font-size: 24px;
     color: white;
     background-color: #4B0082;
-    width: 567px;
-    height: 108px;
+    width: 500px;
+    height: 100px;
     border-radius: 20px;
     cursor: pointer;
 }
