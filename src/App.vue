@@ -35,10 +35,6 @@ export default{
     font-family: v-bind(police);
 }
 
-/* body{
-  background-color: #FEFFE9;
-} */
-
 @font-face {
 font-family: "Luciole";
     src: url("./fonts/Luciole/Luciole-Regular.ttf") format("truetype");
@@ -72,24 +68,4 @@ h2{
     width: 50px;
 }
 
-header{
-  background-color: #F98FFF;
-}
-
-footer{
-  background-color: #F98FFF;
-}
-
-.mode:hover{
-  background-color: #9800A1;
-}
-
-.btn:hover{
-  background-color:#993F00 !important;
-  color: white;
-}
-
-.jouer:hover{
-  background-color: #F538FF;
-}
 </style>

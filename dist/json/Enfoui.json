@@ -66,7 +66,7 @@
         "bouton1": "Opérer",
         "bouton2": "Inaction",
         "Bon": "Opérer",
-        "Détails": "'<u>Bon choix</u>': Opérer M(Opérer) = 0.5, M(Inaction) = 0",
+        "Détails": "'<u>Bon choix</u>': Opérer M(Opérer) = 0.5, M(Inaction) = 0, si 1 des deux personnes sauver était non-consentante, M(Opérer) = 0.25 environ",
         "M": 0.5,
         "M1": 0.5,
         "M2": 0,

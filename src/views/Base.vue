@@ -3,7 +3,6 @@ export default {
     name: "Base",
     props: [
         "niveau",
-        "dilemme_custom",
         "nombre_dilemmes"
     ],
   data() {
@@ -169,9 +168,7 @@ export default {
                     vie.style.left = `calc(95% - ${index*12}px)`;
                 }
             });
-            
-            
-            
+              
         //suppression des arbres des dilemmes précédents
         const arbreAncien1 = document.querySelector(".arbre1");
         const arbreAncien2 = document.querySelector(".arbre2");
@@ -185,15 +182,15 @@ export default {
         //Affichage de nouveaux arbres si dans le dilemme
         const container = document.querySelector(".plan-container");
         if(this.dilemme.voie1_arbre){
-        var arbre1 = document.createElement("img");
-        arbre1.className = "arbre1 voie1";
-        arbre1.src = "/img/arbre.png";
-        arbre1.style.display = "block";
-        arbre1.style.position = "absolute";
-        arbre1.style.top = `calc(60%)`;
-        arbre1.style.left = `calc(70%)`;
-        arbre1.style.transform = "translate(-50%, -50%)";
-        if (screenWidth <= 768){
+            var arbre1 = document.createElement("img");
+            arbre1.className = "arbre1 voie1";
+            arbre1.src = "/img/arbre.png";
+            arbre1.style.display = "block";
+            arbre1.style.position = "absolute";
+            arbre1.style.top = `calc(60%)`;
+            arbre1.style.left = `calc(70%)`;
+            arbre1.style.transform = "translate(-50%, -50%)";
+            if (screenWidth <= 768){
             arbre1.style.width = "100px";
             arbre1.style.top = `calc(55%)`;
             arbre1.style.left = `calc(70%)`;
@@ -239,10 +236,10 @@ export default {
             localStorage.setItem(`étoiles_${this.niveau}_courrante`, Math.floor(this.score/100).toString());
             let étoiles = localStorage.getItem(`étoiles_${this.niveau}_courrante`) || 0;
             localStorage.setItem(`étoiles_${this.niveau}`, Math.max(Math.floor(this.score/100), étoiles));
-            
             this.étoiles_niveau = Number(étoiles);
 
             const screenWidth = window.innerWidth;
+            // attendre que le DOM rende les éléments (v-if et v-for)
             this.$nextTick(() => { //afficher étoiles:
             if(!this.afficher_étoiles){
                 const mode = document.querySelector(".mode");
@@ -287,7 +284,7 @@ export default {
 
             this.chargement();
         }
-        // attendre que le DOM rende les éléments (v-if et v-for)
+        
         const voie1 = document.querySelectorAll(".voie1");
         const voie2 = document.querySelectorAll(".voie2");
         voie1.forEach((vie, index) => {
