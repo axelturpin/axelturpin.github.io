@@ -278,14 +278,14 @@ export default {
             this.clickBtn3 = false;
             const btn1 = document.querySelector(".btn-1");
             btn1.style.background = "#FA6700";
-            btn1.style.color = 'white';
+            btn1.style.color = "black";
             const btn2 = document.querySelector(".btn-2");
             btn2.style.background = "#FA6700";
-            btn3.style.color = 'white';
+            btn2.style.color = "black";
             if(document.querySelector(".btn-3")){
                 const btn3 = document.querySelector(".btn-3");
                 btn3.style.background = "#FA6700";
-                btn3.style.color = 'white';
+                btn3.style.color = "black;"
             }
 
             this.chargement();
