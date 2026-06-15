@@ -102,9 +102,9 @@ export default {
     <button class="btn" @click="click">Ajouter ou supprimer un dilemme</button>
     <div v-if="ajout && PasEncoreValider">
         <form action="" class="form">
-            description:
+            <label for="description">Description:</label>
             <textarea name="description" id="description" placeholder="Description du dilemme" v-model="description"></textarea>
-            Solution:
+            <label for="détails">Solution:</label>
             <textarea name="détails" id="détails" placeholder="Description de la solution" v-model="Détails"></textarea>
 
             <div class="check">

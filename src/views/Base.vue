@@ -384,15 +384,15 @@ export default {
                 <img src="/img/soucoupeFaite.png" title="made at imgflip.com" class="soucoupe"/></a>
                 <!-- voie 1 -->
                 <div v-if="dilemme.voie1 > 0" v-for="n in dilemme.voie1">
-                    <img :key="n" v-if="dilemme.voie1_type === 'chien'" src="/img/chien.png" alt="" loading="lazy" class="chien voie1" >
-                    <img :key="n" v-if="dilemme.voie1_type === 'person'" src="/img/personneHD1.png" alt="" loading="lazy" class="person voie1">
-                    <img :key="n" v-if="dilemme.voie1_type === 'voluntary person'" src="/img/VolontaireAtttaché.png" alt="" loading="lazy" class="Vperson voie1">
+                    <img :key="n" v-if="dilemme.voie1_type === 'chien'" src="/img/chien.png" alt="chien" loading="lazy" class="chien voie1" >
+                    <img :key="n" v-if="dilemme.voie1_type === 'person'" src="/img/personneHD1.png" alt="personne" loading="lazy" class="person voie1">
+                    <img :key="n" v-if="dilemme.voie1_type === 'voluntary person'" src="/img/VolontaireAtttaché.png" alt="personne qui est volontairement sur la voie" loading="lazy" class="Vperson voie1">
                 </div>
                 <!-- voie 2 -->
             <div v-if="dilemme.voie2 > 0" v-for="n in dilemme.voie2">
-                <img :key="n" v-if="dilemme.voie2_type === 'chien'" src="/img/chien.png" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2">
-                <img :key="n" v-if="dilemme.voie2_type === 'person'" src="/img/personneHD1.png" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2">
-                <img :key="n" v-if="dilemme.voie2_type === 'voluntary person'" src="/img/VolontaireAtttaché.png" alt="" loading="lazy" class="Vperson voie2">
+                <img :key="n" v-if="dilemme.voie2_type === 'chien'" src="/img/chien.png" alt="chien" loading="lazy" :class="dilemme.voie2_type" class="voie2">
+                <img :key="n" v-if="dilemme.voie2_type === 'person'" src="/img/personneHD1.png" alt="personne" loading="lazy" :class="dilemme.voie2_type" class="voie2">
+                <img :key="n" v-if="dilemme.voie2_type === 'voluntary person'" src="/img/VolontaireAtttaché.png" alt="personne qui est volontairement sur la voie" loading="lazy" class="Vperson voie2">
             </div>
             </div>
             <!-- </a> -->
@@ -417,7 +417,7 @@ export default {
     <p class="détails" v-if="clicked" v-html="Détails"></p>
         <!-- étoiles -->
     <router-link :to="'/'+ niveau.toLocaleLowerCase()" class="none">
-    <button @click="resetNiveau()" class="mode" :class="{hidden: !fin}">
+    <button @click="resetNiveau()" class="mode" :class="{hidden: !fin}" :aria-label="`${niveau} - ${étoiles_niveau} étoile(s) sur ${nombre_dilemmes}`">
         {{ niveau }} 
         <!-- img d'étoiles en js cette fois ci -->
     </button>
