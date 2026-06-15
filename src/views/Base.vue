@@ -447,7 +447,7 @@ export default {
 
 .btn:hover{
   background-color:#993F00 !important;
-  color: white;
+  color: white !important;
 }
 
 .p-description {
