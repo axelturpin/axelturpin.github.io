@@ -8,7 +8,7 @@ export default{
     <header>
         <div>
             <router-link to="/" class="router-link">
-                <img src="/img/train-60.png" alt="Accueil">
+                <img src="/img/train-60.png">
                 <p>Accueil</p>
             </router-link>
         </div>
@@ -18,7 +18,7 @@ export default{
         </div>
         <div>
             <router-link to="/parametres" class="router-link">
-                <img src="/img/paramètres-60.png" alt="Paramètres">
+                <img src="/img/paramètres-60.png">
                 <p>paramètres</p>
             </router-link>
         </div>

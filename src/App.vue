@@ -19,11 +19,16 @@ export default{
 
 </script>
 
-<template :style="{ '--police': police }">
-  <Header></Header>
-  <router-view/>
-  <p>Musique : "Infos Tapis", "Alice", "Luiz" – Copyright © Hicham Chahidi, utilisé avec permission via MusicScreen (musique libre de droits).</p>
-  <Footer></Footer>
+<template>
+  <div :style="{ '--police': police }">
+    <title>Dilemmes purs</title>
+    <Header></Header>
+    <main>
+      <router-view/>
+      <p>Musique : "Infos Tapis", "Alice", "Luiz" – Copyright © Hicham Chahidi, utilisé avec permission via MusicScreen (musique libre de droits).</p>
+    </main>
+    <Footer></Footer>
+  </div>
 </template>
 
 <!-- pas scoped donc s'applique a tous les composants -->
@@ -47,7 +52,7 @@ h2{
 }
 
 .lien{
-  color: #0300A3
+  color: #03009E
 }
 
 .center {
