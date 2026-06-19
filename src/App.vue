@@ -21,7 +21,6 @@ export default{
 
 <template>
   <div :style="{ '--police': police }">
-    <title>Dilemmes purs</title>
     <Header></Header>
     <main>
       <router-view/>

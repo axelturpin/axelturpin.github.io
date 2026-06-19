@@ -1,7 +1,7 @@
 {
     "dilemme1": 
     {
-        "description": "Dilemme des pilules pour soi-même \nSoit un nombre de participant **(101)**, \nTu fais partie des participants \nTu choisis ta couleur, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous le monde est sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne \n+Dans ce dilemme uniquement, il y a de l'intérêt personnel, je demande donc à faire comme si il n'y en avait pas",
+        "description": "Dilemme des pilules pour soi-même \nSoit un nombre de participant **(101)**, \nTu fais partie des participants \nTu choisis ta couleur, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous le monde est sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne \n+Dans ce dilemme uniquement, il y a de l'intérêt personnel, je demande donc à faire comme si il n'y en avait pas, ni pour toi, ni pour les autres qui les inciterais à choisir rouge",
         "bouton1": "Bleu",
         "bouton2": "Rouge",
         "Bon": "Bleu",
