@@ -14,6 +14,8 @@ export default {
         vies_voie2: 0,
         type_voie1: "person", // chien / person / Vperson
         type_voie2: "person",
+        bouton1: "Dévier",
+        bouton2: "Inaction",
         dilemme: {},
         dilemmes: JSON.parse(localStorage.getItem("dilemmes_custom")) || {},
         description: "description non modifié",
@@ -133,10 +135,10 @@ export default {
                 <option value="voluntary person">personne volontaire</option>
             </select>
 
-            <label for="btn-1">nom bouton1</label>
+            <!-- <label for="btn-1">nom bouton1</label>
             <input type="text" id="btn-1" v-model="bouton1">
             <label for="btn-2">nom bouton2</label>
-            <input type="text" id="btn-2" v-model="bouton2">
+            <input type="text" id="btn-2" v-model="bouton2"> -->
         </form>
         <div class="center colonne">
             <button class="btn" @click="valider">valider un dilemme</button>

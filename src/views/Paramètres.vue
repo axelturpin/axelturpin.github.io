@@ -12,6 +12,7 @@
                 localStorage.setItem("malvoyant", JSON.stringify(this.malvoyant));
                 //prévenir l'application que la police a changé (optionnel)
                 window.dispatchEvent(new CustomEvent("font-changed", { detail: { police } }));
+                location. reload()
             },
             reset(){
                 // Affiche une boîte de confirmation
@@ -47,7 +48,7 @@
         },
             mounted(){
             //optionnel
-            this.setPolice()
+            // this.setPolice()
         }
     }
 </script>
@@ -61,7 +62,7 @@
                 <label for="malvoyant">malvoyant</label>
                 <input type="checkbox" name="malvoyant" id="malvoyant" v-model="malvoyant" @change="setPolice">
             </div>
-            <p>Actualisez ensuite pour voir le changement de police</p>
+            <!-- <p>Actualisez ensuite pour voir le changement de police</p> -->
             <button class="btn" @click="reset">Recommencer à 0</button>
 
         </div>
