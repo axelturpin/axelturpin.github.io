@@ -290,15 +290,6 @@ export default {
 
             this.chargement();
         }
-        
-        const voie1 = document.querySelectorAll(".voie1");
-        const voie2 = document.querySelectorAll(".voie2");
-        voie1.forEach((vie, index) => {
-            vie.style.display = "block";
-        })
-        voie2.forEach((vie, index) => {
-            vie.style.display = "block";
-        })
 
     }
   },
