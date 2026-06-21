@@ -121,13 +121,6 @@
     border-radius: 20px;
 }
 
-.btn{
-    background-color: #FA6700;
-    padding: 10px 30px;
-    margin: 30px;
-    border-radius: 20px;
-}
-
 .vh{ 
     /* pour que le footer se mette en bas de l'écran */
     /* min-height: calc(100vh - 15vh - 12vh - 40px); */

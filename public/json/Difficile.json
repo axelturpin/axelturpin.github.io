@@ -27,7 +27,7 @@
         "Bon": "Inaction",
         "Détails": "'Bon choix': Ne rien faire (pour p = 0.5, le risque pris intentionnellement n’est pas trop élevé, mais le devient, donc dévier est mieux pour p = 0.6 et plus) \nM(inaction) = 0, M(dévier) = -0.25",
         "M": 0,
-        "M1": -0.25,
+        "M1": -0.12688442211055273,
         "M2": 0,
         "src_plan": "./img/rails.png",
         "href": "https://imgflip.com/i/al62xe",
@@ -42,7 +42,7 @@
 
     "dilemme3":
     {
-        "description": "Soit 1 personne ligotée sur la voie \nUn tramway arrive sur cette personne, mais des Aliens acceptent de la sauver contre brancher une autre personne (qui ne risque rien et n'est pas consentant) à la machine à expérience:\nDescription: La machine à expérience est une machine qui nous garde dans une simulation de pnj mais sans qu’on le sache, de plus la simulation est optimisée pour maximiser notre bonheur. On suppose que la liberté offerte par la machine à expérience est négligeable car virtuelle, mais que le bonheur est triplé\n+Accepter de céder une personne à la machine à expérience\n+Ne rien faire",
+        "description": "Soit 1 personne ligotée sur la voie \nUn tramway arrive sur cette personne, mais des Aliens acceptent de la sauver contre brancher une autre personne (qui ne risque rien et n'est pas consentant) à la machine à expérience:\nDescription: La machine à expérience est une machine qui nous garde dans une simulation de pnj mais sans qu’on le sache, de plus la simulation est optimisée pour maximiser notre bonheur. On suppose que la liberté offerte par la machine à expérience est négligeable car virtuelle, mais que le bonheur est doublé\n+Accepter de céder une personne à la machine à expérience\n+Ne rien faire",
         "bouton1": "Accepter",
         "bouton2": "Inaction",
         "Bon": "Accepter",

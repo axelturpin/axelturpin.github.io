@@ -414,13 +414,6 @@ export default {
     margin: 20px;
 }
 
-.btn{
-    background-color: #FA6700;
-    padding: 10px 30px;
-    margin: 30px;
-    border-radius: 20px;
-}
-
 .détails, .score{
     text-align: center;
     /* white-space: pre-line; */
