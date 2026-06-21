@@ -285,13 +285,14 @@ export default {
             if(document.querySelector(".btn-3")){
                 const btn3 = document.querySelector(".btn-3");
                 btn3.style.background = "#FA6700";
-                btn3.style.color = "black;"
+                btn3.style.color = "black";
             }
 
             this.chargement();
         }
 
-    }
+    },
+    strNoAccent(a){return (''+a).normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
   },
   computed(){
     this.dilemme;
@@ -407,7 +408,7 @@ export default {
     <p class="score">Score total: {{ Math.floor(score) }}</p>
     <p class="détails" v-if="clicked" v-html="Détails"></p>
         <!-- étoiles -->
-    <router-link :to="'/'+ niveau.toLocaleLowerCase()" class="none">
+    <router-link :to="'/'+ strNoAccent(niveau.toLocaleLowerCase())" class="none">
     <button @click="resetNiveau()" class="mode" :class="{hidden: !fin}" :aria-label="`${niveau} - ${étoiles_niveau} étoile(s) sur ${nombre_dilemmes}`">
         {{ niveau }} 
         <!-- img d'étoiles en js cette fois ci -->
