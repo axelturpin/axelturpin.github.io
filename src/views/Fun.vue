@@ -31,6 +31,7 @@ export default {
             this.clickBtn1 = true;
             const btn = document.querySelector(".btn-1");
             btn.style.background = "#993F00";
+            btn.style.color = 'white';
             this.Détails = this.dilemme.Détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
             this.timeoutId = setTimeout(function()
@@ -43,7 +44,7 @@ export default {
             if(train){
                 train.style.display = "none";
             }
-            }, 1950);
+            }, 1900);
             
             if(this.dilemme.bouton1 === this.dilemme.Bon){
                 this.score_temp = 100;
@@ -51,17 +52,6 @@ export default {
             }else{
                 this.score_temp = (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/this.ratio));
                 this.score += this.score_temp
-            }
-            if(this.dilemme.voie2_arbre){
-                this.slipId = setTimeout(function(){
-                    train.classList.add("tour");
-                    const slip = document.createElement("audio");
-                    // slip.src = "/audio/slip-and-fall.mp3";faudio
-                    slip.autoplay = true;
-                    slip.loop = false;
-                    const body = document.querySelector("body");
-                    body.appendChild(slip);
-                }, 700);
             }
         }
     },
@@ -71,6 +61,7 @@ export default {
             this.clickBtn2 = true;
             const btn = document.querySelector(".btn-2");
             btn.style.background = "#993F00";
+            btn.style.color = 'white';
             this.Détails = this.dilemme.Détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
             this.timeoutId = setTimeout(function()
@@ -92,18 +83,6 @@ export default {
                 this.score_temp = (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/this.ratio))
                 this.score += this.score_temp
             }
-            if(this.dilemme.voie1_arbre){
-                this.slipId = setTimeout(function(){
-                    const train = document.querySelector(".train");
-                    train.classList.add("tour");
-                    const slip = document.createElement("audio");
-                    // slip.src = "/audio/slip-and-fall.mp3";
-                    slip.autoplay = true;
-                    slip.loop = false;
-                    const body = document.querySelector("body");
-                    body.appendChild(slip);
-                }, 700)
-            }
         }
     },
     click3(){
@@ -112,6 +91,7 @@ export default {
             this.clickBtn3 = true;
             const btn = document.querySelector(".btn-3");
             btn.style.background = "#993F00";
+            btn.style.color = 'white';
             this.Détails = this.dilemme.Détails;
             
             if(this.dilemme.bouton3 === this.dilemme.Bon){

@@ -41,6 +41,7 @@ export default {
             this.clickBtn1 = true;
             const btn = document.querySelector(".btn-1");
             btn.style.background = "#993F00";
+            btn.style.color = 'white';
             this.Détails = this.dilemme.Détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
             this.timeoutId = setTimeout(function()
@@ -56,9 +57,11 @@ export default {
             }, 1900);
             
             // if(this.dilemme.bouton1 === this.dilemme.Bon){
-            //     this.score += 100
+            //     this.score_temp = 100;
+            //     this.score += 100;
             // }else{
-            //     this.score += (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/this.ratio))
+            //     this.score_temp = (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/this.ratio));
+            //     this.score += this.score_temp
             // }
         }
     },
@@ -68,6 +71,7 @@ export default {
             this.clickBtn2 = true;
             const btn = document.querySelector(".btn-2");
             btn.style.background = "#993F00";
+            btn.style.color = 'white';
             this.Détails = this.dilemme.Détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
             this.timeoutId = setTimeout(function()
@@ -83,9 +87,11 @@ export default {
             }, 1900);
             
             // if(this.dilemme.bouton2 === this.dilemme.Bon){
+            //     this.score_temp = 100
             //     this.score += 100
             // }else{
-            //     this.score += (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/this.ratio))
+            //     this.score_temp = (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/this.ratio))
+            //     this.score += this.score_temp
             // }
         }
     },
@@ -95,14 +101,16 @@ export default {
             this.clickBtn3 = true;
             const btn = document.querySelector(".btn-3");
             btn.style.background = "#993F00";
+            btn.style.color = 'white';
             this.Détails = this.dilemme.Détails;
             
-            if(this.dilemme.bouton3 === this.dilemme.Bon){
-                this.score += 100
-            }else{
-                this.score += (100*(1-Math.abs(this.dilemme.M3 - this.dilemme.M)/4))
+            // if(this.dilemme.bouton3 === this.dilemme.Bon){
+            //     this.score_temp = 100
+            //     this.score += 100
+            // }else{
+            //     this.score_temp = (100*(1-Math.abs(this.dilemme.M3 - this.dilemme.M)/this.ratio));
+            //     this.score += this.score_temp;
             }
-        }
     },
     chargement(){
         // attendre que le DOM rende les éléments (v-if et v-for)
