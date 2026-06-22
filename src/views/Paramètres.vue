@@ -12,7 +12,7 @@
                 localStorage.setItem("malvoyant", JSON.stringify(this.malvoyant));
                 //prévenir l'application que la police a changé (optionnel)
                 window.dispatchEvent(new CustomEvent("font-changed", { detail: { police } }));
-                location. reload()
+                location.reload()
             },
             reset(){
                 // Affiche une boîte de confirmation

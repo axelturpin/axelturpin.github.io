@@ -259,7 +259,10 @@ export default {
             this.chargement();
         }
 
-    }
+    },
+    recharger(){
+      location.reload()
+    },
   },
   computed(){
     this.dilemme;
@@ -371,7 +374,7 @@ export default {
     <p class="score">Score total: {{ Math.floor(score) }}</p>
     <p class="détails" v-if="clicked" >{{ Détails }}</p>
         <!-- étoiles -->
-    <button class="mode" :class="{hidden: !fin}">
+    <button class="mode" :class="{hidden: !fin}" @click="recharger()">
         {{ niveau }} 
         <!-- img d'étoiles en js cette fois ci -->
     </button>
