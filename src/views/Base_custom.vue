@@ -171,6 +171,7 @@ export default {
         var arbre1 = document.createElement("img");
         arbre1.className = "arbre1 voie1";
         arbre1.src = "/img/arbre.webp";
+        arbre1.alt = "arbre";
         arbre1.style.display = "block";
         arbre1.style.position = "absolute";
         arbre1.style.top = `calc(60%)`;
@@ -187,6 +188,7 @@ export default {
         var arbre2 = document.createElement("img");
         arbre2.className = "arbre2 voie2";
         arbre2.src = "/img/arbre.webp";
+        arbre2.alt = "arbre";
         arbre2.style.display = "block";
         arbre2.style.position = "absolute";
         arbre2.style.top = `calc(30%)`;
