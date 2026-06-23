@@ -87,7 +87,7 @@ Même en cas de “mauvaise” réponse dans le mode “Niveaux” on gagne des 
     color: white;
     background-color: #4B0082;
     padding: 10px 60px;
-    margin: 10px;
+    margin: 30px;
     border-radius: 20px;
 }
 
