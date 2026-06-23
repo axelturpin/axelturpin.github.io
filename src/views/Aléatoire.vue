@@ -194,7 +194,7 @@ export default {
         if(this.dilemme.voie1_arbre){
         var arbre1 = document.createElement("img");
         arbre1.className = "arbre1 voie1";
-        arbre1.src = "/img/arbre.png";
+        arbre1.src = "/img/arbre.webp";
         arbre1.style.display = "block";
         arbre1.style.position = "absolute";
         arbre1.style.top = `calc(60%)`;
@@ -210,7 +210,7 @@ export default {
     if(this.dilemme.voie2_arbre){
         var arbre2 = document.createElement("img");
         arbre2.className = "arbre2 voie2";
-        arbre2.src = "/img/arbre.png";
+        arbre2.src = "/img/arbre.webp";
         arbre2.style.display = "block";
         arbre2.style.position = "absolute";
         arbre2.style.top = `calc(30%)`;
@@ -362,22 +362,22 @@ export default {
                 <img :src="dilemme.src_plan" class="img-rails" alt="fond" title="inspié de imgflip.com" loading="lazy">
                 <!-- train -->
                 <div v-if="dilemme.voie1 > 0">
-                    <img :class="{animation1: clickBtn1 && !socoupAnimation, animation2: clickBtn2}" src="/img/train.png" alt="train" class="train">
+                    <img :class="{animation1: clickBtn1 && !socoupAnimation, animation2: clickBtn2}" src="/img/train.webp" alt="train" class="train">
                 </div>
                 <!-- soucoupe -->
                 <a v-if="dilemme.soucoupe" href="https://imgflip.com/i/ancqwb">
-                <img src="/img/soucoupeFaite.png" title="made at imgflip.com" class="soucoupe"/></a>
+                <img src="/img/soucoupeFaite.webp" title="made at imgflip.com" class="soucoupe"/></a>
                 <!-- voie 1 -->
                 <div v-if="dilemme.voie1 > 0" v-for="n in dilemme.voie1">
-                    <img :key="n" v-if="dilemme.voie1_type === 'chien'" src="/img/chien.png" alt="" loading="lazy" class="chien voie1" >
-                    <img :key="n" v-if="dilemme.voie1_type === 'person'" src="/img/personneHD1.png" alt="" loading="lazy" class="person voie1">
-                    <img :key="n" v-if="dilemme.voie1_type === 'voluntary person'" src="/img/VolontaireAtttaché.png" alt="" loading="lazy" class="Vperson voie1">
+                    <img :key="n" v-if="dilemme.voie1_type === 'chien'" src="/img/chien.webp" alt="" loading="lazy" class="chien voie1" >
+                    <img :key="n" v-if="dilemme.voie1_type === 'person'" src="/img/personneHD1.webp" alt="" loading="lazy" class="person voie1">
+                    <img :key="n" v-if="dilemme.voie1_type === 'voluntary person'" src="/img/VolontaireAtttaché.webp" alt="" loading="lazy" class="Vperson voie1">
                 </div>
                 <!-- voie 2 -->
             <div v-if="dilemme.voie2 > 0" v-for="n in dilemme.voie2">
-                <img :key="n" v-if="dilemme.voie2_type === 'chien'" src="/img/chien.png" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2">
-                <img :key="n" v-if="dilemme.voie2_type === 'person'" src="/img/personneHD1.png" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2">
-                <img :key="n" v-if="dilemme.voie2_type === 'voluntary person'" src="/img/VolontaireAtttaché.png" alt="" loading="lazy" class="Vperson voie2">
+                <img :key="n" v-if="dilemme.voie2_type === 'chien'" src="/img/chien.webp" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2">
+                <img :key="n" v-if="dilemme.voie2_type === 'person'" src="/img/personneHD1.webp" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2">
+                <img :key="n" v-if="dilemme.voie2_type === 'voluntary person'" src="/img/VolontaireAtttaché.webp" alt="" loading="lazy" class="Vperson voie2">
             </div>
             </div>
             <!-- </a> -->

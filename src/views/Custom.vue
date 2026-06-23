@@ -50,7 +50,7 @@ export default {
                 niveau: "Custom",
                 description: this.description,
                 Détails: this.Détails,
-                src_plan: "./img/rails.png",
+                src_plan: "./img/rails.webp",
                 href: "https://imgflip.com/i/al62xe",
                 bouton1: this.bouton1,
                 bouton2: this.bouton2,

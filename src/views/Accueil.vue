@@ -25,13 +25,13 @@ export default{
 ensemble des théories morales qui soutiennent que ce sont les conséquences d'une action donnée qui doivent constituer la base de tout jugement moral de ladite action, par exemple on peut compter le nombre moyen de vies sauvées, ou la quantité de bonheur moins la quantité de malheur (utilitarisme).
 <br><br>
 <span class="underline">Finalitarisme:</span> Théorie morale (utilisée) qui se base sur une certaine définition du respect (r):<br>
-<img src="/img/r.png" alt="respect" loading="lazy" class="r"><br>
+<img src="/img/r.webp" alt="respect" loading="lazy" class="r"><br>
 Avec le bien qui correspond au bien le plus élevé donné à une seule personne, et le mal est le mal le plus élevé donné à une seule personne. (En pratique les définitions du bien et du mal du respect ne sont pas tout à fait les mêmes que pour les conséquences, mais pour l’exemple que je vais donner ça suffit)<br>
 Plus on fait de mal par rapport au meilleur bien, plus le respect est faible, le respect est entre -1 et 1.  <br> <br>
 Le respect positif (rx) commence à 0, mais le respect négatif (ry) à 1, car les conséquences négatives ne doivent pas êtres ignorées sauf empêchements. Quand le respect r est positif, on augmente le respect positif, et quand r est négatif, on augmente le respect négatif, (quand r < 0, -r > 0) <br>
-<img src="/img/r2.png" alt="respect2" loading="lazy" class="r2"><br>
+<img src="/img/r2.webp" alt="respect2" loading="lazy" class="r2"><br>
 <br> Soit M la moralité: <br>
-<img src="/img/M.png" alt="Moralité" loading="lazy" class="M"> <br>
+<img src="/img/M.webp" alt="Moralité" loading="lazy" class="M"> <br>
 Avec i = 1 si on est responsable et 0 sinon (i = intentionnalité) <br>
 <br>
 <span class="underline">Exemple:</span> Dilemme du tramway avec l’homme obèse: <br>
