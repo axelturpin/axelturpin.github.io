@@ -316,7 +316,16 @@ export default {
       audio.src = `/audio/fond${this.niveau}.mp3`;
       audio.onerror = () => {
         // Si le fichier spécifique n'existe pas, charger le fallback
-        audio.src = '/audio/fondNormal.mp3';
+        const alea = Math.random()
+        if(alea < 1/3){
+            audio.src = '/audio/fondFacile.mp3';
+        }
+        else if(alea < 5/6){
+            audio.src = '/audio/fondNormal.mp3';
+        }
+        else{
+            audio.src = '/audio/fondDifficile.mp3';
+        }
       };
       audio.autoplay = true;
       audio.loop = true;
