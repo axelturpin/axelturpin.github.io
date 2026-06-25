@@ -62,21 +62,20 @@
     },
     "dilemme4":
     {
-        "description": "2 personnes vont mourir sans des organes, une personne veut se sacrifier pour les sauver, les 3 personnes sont consentantes: \n**+**Inaction \n**+**Opérer",
-        "bouton1": "Opérer",
+        "description": "Vous êtes médecin dans un hôpital où cinq patients sont gravement malades et mourront sans un médicament innovant. Vous disposez d’un médicament expérimental qui pourrait les sauver, mais il doit être testé rapidement sur une personne saine, qui refuse, **elle ne consent pas à ce test**. \n**+**Administrer ce médicament à une personne saine comporte un risque de 1 % de la tuer. \n**+**Sans ce test, les cinq patients mourront certainement. Que faites-vous ?",
+        "bouton1": "Administrer",
         "bouton2": "Inaction",
-        "Bon": "Opérer",
-        "Détails": "'<u>Bon choix</u>': Opérer M(Opérer) = 0.5, M(Inaction) = 0, si 1 des deux personnes sauver était non-consentante, M(Opérer) = 0.25 environ",
-        "M": 0.5,
-        "M1": 0.5,
+        "Bon": "Inaction",
+        "Détails": "'Bon choix': Ne rien faire (homme obèse en plus légé donc mal moins important, mais le respect reste null, c’est juste moins mal) \nM(inaction) = 0, M(administrer) = -p = -0.01 ",
+        "M": 0,
+        "M1": -0.01,
         "M2": 0,
         "src_plan": "./img/medicament.webp",
-        "voie1_type": "person",
-        "voie2_type": "person",
+        "href": "https://imgflip.com/i/alptp6",
         "voie1": 0,
         "voie2": 0,
         "voie1_arbre": false,
-        "voie2_arbre": false
+        "voie2_arbre": false 
     },
     "dilemme5":
     {

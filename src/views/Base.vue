@@ -240,7 +240,8 @@ export default {
 
             localStorage.setItem(`étoiles_${this.niveau}_courrante`, Math.floor(this.score/100).toString());
             let étoiles = localStorage.getItem(`étoiles_${this.niveau}_courrante`) || 0;
-            localStorage.setItem(`étoiles_${this.niveau}`, Math.max(Math.floor(this.score/100), étoiles));
+            let max_étoiles_passé = localStorage.getItem(`étoiles_${this.niveau}`) || 0;
+            localStorage.setItem(`étoiles_${this.niveau}`, Math.max(max_étoiles_passé, étoiles));
             this.étoiles_niveau = Number(étoiles);
 
             const screenWidth = window.innerWidth;

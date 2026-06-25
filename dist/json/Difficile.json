@@ -83,19 +83,23 @@
     },
     "dilemme5":
     {
-        "description": "Vous êtes médecin dans un hôpital où cinq patients sont gravement malades et mourront sans un médicament innovant. Vous disposez d’un médicament expérimental qui pourrait les sauver, mais il doit être testé rapidement sur une personne saine, qui refuse, **elle ne consent pas à ce test**. \n**+**Administrer ce médicament à une personne saine comporte un risque de 1 % de la tuer. \n**+**Sans ce test, les cinq patients mourront certainement. Que faites-vous ?",
-        "bouton1": "Administrer",
-        "bouton2": "Inaction",
-        "Bon": "Inaction",
-        "Détails": "'Bon choix': Ne rien faire (homme obèse en plus légé donc mal moins important, mais le respect reste null, c’est juste moins mal) \nM(inaction) = 0, M(administrer) = -p = -0.01 ",
-        "M": 0,
-        "M1": -0.01,
-        "M2": 0,
-        "src_plan": "./img/medicament.webp",
-        "href": "https://imgflip.com/i/alptp6",
+        "description": "(dilemme de chat gpt) \nUne immense bibliothèque contient l’intégralité des connaissances humaines : médecine, mathématiques, histoire, physique, littérature, etc. \nUn incendie se déclare. \nTu peux sauver : \n**+**soit une seule personne inconnue, coincée dans le bâtiment, \n**+**soit la bibliothèque entière, mais la personne mourra. \nLa personne n’est ni un proche, ni quelqu’un d’important connu, ni un futur génie identifié. \nTu ne gagneras rien personnellement dans les deux cas.",
+        "bouton1": "Sauver la personne",
+        "bouton2": "Sauver la bibliothèque",
+        "bouton3": "Manque d'information",
+        "Bon": "Sauver la personne",
+        "Détails": "<u>Bon choix</u>: Inaction, voler de l'argent représente un léger risque pour la survie de la personne, il y a donc un respect nul, et c'est une mauvaise action même pour survivre.",
+        "M": 1,
+        "M1": 1,
+        "M2": 0.5,
+        "M3": 0.7,
+        "src_plan": "./img/bibliothèque.webp",
+        "href": "",
+        "voie1_type": "",
+        "voie2_type": "",
         "voie1": 0,
         "voie2": 0,
         "voie1_arbre": false,
-        "voie2_arbre": false 
+        "voie2_arbre": false
     }
 }
