@@ -1,7 +1,7 @@
 {
     "dilemme1": 
     {
-        "description": "Dilemme des pilules pour autrui C(bleu) = 0 C(rouge) = 1 \nSoit un nombre de participant **(101) qui n'ont pas choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **disent tous vouloir êtres rouges mais surtout pas bleu**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
+        "description": "Dilemme des pilules pour autrui C(bleu) = 0 C(rouge) = 1 \nSoit un nombre de participant **(101) qui n'ont pas choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **disent tous vouloir êtres rouges mais surtout pas bleu**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: il meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
         "bouton1": "Bleu",
         "bouton2": "Rouge",
         "Bon": "Rouge",
@@ -20,7 +20,7 @@
     },
     "dilemme2": 
     {
-        "description": "Dilemme des pilules pour autrui C(bleu) = 1 C(rouge) = 0 \nSoit un nombre de participant **(101) qui n'ont pas choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **disent tous vouloir êtres bleus mais surtout pas rouge**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
+        "description": "Dilemme des pilules pour autrui C(bleu) = 1 C(rouge) = 0 \nSoit un nombre de participant **(101) qui n'ont pas choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **disent tous vouloir êtres bleus mais surtout pas rouge**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: il meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
         "bouton1": "Bleu",
         "bouton2": "Rouge",
         "Bon": "Bleu",
@@ -58,7 +58,7 @@
     },
     "dilemme4": 
     {
-        "description": "Dilemme des pilules pour autrui C(bleu) = 1 C(rouge) = 1 \nSoit un nombre de participant **(101) qui ont choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **consentent pleinement aux conséquences de cette couleur**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
+        "description": "Dilemme des pilules pour autrui C(bleu) = 1 C(rouge) = 1 \nSoit un nombre de participant **(101) qui ont choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **consentent pleinement aux conséquences de cette couleur**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: il meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
         "bouton1": "Bleu",
         "bouton2": "Rouge",
         "Bon": "Rouge",
@@ -77,7 +77,7 @@
     },
     "dilemme5": 
     {
-        "description": "Dilemme des pilules pour autrui C(bleu) = 0 C(rouge) = 0 \nSoit un nombre de participant **(101) qui n'ont pas choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **ne consentent pas du tout aux conséquences de cette couleur**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: tu meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
+        "description": "Dilemme des pilules pour autrui C(bleu) = 0 C(rouge) = 0 \nSoit un nombre de participant **(101) qui n'ont pas choisi d’être cobaye d’une expérience**, \nTu fais partie des personnes qui choisissent la couleur des cobayes, ils vont tous avoir une couleur et **ne consentent pas du tout aux conséquences de cette couleur**. \nTu choisis la couleur d’un cobaye, soit rouge, soit bleue: \n**<u>Bleue:</u>** Tous les cobayes sont sauf si la majorité est bleue \n**<u>Rouge:</u>** Tous ceux qui sont bleue meurt si la majorité absolue est rouge\n**<u>Rien</u>**: il meurs\n+Il ne peut pas y avoir autant de rouges que de bleus \n+On t'as informé qu'avec cette description du dilemme et ces participants, il y a autant de rouges que de bleus en moyenne",
         "bouton1": "Bleu",
         "bouton2": "Rouge",
         "Bon": "Rouge",
