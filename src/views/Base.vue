@@ -364,9 +364,12 @@ export default {
             this.ratio = 0.6;
             break;
         case "Pilules":
-            this.ratio = 1;
+            this.ratio = 0.52;
             break;
         case "Enfoui":
+            this.ratio = 1.2;
+            break;
+        case "Classique":
             this.ratio = 1.6;
             break;
         default:

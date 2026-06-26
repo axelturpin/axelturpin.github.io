@@ -80,4 +80,34 @@ h2{
     cursor: pointer;
 }
 
+.mode{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 24px;
+    color: white;
+    background-color: #4B0082;
+    width: 500px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mode{
+        width: 330px;
+        height: 62px;
+        gap: 5px;
+        font-size: 16px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    .étoile{
+        width: 25px;
+    }
+  }
+
 </style>

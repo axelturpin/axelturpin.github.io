@@ -424,22 +424,6 @@ export default {
     align-items: center;
 }
 
-.mode{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    color: white;
-    background-color: #4B0082;
-    width: 520px;
-    height: 100px;
-    font-size: 20px;
-    margin: 25px;
-    gap: 20px;
-    border-radius: 20px;
-}
-
 /* relative et absolute pour placer les images */
 .plan-container {
   position: relative;
@@ -542,13 +526,6 @@ export default {
     top: 60px;
     left: 300px;
     transform: translateX(-50%) translateY(-50%);
-}
-
-.mode{
-    width: 320px;
-    height: 60px;
-    font-size: 16px;
-    gap: 5px;
 }
 
 @keyframes animerTrain {
