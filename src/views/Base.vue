@@ -603,14 +603,6 @@ export default {
     margin-left: 0%;
 }
 
-.soucoupe{
-    position: absolute;
-    width: 300px;
-    top: 60px;
-    left: 300px;
-    transform: translateX(-50%) translateY(-50%);
-}
-
 .mode{
     width: 320px;
     height: 60px;
@@ -651,5 +643,12 @@ export default {
     font-size: 18px;
 } 
 
+.soucoupe{
+    position: absolute;
+    width: 100px;
+    top: 40px;
+    left: 250px;
+    transform: translateX(-50%) translateY(-50%);
+}
 }
 </style>
