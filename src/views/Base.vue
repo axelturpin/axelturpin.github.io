@@ -26,7 +26,7 @@ export default {
       clickBtn3: false,
       socoupAnimation: false,
       timeoutId: null,
-      audio: null,
+    //   audio: null,
     }
   },
   methods: {
@@ -305,44 +305,44 @@ export default {
   async created() {
   try {
     
-    // document.querySelectorAll("audio").forEach(e=>{
-    //     e.remove();
-    // })
+    document.querySelectorAll("audio").forEach(e=>{
+        e.remove();
+    })
 
-    //   const audio = document.createElement("audio");
-    //   audio.src = `/audio/fond${this.niveau}.mp3`;
-    //   audio.onerror = () => {
-    //     // Si le fichier spécifique n'existe pas, charger le fallback
-    //     const alea = Math.random()
-    //     if(alea < 1/3){
-    //         audio.src = '/audio/fondFacile.mp3';
-    //     }
-    //     else if(alea < 5/6){
-    //         audio.src = '/audio/fondNormal.mp3';
-    //     }
-    //     else{
-    //         audio.src = '/audio/fondDifficile.mp3';
-    //     }
-    //   };
-    //   audio.autoplay = true;
-    //   audio.loop = true;
-    //   const body = document.querySelector("body");
-    //   body.appendChild(audio);
+      const audio = document.createElement("audio");
+      audio.src = `/audio/fond${this.niveau}.mp3`;
+      audio.onerror = () => {
+        // Si le fichier spécifique n'existe pas, charger le fallback
+        const alea = Math.random()
+        if(alea < 1/3){
+            audio.src = '/audio/fondFacile.mp3';
+        }
+        else if(alea < 5/6){
+            audio.src = '/audio/fondNormal.mp3';
+        }
+        else{
+            audio.src = '/audio/fondDifficile.mp3';
+        }
+      };
+      audio.autoplay = true;
+      audio.loop = true;
+      const body = document.querySelector("body");
+      body.appendChild(audio);
 
-    if (['Facile', 'Normal', 'Difficile'].includes(this.niveau)) {
-        this.audio = `/audio/fond${this.niveau}.mp3`;
-    } else {
-        const alea = Math.random();
-        if (alea < 1 / 3) {
-            this.audio = '/audio/fondFacile.mp3';
-        }
-        else if (alea < 5 / 6) {
-            this.audio = '/audio/fondNormal.mp3';
-        }
-        else {
-            this.audio = '/audio/fondDifficile.mp3';
-        }
-    }
+    // if (['Facile', 'Normal', 'Difficile'].includes(this.niveau)) {
+    //     this.audio = `/audio/fond${this.niveau}.mp3`;
+    // } else {
+    //     const alea = Math.random();
+    //     if (alea < 1 / 3) {
+    //         this.audio = '/audio/fondFacile.mp3';
+    //     }
+    //     else if (alea < 5 / 6) {
+    //         this.audio = '/audio/fondNormal.mp3';
+    //     }
+    //     else {
+    //         this.audio = '/audio/fondDifficile.mp3';
+    //     }
+    // }
     
     const response = await fetch(`/json/${this.niveau}.json`);
     if (!response.ok) throw new Error('Erreur HTTP ' + response.status);
@@ -384,7 +384,7 @@ export default {
 </script>
 
 <template>
-    <audio :src="audio" autoplay loop></audio>
+    <!-- <audio :src="audio" autoplay loop></audio> -->
 
   <h2>{{ niveau }}: {{ numéro }}</h2>
     <div class="center">
