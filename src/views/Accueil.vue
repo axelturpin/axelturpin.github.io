@@ -87,8 +87,8 @@ Même en cas de “mauvaise” réponse dans le mode “Niveaux” on gagne des 
     color: white;
     background-color: #4B0082;
     padding: 10px 60px;
-    margin: 30px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .jouer:hover{
@@ -98,6 +98,7 @@ Même en cas de “mauvaise” réponse dans le mode “Niveaux” on gagne des 
 .div-jouer{
     display: flex;
     justify-content: center;
+    margin: 50px;
 }
 
 .underline{
