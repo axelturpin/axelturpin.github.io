@@ -77,6 +77,9 @@ h2{
     padding: 10px 30px;
     margin: 30px;
     border-radius: 20px;
+    font-size: large;
+    border: 3px solid black;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -107,6 +110,9 @@ h2{
     }
     .étoile{
         width: 25px;
+    }
+    .btn{
+      font-size: 1rem;
     }
   }
 
