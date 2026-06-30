@@ -391,7 +391,7 @@ export default {
             this.ratio = 1.2;
             break;
         case "Classique":
-            this.ratio = 1.6;
+            this.ratio = 1.2;
             break;
         default:
             this.ratio = 3;
