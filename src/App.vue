@@ -11,9 +11,6 @@ export default{
       police: localStorage.getItem("font") || "Arial",
     }
   },
-  mounted() {
-
-  }
 }
 
 
@@ -97,6 +94,11 @@ h2{
     margin: 20px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+
+.audio{
+    margin: 5px;
 }
 
 @media (max-width: 768px) {
