@@ -1,7 +1,7 @@
 <script>
 
 export default{
-    name: "Modes",
+    name: "ModesDilemmes",
     data(){
         return{
             étoiles_facile: Number(localStorage.getItem("étoiles_Facile")) || 0,

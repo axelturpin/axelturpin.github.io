@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "Base",
+    name: "BaseDilemmes",
     props: [
         "niveau",
         "nombre_dilemmes"
@@ -9,7 +9,6 @@ export default {
     return {
       data: {},
       dilemme: {},
-    //   nombre_dilemmes: Number(this.nombre_dilemmes),
       description: "",
       error: null,
       clicked: false,
@@ -28,6 +27,8 @@ export default {
       timeoutId: null,
       audio: null,
       musiqueBloquee: false,
+      voie1_arbre: false,
+      voie2_arbre: false,
     }
   },
   methods: {
@@ -52,6 +53,8 @@ export default {
       this.clickBtn2 = false;
       this.clickBtn3 = false;
       this.socoupAnimation = false;
+      this.voie1_arbre = false;
+      this.voie2_arbre = false;
       this.suivant();
       this.étoiles_niveau = 0;
     },
@@ -64,16 +67,16 @@ export default {
             btn.style.color = 'white';
             this.Détails = this.dilemme.Détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
-            this.timeoutId = setTimeout(function()
-            {
+            this.timeoutId = setTimeout(() => {
             const voie2 = document.querySelectorAll(".voie2");
-            voie2.forEach((vie, index) => {
+            voie2.forEach((vie) => {
                 vie.style.display = "none";
             });
             const train = document.querySelector(".train");
             if(train){
                 train.style.display = "none";
             }
+            this.voie2_arbre = false;
             }, 1900);
             
             if(this.dilemme.bouton1 === this.dilemme.Bon){
@@ -94,16 +97,16 @@ export default {
             btn.style.color = 'white';
             this.Détails = this.dilemme.Détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
-            this.timeoutId = setTimeout(function()
-            {
+            this.timeoutId = setTimeout(() => {
             const voie1 = document.querySelectorAll(".voie1");
-            voie1.forEach((vie, index) => {
+            voie1.forEach((vie) => {
                 vie.style.display = "none";
             });
             const train = document.querySelector(".train");
             if(train){
                 train.style.display = "none";
             }
+            this.voie1_arbre = false;
             }, 1900);
             
             if(this.dilemme.bouton2 === this.dilemme.Bon){
@@ -136,7 +139,7 @@ export default {
     chargement(){
         // attendre que le DOM rende les éléments (v-if et v-for)
         this.$nextTick(() => {
-            window.scrollTo(0, 0);
+window.scrollTo(0, 0);
             this.description = this.dilemme.description
             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
             .replace(/\n/g, '<br>');
@@ -173,53 +176,20 @@ export default {
                     vie.style.left = `calc(95% - ${index*12}px)`;
                 }
             });
-              
-        //suppression des arbres des dilemmes précédents
-        const arbreAncien1 = document.querySelector(".arbre1");
-        const arbreAncien2 = document.querySelector(".arbre2");
-        if(arbreAncien1){
-            arbreAncien1.remove();
-        }
-        if(arbreAncien2){
-            arbreAncien2.remove();
-        }
 
-        //Affichage de nouveaux arbres si dans le dilemme
-        const container = document.querySelector(".plan-container");
-        if(this.dilemme.voie1_arbre){
-            var arbre1 = document.createElement("img");
-            arbre1.className = "arbre1 voie1";
-            arbre1.src = "/img/arbre.webp";
-            arbre1.alt = "arbre";
-            arbre1.style.display = "block";
-            arbre1.style.position = "absolute";
-            arbre1.style.top = `calc(60%)`;
-            arbre1.style.left = `calc(70%)`;
-            arbre1.style.transform = "translate(-50%, -50%)";
-            if (screenWidth <= 768){
-            arbre1.style.width = "100px";
-            arbre1.style.top = `calc(55%)`;
-            arbre1.style.left = `calc(70%)`;
-        }
-        container.appendChild(arbre1);
-    }
-    if(this.dilemme.voie2_arbre){
-        var arbre2 = document.createElement("img");
-        arbre2.className = "arbre2 voie2";
-        arbre2.src = "/img/arbre.webp";
-        arbre2.alt = "arbre";
-        arbre2.style.display = "block";
-        arbre2.style.position = "absolute";
-        arbre2.style.top = `calc(30%)`;
-        arbre2.style.left = `calc(70%)`;
-        arbre2.style.transform = "translate(-50%, -50%)";
-        if (screenWidth <= 768){
-        arbre2.style.width = "100px";
-        arbre2.style.top = `calc(30%)`;
-        arbre2.style.left = `calc(70%)`;
-        }
-        container.appendChild(arbre2);
-    }
+            // Arbres à affichés ou caché par rapport au dilemme précédent
+            if(this.dilemme.voie1_arbre){
+                this.voie1_arbre = true;
+            }else{
+                this.voie1_arbre = false;
+            }
+              
+            if(this.dilemme.voie2_arbre){
+                this.voie2_arbre = true;
+            }else{
+                this.voie2_arbre = false;
+            }
+              
     if(this.dilemme.soucoupe){
         this.socoupAnimation = true;
     }
@@ -297,11 +267,7 @@ export default {
         }
 
     },
-    strNoAccent(a){return (''+a).normalize('NFD').replace(/[\u0300-\u036f]/g,'');},
-    relancerAudio(){
-        this.audio.play().then(() => {
-        this.musiqueBloquee = false;
-    });
+    strNoAccent(a){return (''+a).normalize('NFD').replace(/[\u0300-\u036f]/g,'');
     },
   },
   computed(){
@@ -311,60 +277,21 @@ export default {
   // après le chargement du composant
   async created() {
   try {
-    document.querySelectorAll("audio").forEach(e=>{
-        e.remove();
-    })
-
-    this.audio = document.createElement("audio");
     if (['Facile', 'Normal', 'Difficile'].includes(this.niveau)) {
-        this.audio.src = `/audio/fond${this.niveau}.mp3`;
+        this.audio = `/audio/fond${this.niveau}.mp3`;
     } else {
         const alea = Math.random();
         if (alea < 1 / 3) {
-            this.audio.src = '/audio/fondFacile.mp3';
+            this.audio = '/audio/fondFacile.mp3';
         }
         else if (alea < 5 / 6) {
-            this.audio.src = '/audio/fondNormal.mp3';
+            this.audio = '/audio/fondNormal.mp3';
         }
         else {
-            this.audio.src = '/audio/fondDifficile.mp3';
+            this.audio = '/audio/fondDifficile.mp3';
         }
     }
-    // const audio = document.createElement("audio");
-    //   audio.src = `/audio/fond${this.niveau}.mp3`;
-    //   audio.onerror = () => {
-    //     // Si le fichier spécifique n'existe pas, charger le fallback
-    //     const alea = Math.random()
-    //     if(alea < 1/3){
-    //         audio.src = '/audio/fondFacile.mp3';
-    //     }
-    //     else if(alea < 5/6){
-    //         audio.src = '/audio/fondNormal.mp3';
-    //     }
-    //     else{
-    //         audio.src = '/audio/fondDifficile.mp3';
-    //     }
-    //   };
-    //   audio.autoplay = true;
-    //   audio.loop = true;
-    //   const body = document.querySelector("body");
-    //   body.appendChild(audio);
-
-    this.audio.autoplay = true;
-    this.audio.loop = true;
-    const body = document.querySelector("body");
-    body.appendChild(this.audio);
-
-    this.audio.play()
-    .then(() => {
-        this.musiqueBloquee = false;
-    })
-    .catch((err) => {
-        this.musiqueBloquee = true;
-    });
-
-
-    
+ 
     const response = await fetch(`/json/${this.niveau}.json`);
     if (!response.ok) throw new Error('Erreur HTTP ' + response.status);
     const data = await response.json();
@@ -408,8 +335,8 @@ export default {
 </script>
 
 <template>
-    <button class="btn audio" @click="relancerAudio" v-if="musiqueBloquee">Relancer audio</button>
-  <h2>{{ niveau }}: {{ numéro }}</h2>
+    <audio :src="audio" autoplay loop></audio>
+    <h2>{{ niveau }}: {{ numéro }}</h2>
     <div class="center">
         <!-- v-html pour appliquer des effets au texte (mettre en gras) -->
         <p class="p-description" v-html="description"></p>
@@ -417,34 +344,38 @@ export default {
 
     <div class="center colonne">
         <div class="plan-container">
-            <!-- <a :href="dilemme.href"> div à la place-->
                 <div>
-                <img :src="dilemme.src_plan" class="img-rails" alt="fond" loading="lazy">
+                <!-- arbre -->
+                <img src="/img/arbre.webp" alt="arbre sur la voie 1" v-if="voie1_arbre" class="arbre1">
+                <img src="/img/arbre.webp" alt="arbre sur la voie 2" v-if="voie2_arbre" class="arbre2">
+                <!-- fond -->
+                <img :src="dilemme.src_plan" class="img-rails" alt="fond" title="inspié de imgflip.com" loading="lazy">
                 <!-- train -->
                 <div v-if="dilemme.voie1 > 0">
                     <img :class="{animation1: clickBtn1 && !socoupAnimation, animation2: clickBtn2}" src="/img/train.webp" alt="train" class="train">
                 </div>
                 <!-- soucoupe -->
                 <a v-if="dilemme.soucoupe" href="https://imgflip.com/i/ancqwb">
-                <img src="/img/soucoupeFaite.webp" class="soucoupe"/></a>
+                <img src="/img/soucoupeFaite.webp" title="made at imgflip.com" class="soucoupe"/></a>
                 <!-- voie 1 -->
-                <div v-if="dilemme.voie1 > 0" v-for="n in dilemme.voie1">
-                    <img :key="n" v-if="dilemme.voie1_type === 'chien'" src="/img/chien.webp" alt="chien" loading="lazy" class="chien voie1" >
-                    <img :key="n" v-if="dilemme.voie1_type === 'person'" src="/img/personneHD1.webp" alt="personne" loading="lazy" class="person voie1">
-                    <img :key="n" v-if="dilemme.voie1_type === 'voluntary person'" src="/img/VolontaireAtttaché.webp" alt="personne qui est volontairement sur la voie" loading="lazy" class="Vperson voie1">
+                <div v-if="dilemme.voie1 > 0">
+                    <div v-for="n in dilemme.voie1" :key="n">
+                        <img v-if="dilemme.voie1_type === 'chien'" src="/img/chien.webp" alt="chien" loading="lazy" class="chien voie1" >
+                        <img v-if="dilemme.voie1_type === 'person'" src="/img/personneHD1.webp" alt="personne" loading="lazy" class="person voie1">
+                        <img v-if="dilemme.voie1_type === 'voluntary person'" src="/img/VolontaireAtttaché.webp" alt="personne qui est volontairement sur la voie" loading="lazy" class="Vperson voie1">
+                    </div>
                 </div>
                 <!-- voie 2 -->
-                <div v-if="dilemme.voie2 > 0" v-for="n in dilemme.voie2">
-                    <img :key="n" v-if="dilemme.voie2_type === 'chien'" src="/img/chien.webp" alt="chien" loading="lazy" :class="dilemme.voie2_type" class="voie2">
-                    <img :key="n" v-if="dilemme.voie2_type === 'person'" src="/img/personneHD1.webp" alt="personne" loading="lazy" :class="dilemme.voie2_type" class="voie2">
-                    <img :key="n" v-if="dilemme.voie2_type === 'voluntary person'" src="/img/VolontaireAtttaché.webp" alt="personne qui est volontairement sur la voie" loading="lazy" class="Vperson voie2">
+                <div v-if="dilemme.voie2 > 0">
+                    <div v-for="n in dilemme.voie2" :key="n">
+                        <img v-if="dilemme.voie2_type === 'chien'" src="/img/chien.webp" alt="chien" loading="lazy" :class="dilemme.voie2_type" class="voie2">
+                        <img v-if="dilemme.voie2_type === 'person'" src="/img/personneHD1.webp" alt="personne" loading="lazy" :class="dilemme.voie2_type" class="voie2">
+                        <img v-if="dilemme.voie2_type === 'voluntary person'" src="/img/VolontaireAtttaché.webp" alt="personne qui est volontairement sur la voie" loading="lazy" class="Vperson voie2">
+                    </div>
                 </div>
             </div>
-            <!-- </a> -->
         </div>
 
-        <!-- <div><a href="https://imgflip.com/memegenerator" class="lien">from Imgflip Meme Generator</a></div> -->
-        <!-- <div v-if="dilemme.href_dog"><a :href="dilemme.href_dog" class="lien">dog modified image from Imgflip Meme Generator</a></div> -->
         <div v-if="dilemme.href"><a :href="dilemme.href" class="lien">Décorts inspirés de Imgflip Meme Generator</a></div>
         <div v-if="dilemme.href_person"><a :href="dilemme.href_person" class="lien">personnage inspiré de Imgflip Meme Generator</a></div>
         <div v-if="dilemme.href_soucoupe"><a :href="dilemme.href_soucoupe" class="lien">soucoup inspiré de Imgflip Meme Generator</a></div>
@@ -559,6 +490,23 @@ export default {
     transform: translateX(-50%) translateY(-50%);
 }
 
+.arbre1, .arbre2{
+    min-width: 12%;
+    max-width: 16vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.arbre1{
+    top: 60%;
+    left: 70%;
+}
+
+.arbre2{
+    top: 34%;
+    left: 70%;
+}
+
 .animation1{
   animation: animerTrain 2s linear 0s;
 }
@@ -670,5 +618,6 @@ export default {
     left: 250px;
     transform: translateX(-50%) translateY(-50%);
 }
+
 }
 </style>

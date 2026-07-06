@@ -1,11 +1,7 @@
 <script>
-import Base_custom from './Base_custom.vue';
 
 export default {
-    name: 'Facile',
-    components: {
-    Base_custom
-  },
+    name: 'CustomDilemmes',
   data(){
     return{
         nb: localStorage.getItem("nb_custom") || 0,

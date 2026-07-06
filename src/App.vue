@@ -1,10 +1,11 @@
 <script>
-import Footer from './components/Footer.vue';
-import Header from './components/Header.vue';
+import SiteFooter from './components/Footer.vue';
+import SiteHeader from './components/Header.vue';
+
 export default{
   components:{
-    Header,
-    Footer
+    SiteHeader,
+    SiteFooter
   },
   data(){
     return{
@@ -18,12 +19,12 @@ export default{
 
 <template>
   <div :style="{ '--police': police }">
-    <Header></Header>
+    <SiteHeader />
     <main>
       <router-view/>
       <p>Musique : "Infos Tapis", "Alice", "Luiz" – Copyright © Hicham Chahidi, utilisé avec permission via MusicScreen (musique libre de droits).</p>
     </main>
-    <Footer></Footer>
+    <SiteFooter />
   </div>
 </template>
 

@@ -27,8 +27,8 @@ ensemble des théories morales qui soutiennent que ce sont les conséquences d'u
 <span class="underline">Finalitarisme:</span> Théorie morale (utilisée) qui se base sur une certaine définition du respect (r):<br>
 <img src="/img/r.webp" alt="respect" loading="lazy" class="r"><br>
 Avec le bien qui correspond au bien le plus élevé donné à une seule personne, et le mal est le mal le plus élevé donné à une seule personne. (En pratique les définitions du bien et du mal du respect ne sont pas tout à fait les mêmes que pour les conséquences, mais pour l’exemple que je vais donner ça suffit)<br>
-Plus on fait de mal par rapport au meilleur bien, plus le respect est faible, le respect est entre -1 et 1.  <br> <br>
-Le respect positif (rx) commence à 0, mais le respect négatif (ry) à 1, car les conséquences négatives ne doivent pas êtres ignorées sauf empêchements. Quand le respect r est positif, on augmente le respect positif, et quand r est négatif, on augmente le respect négatif, (quand r < 0, -r > 0) <br>
+Plus on fait de mal par rapport au meilleur bien, plus le respect est faible, le respect est entre -1 et 1. <br> <br>
+Le respect positif (rx) commence à 0, mais le respect négatif (ry) à 1, car les conséquences négatives ne doivent pas êtres ignorées sauf empêchements. Quand le respect r est positif, on augmente le respect positif, et quand r est négatif, on augmente le respect négatif, (quand r &lt; 0, -r &gt; 0) <br>
 <img src="/img/r2.webp" alt="respect2" loading="lazy" class="r2"><br>
 <br> Soit M la moralité: <br>
 <img src="/img/M.webp" alt="Moralité" loading="lazy" class="M"> <br>
@@ -36,14 +36,15 @@ Avec i = 1 si on est responsable et 0 sinon (i = intentionnalité) <br>
 <br>
 <span class="underline">Exemple:</span> Dilemme du tramway avec l’homme obèse: <br>
 5 personnes risquent d’être écrasées par un train mais: <br>
-+On peut pousser une personne obèse d’un pont pour faire dérailler le train et sauver les 5 autres. <br>
++On peut pousser une personne obèse d’un pont pour faire dérailler le train et sauver les 5 autres.<br>
 +Ou ne rien faire<br>
 <span class="underline">Cas:“Pousser et tuer 1 personne pour en sauver 5”:</span><br>
 On pose M(vie) = 1<br>
 5 × bien = 1, et mal = 1<br>
 Donc rx = 0 et ry = 1<br>
 M = somme(rx × bien - ry × mal ) <br>
-= 5 × 0 - mal = - mal = <strong>M(pousser) = - 1</strong> <br>
+= 5 × 0 - mal = - mal = -1 <br>
+<strong>M(pousser) = - 1</strong> <br>
 <span class="underline">Cas: “Ne rien faire”: </span><br>
 i = 0 <br>
 Donc <strong>M(inaction) = 0</strong> <br>
@@ -51,7 +52,7 @@ tuer un innocent est toujours aussi mal (-1) comparé à l’inaction (0) (subje
 <br>
 <a href="https://docs.google.com/document/d/1B0GHW-14BNw4Vj9-4fVeaHQf5okFP3LjS_oU0D4EJps/edit?tab=t.0" class="lien">Lien vers cette théorie</a> (et d’autres sujets en lien avec la philosophie et les mathématiques)<br>
 <br>
-Note: Dans le dilemme du tramway classique par exemple: La probabilité à priori que le train passe “p” (selon le temps qu’on reste sur la voie) à son importance, car si le risque est déjà important, on est moins responsable du mal qu’on fait en changeant de voie, donc changer de voie peut devenir moral ou immoral. Un argument opposé: de toute façon dans le dilemme le train passe. Mais si on regarde les extrêmes, p = 0.99 le mal est presque déjà fait contrairement au bien qui est à peine fait (probabilité de bien de 0.01 avant qu’on sache que le train passe), comparé à p = 0.01, où l’on fait presque tout le mal. Le respect est fait pour que ce soit pris en compte. <br>Cette probabilité à priori est une variable caché  du dilemme du tramway tel qu'il est généralement décrit, cette probabilité est associée à l'intensité du mal risqué. Ce mal potentiel intervient dans le respect même si il n'intervient pas dans les conséquences, c'est lui qui fait que c'est moins "grave" de dévier le train. 
+Note: Dans le dilemme du tramway classique par exemple: La probabilité à priori que le train passe “p” (selon le temps qu’on reste sur la voie) à son importance, car si le risque est déjà important, on est moins responsable du mal qu’on fait en changeant de voie, donc changer de voie peut devenir moral ou immoral. Un argument opposé: de toute façon dans le dilemme le train passe. Mais si on regarde les extrêmes, p = 0.99 le mal est presque déjà fait contrairement au bien qui est à peine fait (probabilité de bien de 0.01 avant qu’on sache que le train passe), comparé à p = 0.01, où l’on fait presque tout le mal. Le respect est fait pour que ce soit pris en compte. <br>Cette probabilité à priori est une variable caché  du dilemme du tramway tel qu'il est généralement décrit, cette probabilité est associée à l'intensité du mal risqué. Ce mal potentiel intervient dans le respect même si il n'intervient pas dans les conséquences, c'est lui qui fait que c'est moins "grave" de dévier le train.
 <br><br>
 Il y a un mode Classique (5 Dilemmes très connus (certains présent dans les autres modes)), un mode Niveaux (Facile, Normal, Difficile), chaque niveau à 5 dilemmes, un mode aléatoire et un mode Custom<br>
 Même en cas de “mauvaise” réponse dans le mode “Niveaux” on gagne des points, car c’est quand même très subjectif, le minimum de réussite par niveau est de 2 étoiles sur 5.<br>

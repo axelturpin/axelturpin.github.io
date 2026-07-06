@@ -1,11 +1,11 @@
 <script>
 
-import Base from "./Base.vue";
+import BaseDilemmes from "./BaseDilemmes.vue";
 
 export default {
-    name: 'Facile',
+    name: 'FacileDilemmes',
     components: {
-    Base
+    BaseDilemmes
   },
 
   }
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <Base niveau="Facile" nombre_dilemmes="5"></Base>
+  <BaseDilemmes niveau="Facile" nombre_dilemmes="5"></BaseDilemmes>
 </template>
 
 <style scoped>

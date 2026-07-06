@@ -48,7 +48,7 @@ export default {
             this.timeoutId = setTimeout(function()
             {
             const voie2 = document.querySelectorAll(".voie2");
-            voie2.forEach((vie, index) => {
+            voie2.forEach((vie) => {
                 vie.style.display = "none";
             });
             const train = document.querySelector(".train");
@@ -78,7 +78,7 @@ export default {
             this.timeoutId = setTimeout(function()
             {
             const voie1 = document.querySelectorAll(".voie1");
-            voie1.forEach((vie, index) => {
+            voie1.forEach((vie) => {
                 vie.style.display = "none";
             });
             const train = document.querySelector(".train");
@@ -359,7 +359,7 @@ export default {
 
     <div class="center colonne">
         <div class="plan-container">
-            <a ><img :src="dilemme.src_plan" class="img-rails" alt="fond" title="made at imgflip.com" loading="lazy">
+            <img :src="dilemme.src_plan" class="img-rails" alt="fond" title="made at imgflip.com" loading="lazy">
                 <!-- train -->
                 <div v-if="dilemme.voie1 > 0">
                     <img :class="{animation1: clickBtn1 && !socoupAnimation, animation2: clickBtn2}" src="/img/train.webp" alt="train" class="train">
@@ -368,18 +368,21 @@ export default {
                 <a v-if="dilemme.soucoupe" >
                 <img src="/img/soucoupeFaite.webp" title="made at imgflip.com" class="soucoupe"/></a>
                 <!-- voie 1 -->
-                <div v-if="dilemme.voie1 > 0" v-for="n in dilemme.voie1">
-                    <img :key="n" v-if="dilemme.voie1_type === 'chien'" src="/img/chien.webp" alt="" loading="lazy" :class="dilemme.voie1_type"  class="voie1" >
-                    <img :key="n" v-if="dilemme.voie1_type === 'person'" src="/img/personneHD1.webp" alt="" loading="lazy" :class="dilemme.voie1_type" class="voie1">
-                    <img :key="n" v-if="dilemme.voie1_type === 'voluntary person'" src="/img/VolontaireAtttaché.webp" alt="" loading="lazy" class="Vperson voie1">
-                </div>
+                <template v-if="dilemme.voie1 > 0">
+                  <div v-for="n in dilemme.voie1" :key="`voie1-${n}`">
+                    <img v-if="dilemme.voie1_type === 'chien'" src="/img/chien.webp" alt="" loading="lazy" :class="dilemme.voie1_type"  class="voie1" >
+                    <img v-if="dilemme.voie1_type === 'person'" src="/img/personneHD1.webp" alt="" loading="lazy" :class="dilemme.voie1_type" class="voie1">
+                    <img v-if="dilemme.voie1_type === 'voluntary person'" src="/img/VolontaireAtttaché.webp" alt="" loading="lazy" class="Vperson voie1">
+                  </div>
+                </template>
                 <!-- voie 2 -->
-            <div v-if="dilemme.voie2 > 0" v-for="n in dilemme.voie2">
-                <img :key="n" v-if="dilemme.voie2_type === 'chien'" src="/img/chien.webp" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2">
-                <img :key="n" v-if="dilemme.voie2_type === 'person'" src="/img/personneHD1.webp" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2">
-                <img :key="n" v-if="dilemme.voie2_type === 'voluntary person'" src="/img/VolontaireAtttaché.webp" alt="" loading="lazy" class="Vperson voie2">
-            </div>
-            </a>
+                <template v-if="dilemme.voie2 > 0">
+                    <div v-for="n in dilemme.voie2" :key="`voie2-${n}`">
+                        <img v-if="dilemme.voie2_type === 'chien'" src="/img/chien.webp" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2">
+                        <img v-if="dilemme.voie2_type === 'person'" src="/img/personneHD1.webp" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2">
+                        <img v-if="dilemme.voie2_type === 'voluntary person'" src="/img/VolontaireAtttaché.webp" alt="" loading="lazy" class="Vperson voie2">
+                    </div>
+                </template>
         </div>
 
         <!-- <div><a href="https://imgflip.com/memegenerator" class="lien">from Imgflip Meme Generator</a></div> -->

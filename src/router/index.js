@@ -1,9 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import Accueil from "../views/Accueil.vue";
+import AccueilPage from "../views/AccueilPage.vue";
 import Modes from "../views/Modes.vue";
 import Facile from "../views/Facile.vue";
-import Paramètres from "../views/Paramètres.vue";
 import Difficile from "../views/Difficile.vue";
 import Aléatoire from "../views/Aléatoire.vue";
 import Custom from "../views/Custom.vue";
@@ -16,14 +15,15 @@ import Base_custom from "@/views/Base_custom.vue";
 import Caché from "@/views/Caché.vue";
 import Pilules from "@/views/Pilules.vue";
 import Enfoui from "@/views/Enfoui.vue";
+import ParamètresPage from "@/views/ParamètresPage.vue";
 
 //définir les routes
 
 const roads = [
     {
         path: "/",
-        name: "Accueil",
-        component: Accueil
+        name: "AccueilPage",
+        component: AccueilPage
     },
     {
         path: "/modes",
@@ -97,8 +97,8 @@ const roads = [
     },
     {
         path: "/parametres",
-        name: "Paramètres",
-        component: Paramètres
+        name: "ParamètresPage",
+        component: ParamètresPage
     },
 ]
 

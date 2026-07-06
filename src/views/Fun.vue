@@ -1,5 +1,6 @@
 <script>
 export default {
+    name: 'FunDilemmes',
   data() {
     return {
       data: {},
@@ -37,7 +38,7 @@ export default {
             this.timeoutId = setTimeout(function()
             {
             const voie2 = document.querySelectorAll(".voie2");
-            voie2.forEach((vie, index) => {
+            voie2.forEach((vie) => {
                 vie.style.display = "none";
             });
             const train = document.querySelector(".train");
@@ -67,7 +68,7 @@ export default {
             this.timeoutId = setTimeout(function()
             {
             const voie1 = document.querySelectorAll(".voie1");
-            voie1.forEach((vie, index) => {
+            voie1.forEach((vie) => {
                 vie.style.display = "none";
             });
             const train = document.querySelector(".train");
@@ -341,14 +342,18 @@ export default {
                     <img :class="{animation1: clickBtn1, animation2: clickBtn2}" src="/img/train.webp" alt="train" class="train animated">
                 </div>
                 <!-- voie 1 -->
-                <div v-if="dilemme.voie1 > 0" v-for="n in dilemme.voie1">
-                    <img :key="n" v-if="dilemme.voie1_type === 'chien'" src="/img/chien.webp" alt="" loading="lazy" :class="dilemme.voie1_type"  class="voie1 animated" >
-                    <img :key="n" v-if="dilemme.voie1_type === 'person'" src="/img/personneHD1.webp" alt="" loading="lazy" :class="dilemme.voie1_type" class="voie1 animated">
+                <div v-if="dilemme.voie1 > 0">
+                    <div v-for="n in dilemme.voie1" :key="`voie1-${n}`">
+                        <img v-if="dilemme.voie1_type === 'chien'" src="/img/chien.webp" alt="" loading="lazy" :class="dilemme.voie1_type"  class="voie1 animated" >
+                        <img v-if="dilemme.voie1_type === 'person'" src="/img/personneHD1.webp" alt="" loading="lazy" :class="dilemme.voie1_type" class="voie1 animated">
+                    </div>
                 </div>
                 <!-- voie 2 -->
-            <div v-if="dilemme.voie2 > 0" v-for="n in dilemme.voie2">
-                <img :key="n" v-if="dilemme.voie2_type === 'chien'" src="/img/chien.webp" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2 animated">
-                <img :key="n" v-if="dilemme.voie2_type === 'person'" src="/img/personneHD1.webp" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2 animated">
+            <div v-if="dilemme.voie2 > 0">
+                <div v-for="n in dilemme.voie2" :key="`voie2-${n}`">
+                    <img v-if="dilemme.voie2_type === 'chien'" src="/img/chien.webp" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2 animated">
+                    <img v-if="dilemme.voie2_type === 'person'" src="/img/personneHD1.webp" alt="" loading="lazy" :class="dilemme.voie2_type" class="voie2 animated">
+                </div>
             </div>
             </a>
         </div>
