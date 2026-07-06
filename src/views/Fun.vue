@@ -274,25 +274,20 @@ export default {
   // après le chargement du composant
   async created() {
   try {
-    document.querySelectorAll("audio").forEach(e=>{
-        e.remove();
-    })
-
-      const audio = document.createElement("audio");
-      const alea = Math.random()
-        if(alea < 1/3){
-            audio.src = '/audio/fondFacile.mp3';
+    if (['Facile', 'Normal', 'Difficile'].includes(this.niveau)) {
+        this.audio = `/audio/fond${this.niveau}.mp3`;
+    } else {
+        const alea = Math.random();
+        if (alea < 1 / 3) {
+            this.audio = '/audio/fondFacile.mp3';
         }
-        else if(alea < 5/6){
-            audio.src = '/audio/fondNormal.mp3';
+        else if (alea < 5 / 6) {
+            this.audio = '/audio/fondNormal.mp3';
         }
-        else{
-            audio.src = '/audio/fondDifficile.mp3';
+        else {
+            this.audio = '/audio/fondDifficile.mp3';
         }
-      audio.autoplay = true;
-      audio.loop = true;
-      const body = document.querySelector("body");
-      body.appendChild(audio);
+    }
 
     const response = await fetch('/json/Fun.json');
     console.log(response)
@@ -329,6 +324,7 @@ export default {
 </script>
 
 <template>
+    <audio :src="audio" autoplay loop></audio>
   <h2>Fun {{ numéro }}</h2>
     <div class="center">
         <p class="p-description" v-html="description"></p>

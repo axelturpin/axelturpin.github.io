@@ -10,7 +10,7 @@ import Normal from "../views/Normal.vue";
 import Classique from "../views/Classique.vue";
 import Fun from "@/views/Fun.vue";
 import Bonus from "@/views/Bonus.vue";
-import Base_custom from "@/views/Base_custom.vue";
+import BaseCustom from "@/views/BaseCustom.vue";
 // import Bonus2 from "@/views/Bonus2.vue";
 import Caché from "@/views/Caché.vue";
 import Pilules from "@/views/Pilules.vue";
@@ -63,7 +63,7 @@ const roads = [
     {
         path: "/custom/play",
         name: "Play Custom",
-        component: Base_custom
+        component: BaseCustom
     },
     {
         path: "/fun",
