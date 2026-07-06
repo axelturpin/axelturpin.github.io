@@ -43,10 +43,10 @@ On pose M(vie) = 1<br>
 5 × bien = 1, et mal = 1<br>
 Donc rx = 0 et ry = 1<br>
 M = somme(rx × bien - ry × mal ) <br>
-= 5 × 0 - mal = - mal = - 1 <br>
+= 5 × 0 - mal = - mal = <strong>M(pousser) = - 1</strong> <br>
 <span class="underline">Cas: “Ne rien faire”: </span><br>
 i = 0 <br>
-Donc M = 0 <br>
+Donc <strong>M(inaction) = 0</strong> <br>
 tuer un innocent est toujours aussi mal (-1) comparé à l’inaction (0) (subjectif) <br>
 <br>
 <a href="https://docs.google.com/document/d/1B0GHW-14BNw4Vj9-4fVeaHQf5okFP3LjS_oU0D4EJps/edit?tab=t.0" class="lien">Lien vers cette théorie</a> (et d’autres sujets en lien avec la philosophie et les mathématiques)<br>

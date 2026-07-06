@@ -419,14 +419,14 @@ export default {
         <div class="plan-container">
             <!-- <a :href="dilemme.href"> div à la place-->
                 <div>
-                <img :src="dilemme.src_plan" class="img-rails" alt="fond" title="inspié de imgflip.com" loading="lazy">
+                <img :src="dilemme.src_plan" class="img-rails" alt="fond" loading="lazy">
                 <!-- train -->
                 <div v-if="dilemme.voie1 > 0">
                     <img :class="{animation1: clickBtn1 && !socoupAnimation, animation2: clickBtn2}" src="/img/train.webp" alt="train" class="train">
                 </div>
                 <!-- soucoupe -->
                 <a v-if="dilemme.soucoupe" href="https://imgflip.com/i/ancqwb">
-                <img src="/img/soucoupeFaite.webp" title="made at imgflip.com" class="soucoupe"/></a>
+                <img src="/img/soucoupeFaite.webp" class="soucoupe"/></a>
                 <!-- voie 1 -->
                 <div v-if="dilemme.voie1 > 0" v-for="n in dilemme.voie1">
                     <img :key="n" v-if="dilemme.voie1_type === 'chien'" src="/img/chien.webp" alt="chien" loading="lazy" class="chien voie1" >
