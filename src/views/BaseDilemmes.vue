@@ -491,8 +491,7 @@ export default {
 }
 
 .arbre1, .arbre2{
-    min-width: 12%;
-    max-width: 16vw;
+    width: 16vw;
     position: absolute;
     transform: translate(-50%, -50%);
 }
