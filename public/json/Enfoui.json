@@ -45,7 +45,7 @@
         "bouton2": "Voie 3",
         "bouton3": "Voie 4",
         "Bon": "Voie 2",
-        "Détails": "'<u>Bon choix</u>': Les 2 sont aussi bien environ, mais laisser mourir est peut-être légèrement mieux, car le respect est de 0.5 ou légèrement moins selon l’opinion (la formule choisie) \nVoie 2 avec M = 1.5 Vie \nVoie 3 avec, M = 1.25 Vie \nVoie 4 avec, M = 0.875 Vie \nVoie 1 avec M = 0 Vie",
+        "Détails": "'<u>Bon choix</u>': Les 2 sont aussi bien environ, mais laisser mourir est peut-être légèrement mieux, car le respect est de 0.5 ou légèrement moins selon l’opinion (la formule choisie) \nVoie 2 avec M = 1.5 Vie \nVoie 3 avec, M = 0.625 Vie \nVoie 4 avec, M = 0.875 Vie \nVoie 1 avec M = 0 Vie",
         "M": 1.5,
         "M1": 1.5,
         "M2": 0.625,
