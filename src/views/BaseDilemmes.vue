@@ -303,19 +303,25 @@ export default {
 
     switch(this.niveau){
         case "Facile":
-            this.ratio = 4;
+            this.ratio = 3.2;
             break;
         case "Normal":
-            this.ratio = 1.6;
+            this.ratio = 1;
             break;
         case "Difficile":
-            this.ratio = 0.6;
+            this.ratio = 0.5;
             break;
-        case "Pilules":
-            this.ratio = 0.52;
+        case "Bonus":
+            this.ratio = 3.1481;
+            break;
+        case "Caché":
+            this.ratio = 2.4;
             break;
         case "Enfoui":
             this.ratio = 1.2;
+            break;
+        case "Pilules":
+            this.ratio = 0.52;
             break;
         case "Classique":
             this.ratio = 1.2;
