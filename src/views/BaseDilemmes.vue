@@ -12,9 +12,9 @@ export default {
       description: "",
       error: null,
       clicked: false,
-      Détails: "",
+      détails: "",
       score: 0,
-      score_temp: 0,
+      scoreTemp: 0,
       ratio: 3, //pour calculer le score selon la difficulté
       étoiles_niveau: 0,
       afficher_étoiles: false,
@@ -45,7 +45,7 @@ export default {
       this.error = null;
       this.clicked = false;
       this.score = 0;
-      this.score_temp = 0;
+      this.scoretemp = 0;
       this.afficher_étoiles = false;
       this.fin = false;
       this.numéro = 0;
@@ -65,26 +65,26 @@ export default {
             const btn = document.querySelector(".btn-1");
             btn.style.background = "#993F00";
             btn.style.color = 'white';
-            this.Détails = this.dilemme.Détails;
+            this.détails = this.dilemme.détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
             this.timeoutId = setTimeout(() => {
-            const voie2 = document.querySelectorAll(".voie2");
-            voie2.forEach((vie) => {
-                vie.style.display = "none";
-            });
-            const train = document.querySelector(".train");
-            if(train){
-                train.style.display = "none";
-            }
-            this.voie2_arbre = false;
+                const voie2 = document.querySelectorAll(".voie2");
+                voie2.forEach((vie) => {
+                    vie.style.display = "none";
+                });
+                const train = document.querySelector(".train");
+                if(train){
+                    train.style.display = "none";
+                }
+                this.voie2_arbre = false;
             }, 1900);
             
-            if(this.dilemme.bouton1 === this.dilemme.Bon){
-                this.score_temp = 100;
+            if(this.dilemme.bouton1 === this.dilemme.bon){
+                this.scoretemp = 100;
                 this.score += 100;
             }else{
-                this.score_temp = (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/this.ratio));
-                this.score += this.score_temp
+                this.scoretemp = (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/this.ratio));
+                this.score += this.scoretemp
             }
         }
     },
@@ -95,26 +95,26 @@ export default {
             const btn = document.querySelector(".btn-2");
             btn.style.background = "#993F00";
             btn.style.color = 'white';
-            this.Détails = this.dilemme.Détails;
+            this.détails = this.dilemme.détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
             this.timeoutId = setTimeout(() => {
-            const voie1 = document.querySelectorAll(".voie1");
-            voie1.forEach((vie) => {
-                vie.style.display = "none";
-            });
-            const train = document.querySelector(".train");
-            if(train){
-                train.style.display = "none";
-            }
-            this.voie1_arbre = false;
+                const voie1 = document.querySelectorAll(".voie1");
+                voie1.forEach((vie) => {
+                    vie.style.display = "none";
+                });
+                const train = document.querySelector(".train");
+                if(train){
+                    train.style.display = "none";
+                }
+                this.voie1_arbre = false;
             }, 1900);
             
-            if(this.dilemme.bouton2 === this.dilemme.Bon){
-                this.score_temp = 100
+            if(this.dilemme.bouton2 === this.dilemme.bon){
+                this.scoretemp = 100
                 this.score += 100
             }else{
-                this.score_temp = (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/this.ratio))
-                this.score += this.score_temp
+                this.scoretemp = (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/this.ratio))
+                this.score += this.scoretemp
             }
         }
     },
@@ -125,14 +125,14 @@ export default {
             const btn = document.querySelector(".btn-3");
             btn.style.background = "#993F00";
             btn.style.color = 'white';
-            this.Détails = this.dilemme.Détails;
+            this.détails = this.dilemme.détails;
             
-            if(this.dilemme.bouton3 === this.dilemme.Bon){
-                this.score_temp = 100
+            if(this.dilemme.bouton3 === this.dilemme.bon){
+                this.scoretemp = 100
                 this.score += 100
             }else{
-                this.score_temp = (100*(1-Math.abs(this.dilemme.M3 - this.dilemme.M)/this.ratio));
-                this.score += this.score_temp;
+                this.scoretemp = (100*(1-Math.abs(this.dilemme.M3 - this.dilemme.M)/this.ratio));
+                this.score += this.scoretemp;
             }
         }
     },
@@ -207,7 +207,7 @@ export default {
         }
         // console.log(this.numéro, this.nombre_dilemmes)
         if(this.numéro == this.nombre_dilemmes){
-            this.Détails = "Terminé";
+            this.détails = "Terminé";
 
 
             localStorage.setItem(`étoiles_${this.niveau}_courrante`, Math.floor(this.score/100).toString());
@@ -311,7 +311,7 @@ export default {
         case "Difficile":
             this.ratio = 0.5;
             break;
-        case "Bonus":
+        case "bonus":
             this.ratio = 3.1481;
             break;
         case "Caché":
@@ -394,9 +394,9 @@ export default {
     </div>
 
     <div class="center colonne">
-        <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(score_temp) }}</p>
+        <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(scoretemp) }}</p>
     <p class="score">Score total: {{ Math.floor(score) }}</p>
-    <p class="détails" v-if="clicked" v-html="Détails"></p>
+    <p class="détails" v-if="clicked" v-html="détails"></p>
         <!-- étoiles -->
     <router-link :to="'/'+ strNoAccent(niveau.toLocaleLowerCase())" class="none">
     <button @click="resetNiveau()" class="mode" :class="{hidden: !fin}" :aria-label="`${niveau} - ${étoiles_niveau} étoile(s) sur ${nombre_dilemmes}`">
