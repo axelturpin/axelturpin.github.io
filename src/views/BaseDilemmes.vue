@@ -16,8 +16,8 @@ export default {
       score: 0,
       scoreTemp: 0,
       ratio: 3, //pour calculer le score selon la difficulté
-      étoiles_niveau: 0,
-      afficher_étoiles: false,
+      étoilesNiveau: 0,
+      afficherEtoiles: false,
       fin: false,
       numéro: 1,
       clickBtn1: false,
@@ -27,8 +27,8 @@ export default {
       timeoutId: null,
       audio: null,
       musiqueBloquee: false,
-      voie1_arbre: false,
-      voie2_arbre: false,
+      voie1Arbre: false,
+      voie2Arbre: false,
     }
   },
   methods: {
@@ -46,17 +46,17 @@ export default {
       this.clicked = false;
       this.score = 0;
       this.scoretemp = 0;
-      this.afficher_étoiles = false;
+      this.afficherEtoiles = false;
       this.fin = false;
       this.numéro = 0;
       this.clickBtn1 = false;
       this.clickBtn2 = false;
       this.clickBtn3 = false;
       this.socoupAnimation = false;
-      this.voie1_arbre = false;
-      this.voie2_arbre = false;
+      this.voie1Arbre = false;
+      this.voie2Arbre = false;
       this.suivant();
-      this.étoiles_niveau = 0;
+      this.étoilesNiveau = 0;
     },
     click1(){
         if (!this.clicked){
@@ -76,7 +76,7 @@ export default {
                 if(train){
                     train.style.display = "none";
                 }
-                this.voie2_arbre = false;
+                this.voie2Arbre = false;
             }, 1900);
             
             if(this.dilemme.bouton1 === this.dilemme.bon){
@@ -106,7 +106,7 @@ export default {
                 if(train){
                     train.style.display = "none";
                 }
-                this.voie1_arbre = false;
+                this.voie1Arbre = false;
             }, 1900);
             
             if(this.dilemme.bouton2 === this.dilemme.bon){
@@ -179,15 +179,15 @@ export default {
 
             // Arbres à affichés ou caché par rapport au dilemme précédent
             if(this.dilemme.voie1_arbre){
-                this.voie1_arbre = true;
+                this.voie1Arbre = true;
             }else{
-                this.voie1_arbre = false;
+                this.voie1Arbre = false;
             }
               
             if(this.dilemme.voie2_arbre){
-                this.voie2_arbre = true;
+                this.voie2Arbre = true;
             }else{
-                this.voie2_arbre = false;
+                this.voie2Arbre = false;
             }
               
     if(this.dilemme.soucoupe){
@@ -214,12 +214,12 @@ export default {
             let étoiles = localStorage.getItem(`étoiles_${this.niveau}_courrante`) || 0;
             let max_étoiles_passé = localStorage.getItem(`étoiles_${this.niveau}`) || 0;
             localStorage.setItem(`étoiles_${this.niveau}`, Math.max(max_étoiles_passé, étoiles));
-            this.étoiles_niveau = Number(étoiles);
+            this.étoilesNiveau = Number(étoiles);
 
             const screenWidth = window.innerWidth;
             // attendre que le DOM rende les éléments (v-if et v-for)
             this.$nextTick(() => { //afficher étoiles:
-            if(!this.afficher_étoiles){
+            if(!this.afficherEtoiles){
                 const mode = document.querySelector(".mode");
                 if (mode) {
                   mode.querySelectorAll(".étoile").forEach(star => star.remove());
@@ -228,7 +228,7 @@ export default {
                     const e = document.createElement("img");
                     e.className = "étoile";
                     e.loading = "lazy"
-                    if (i < this.étoiles_niveau){
+                    if (i < this.étoilesNiveau){
                         e.src = "/img/etoile pleine.png"
                     } else{
                         e.src="/img/etoile vide.png"
@@ -240,7 +240,7 @@ export default {
                       mode.appendChild(e);
                     }
                 }
-                this.afficher_étoiles = true;
+                this.afficherEtoiles = true;
                 this.fin = true;
             }});
 
@@ -352,8 +352,8 @@ export default {
         <div class="plan-container">
                 <div>
                 <!-- arbre -->
-                <img src="/img/arbre.webp" alt="arbre sur la voie 1" v-if="voie1_arbre" class="arbre1">
-                <img src="/img/arbre.webp" alt="arbre sur la voie 2" v-if="voie2_arbre" class="arbre2">
+                <img src="/img/arbre.webp" alt="arbre sur la voie 1" v-if="voie1Arbre" class="arbre1">
+                <img src="/img/arbre.webp" alt="arbre sur la voie 2" v-if="voie2Arbre" class="arbre2">
                 <!-- fond -->
                 <img :src="dilemme.src_plan" class="img-rails" alt="fond" title="inspié de imgflip.com" loading="lazy">
                 <!-- train -->
@@ -399,7 +399,7 @@ export default {
     <p class="détails" v-if="clicked" v-html="détails"></p>
         <!-- étoiles -->
     <router-link :to="'/'+ strNoAccent(niveau.toLocaleLowerCase())" class="none">
-    <button @click="resetNiveau()" class="mode" :class="{hidden: !fin}" :aria-label="`${niveau} - ${étoiles_niveau} étoile(s) sur ${nombre_dilemmes}`">
+    <button @click="resetNiveau()" class="mode" :class="{hidden: !fin}" :aria-label="`${niveau} - ${étoilesNiveau} étoile(s) sur ${nombre_dilemmes}`">
         {{ niveau }} 
         <!-- img d'étoiles en js cette fois ci -->
     </button>
