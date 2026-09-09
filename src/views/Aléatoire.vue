@@ -10,7 +10,7 @@ export default {
       description: "",
       error: null,
       clicked: false,
-      Détails: "",
+      détails: "",
       score: 0,
       score_temp: 0,
       ratio: 3, //pour calculer le score selon la difficulté
@@ -35,7 +35,7 @@ export default {
             const btn = document.querySelector(".btn-1");
             btn.style.background = "#993F00";
             btn.style.color = 'white';
-            this.Détails = this.dilemme.Détails;
+            this.détails = this.dilemme.détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
             this.timeoutId = setTimeout(function()
             {
@@ -65,7 +65,7 @@ export default {
             const btn = document.querySelector(".btn-2");
             btn.style.background = "#993F00";
             btn.style.color = 'white';
-            this.Détails = this.dilemme.Détails;
+            this.détails = this.dilemme.détails;
             //On récupère l'id du setTimeout pour l'annuler si on charge une nouvelle page
             this.timeoutId = setTimeout(function()
             {
@@ -95,7 +95,7 @@ export default {
             const btn = document.querySelector(".btn-3");
             btn.style.background = "#993F00";
             btn.style.color = 'white';
-            this.Détails = this.dilemme.Détails;
+            this.détails = this.dilemme.détails;
             
             if(this.dilemme.bouton3 === this.dilemme.Bon){
                 this.score_temp = 100
@@ -238,7 +238,7 @@ export default {
         }
         // console.log(this.numéro, this.nombre_dilemmes)
         if(this.numéro == this.nombre_dilemmes){
-            this.Détails = "Terminé";
+            this.détails = "Terminé";
             this.fin = true;
 
             let étoiles = localStorage.getItem(`étoiles_Aléatoire_courrante`) || 0;
@@ -402,7 +402,7 @@ export default {
     <div class="center colonne">
         <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(score_temp) }}</p>
     <p class="score">Score total: {{ Math.floor(score) }}</p>
-    <p class="détails" v-if="clicked" v-html="Détails"></p>
+    <p class="détails" v-if="clicked" v-html="détails"></p>
         <!-- étoiles -->
     <button class="mode" :class="{hidden: !fin}" @click="recharger()">
         Aléatoire

@@ -45,7 +45,7 @@ export default {
       this.error = null;
       this.clicked = false;
       this.score = 0;
-      this.scoretemp = 0;
+      this.scoreTemp = 0;
       this.afficherEtoiles = false;
       this.fin = false;
       this.numéro = 0;
@@ -80,11 +80,11 @@ export default {
             }, 1900);
             
             if(this.dilemme.bouton1 === this.dilemme.bon){
-                this.scoretemp = 100;
+                this.scoreTemp = 100;
                 this.score += 100;
             }else{
-                this.scoretemp = (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/this.ratio));
-                this.score += this.scoretemp
+                this.scoreTemp = (100*(1-Math.abs(this.dilemme.M1 - this.dilemme.M)/this.ratio));
+                this.score += this.scoreTemp
             }
         }
     },
@@ -110,11 +110,11 @@ export default {
             }, 1900);
             
             if(this.dilemme.bouton2 === this.dilemme.bon){
-                this.scoretemp = 100
+                this.scoreTemp = 100
                 this.score += 100
             }else{
-                this.scoretemp = (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/this.ratio))
-                this.score += this.scoretemp
+                this.scoreTemp = (100*(1-Math.abs(this.dilemme.M2 - this.dilemme.M)/this.ratio))
+                this.score += this.scoreTemp
             }
         }
     },
@@ -128,11 +128,11 @@ export default {
             this.détails = this.dilemme.détails;
             
             if(this.dilemme.bouton3 === this.dilemme.bon){
-                this.scoretemp = 100
+                this.scoreTemp = 100
                 this.score += 100
             }else{
-                this.scoretemp = (100*(1-Math.abs(this.dilemme.M3 - this.dilemme.M)/this.ratio));
-                this.score += this.scoretemp;
+                this.scoreTemp = (100*(1-Math.abs(this.dilemme.M3 - this.dilemme.M)/this.ratio));
+                this.score += this.scoreTemp;
             }
         }
     },
@@ -394,7 +394,7 @@ export default {
     </div>
 
     <div class="center colonne">
-        <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(scoretemp) }}</p>
+        <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(scoreTemp) }}</p>
     <p class="score">Score total: {{ Math.floor(score) }}</p>
     <p class="détails" v-if="clicked" v-html="détails"></p>
         <!-- étoiles -->
