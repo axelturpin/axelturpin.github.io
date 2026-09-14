@@ -2,7 +2,7 @@
     export default{
         data(){
             return{
-                malvoyant: JSON.parse(localStorage.getItem("malvoyant")) || true,
+                malvoyant: JSON.parse(localStorage.getItem("malvoyant")) ?? true,
             }
         },
         methods:{
@@ -47,8 +47,6 @@
             }
         },
             mounted(){
-            //optionnel
-            // this.setPolice()
         }
     }
 </script>
