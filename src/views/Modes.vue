@@ -20,6 +20,7 @@ export default{
     },
     created(){
         this.étoilesTotal = this.étoilesFacile + this.étoilesNormal + this.étoilesDifficile + this.étoilesClassique + this.étoilesBonus + this.étoilesCache + this.étoilesFun + this.étoilesAléatoire + this.étoilesPilules + this.étoilesEnfoui;
+        localStorage.setItem("étoiles_Total", this.étoilesTotal);
     }
 }
 </script>

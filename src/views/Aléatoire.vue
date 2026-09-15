@@ -108,7 +108,14 @@ export default {
     },
     async chargement(){
         // attendre que le DOM rende les éléments (v-if et v-for)
-            const niveauAléatoire = Math.ceil(Math.random() * 4)
+        let nb = 4;
+        if(localStorage.getItem("étoiles_Total") >= 10){
+            nb++;
+        }
+        if(localStorage.getItem("étoiles_Total") >= 15){
+            nb++;
+        }
+            const niveauAléatoire = Math.ceil(Math.random() * nb)
             switch(niveauAléatoire){
                 case 1:
                     this.niveau = "Facile";
@@ -121,6 +128,12 @@ export default {
                     break;
                 case 4:
                     this.niveau = "Bonus";
+                    break;
+                case 5:
+                    this.niveau = "Caché";
+                    break;
+                case 6:
+                    this.niveau = "Enfoui";
                     break;
                 default:
                     this.error = "bug dilemme aléatoire"
