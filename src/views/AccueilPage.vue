@@ -4,7 +4,7 @@ export default{
       data(){
         return{
             introduction: `Ce site à pour but de se questionner sur des dilemmes éthiques sans intérêts personnels, et de donner des scores plus ou moins élevés selon une théorie qui se base sur l’intuition commune:\n
-            Avec des mesures très subjectives de la mortalité (on peut ne pas être d'accord) si désaccord entre la formule et l’intuition commune, alors je me base sur l’intuition commune, par exemple pour les dilemmes des pilules, je donne des scores sans calculs de moralité)\n
+            Avec des mesures très subjectives de la moralité (on peut ne pas être d'accord) si désaccord entre la formule et l’intuition commune, alors je me base sur l’intuition commune, par exemple pour les dilemmes des pilules, je donne des scores sans calculs de moralité)\n
             Cette théorie (le Finalitarisme) est causale, càd que si inaction alors la moralité M = 0\nPlus d’information en dessous`,
         }
       }, mounted(){

@@ -108,8 +108,8 @@ h2{
         height: 62px;
         gap: 5px;
         font-size: 16px;
-        margin-left: clamp(2px, calc((100vw - 330px - 2px)/2), 100vw);
-        margin-right: clamp(2px, calc((100vw - 330px - 2px)/2), 100vw);
+        margin-left: calc((100vw - 330px - 2px)/2);
+        margin-right: calc((100vw - 330px - 2px)/2);
     }
     .étoile{
         width: 25px;
