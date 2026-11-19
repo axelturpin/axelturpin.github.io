@@ -92,7 +92,7 @@ export default{
             <router-link to="/custom" class="none mode">
                 Custom
             </router-link>
-            <a href="https://www.youtube.com/playlist?list=PLMeUWXGHPb9A" class="none mode">
+            <a href="https://www.youtube.com/playlist?list=PLMeUWXGHPb9A" class="none mode" v-if="this.étoilesTotal >= 48">
                 Vidéos
             </a>
         </div>
