@@ -62,7 +62,7 @@
         "bouton1": "Bleu",
         "bouton2": "Rouge",
         "bon": "Rouge",
-        "détails": "'bon choix: Rouge' (le risque qu'on fait prendre au bleu est sans leurs consentement donc rouge est un peu mieux, très subjectif) \nM(inaction) = 0, M(bleu) = 0.963 M(rouge) = 0.999 les valeurs exactes dépendent du nombre de participants ici 101",
+        "détails": "'bon choix: Rouge' (le risque qu'on fait prendre au bleu est à leurs place, donc rouge est un peu mieux, très subjectif) \nM(inaction) = 0, M(bleu) = 0.963 M(rouge) = 0.999 les valeurs exactes dépendent du nombre de participants ici 101",
         "M": 0.999,
         "M1": 0.963,
         "M2": 0.999,

@@ -394,8 +394,8 @@ export default {
     </div>
 
     <div class="center colonne">
-        <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(scoreTemp) }}</p>
-    <p class="score">Score total: {{ Math.floor(score) }}</p>
+    <p class="score" v-if="clicked"> score n°{{ this.numéro }}: {{ Math.floor(scoreTemp) }}/100</p>
+    <p class="score">Score total: {{ Math.floor(score) }}/{{ this.numéro*100 }}</p>
     <p class="détails" v-if="clicked" v-html="détails"></p>
         <!-- étoiles -->
     <router-link :to="'/'+ strNoAccent(niveau.toLocaleLowerCase())" class="none">
